@@ -133,7 +133,7 @@
             "id": "1.3.1"
         },
         {
-            "name": "☐ V2 1.3.2 Oblate 奉 (sds)**",
+            "name": "Oblate 奉",
             "slug": "oblate",
             "isSds": true,
             "rating": 2,
@@ -181,7 +181,7 @@
             "id": "1.3.5"
         },
         {
-            "name": "☐ V4 1.3.6 Spectral 幽冥",
+            "name": "Spectral 幽冥",
             "slug": "spectral",
             "isSds": false,
             "rating": 0,
@@ -281,7 +281,7 @@
             "id": "1.4.3"
         },
         {
-            "name": "Brave One*",
+            "name": "Brave One",
             "slug": "brave-one",
             "isSds": false,
             "rating": 1,
@@ -857,7 +857,7 @@
             "id": "6.2.1"
         },
         {
-            "name": "☐ V3 6.2.2 Sail To The East**",
+            "name": "Sail To The East",
             "slug": "sail-to-the-east",
             "isSds": false,
             "rating": 2,
@@ -1073,7 +1073,7 @@
             "id": "7.1.6"
         },
         {
-            "name": "☐ V3 7.1.7 Boulderizer (sds)**",
+            "name": "Boulderizer",
             "slug": "boulderizer",
             "isSds": true,
             "rating": 2,
@@ -1157,7 +1157,7 @@
             "id": "8.3.1a"
         },
         {
-            "name": "Beam Of Hope*",
+            "name": "Beam Of Hope",
             "slug": "beam-of-hope",
             "isSds": false,
             "rating": 1,

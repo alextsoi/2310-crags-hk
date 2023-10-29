@@ -1,0 +1,21 @@
+.blocRoutes {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.blocRoute {
+    display: flex;
+    gap: 10px;
+}
+.blocRouteGrade {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    &:before {
+        border: 1px solid #000;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        content: "";
+    }
+}
