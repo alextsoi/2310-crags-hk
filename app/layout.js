@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
             </nav>
             <div className="social-networks">
               <a className="github-button" href="https://github.com/alextsoi" aria-label="Follow @alextsoi on GitHub">Follow @alextsoi</a>
-              <a className="github-button" href="https://github.com/buttons/github-buttons/issues" data-icon="octicon-issue-opened" aria-label="Issue buttons/github-buttons on GitHub">Issue</a>
+<a class="github-button" href="https://github.com/alextsoi/2310-crags-hk/issues" data-icon="octicon-issue-opened" aria-label="Issue alextsoi/2310-crags-hk on GitHub">Issue</a>
             </div>
           </div>
         </header>
