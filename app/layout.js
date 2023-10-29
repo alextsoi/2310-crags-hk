@@ -20,9 +20,9 @@ export default function RootLayout({ children }) {
               <ul>
                 <li><Link href={`/`}>Home</Link></li>
                 <li><Link href={`/blocs`}>Blocs</Link></li>
-                <li><Link href={`/grade`}>Grade</Link></li>
-                <li><Link href={`/rating`}>Rating</Link></li>
-                <li><Link href={`/zone`}>Zone</Link></li>
+                <li><Link href={`/grades`}>Grades</Link></li>
+                <li><Link href={`/ratings`}>Ratings</Link></li>
+                <li><Link href={`/zones`}>Zones</Link></li>
               </ul>
             </nav>
             <div className="social-networks">
