@@ -34,7 +34,10 @@ export default function RootLayout({ children }) {
         {children}
         <Script src="https://buttons.github.io/buttons.js" />
         <footer>
-          feel free to create issue / pull request on my repo
+          <div className="container">
+            feel free to create issue / pull request on my repo
+            <br/>- By alex
+          </div>
         </footer>
       </body>
     </html>
