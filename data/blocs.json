@@ -1,0 +1,186 @@
+{
+    "data": [
+        {
+            "name": "Welcome",
+            "slug": "welcome",
+            "id": "1.1",
+            "zone": 1
+        },
+        {
+            "name": "The Crown",
+            "slug": "the-crown",
+            "id": "1.2",
+            "zone": 1
+        },
+        {
+            "name": "Spectral 幽冥",
+            "slug": "spectral",
+            "id": "1.3",
+            "zone": 1
+        },
+        {
+            "name": "Viking Table",
+            "slug": "viking-table",
+            "id": "1.4",
+            "zone": 1
+        },
+        {
+            "name": "Tiny",
+            "slug": "tiny",
+            "id": "1.5",
+            "zone": 1
+        },
+        {
+            "name": "Frost",
+            "slug": "frost",
+            "id": "2.1",
+            "zone": 2
+        },
+        {
+            "name": "Iron Wing",
+            "slug": "iron-wing",
+            "id": "2.2",
+            "zone": 2
+        },
+        {
+            "name": "The Whale",
+            "slug": "the-whale",
+            "id": "2.3",
+            "zone": 2
+        },
+        {
+            "name": "Falcon",
+            "slug": "falcon",
+            "id": "3.1",
+            "zone": 3
+        },
+        {
+            "name": "Dragon Head",
+            "slug": "dragon-head",
+            "id": "3.2",
+            "zone": 3
+        },
+        {
+            "name": "Drink Alone 獨酌",
+            "slug": "drink-alone",
+            "id": "3.3",
+            "zone": 3
+        },
+        {
+            "name": "Destiny",
+            "slug": "destiny",
+            "id": "4.1",
+            "zone": 4
+        },
+        {
+            "name": "Wuji",
+            "slug": "wuji",
+            "id": "4.2",
+            "zone": 4
+        },
+        {
+            "name": "Kaze",
+            "slug": "kaze",
+            "id": "5.1",
+            "zone": 5
+        },
+        {
+            "name": "The Three Artifacts 三神器",
+            "slug": "the-three-artifacts",
+            "id": "5.2",
+            "zone": 5,
+            "children": [
+                {
+                    "name": "Jade",
+                    "slug": "jade"
+                },
+                {
+                    "name": "Mirror",
+                    "slug": "mirror"
+                },
+                {
+                    "name": "Sword",
+                    "slug": "sword"
+                }
+            ]
+        },
+        {
+            "name": "Strength 力",
+            "slug": "strength",
+            "id": "6.1",
+            "zone": 6
+        },
+        {
+            "name": "The Great Sail 偉大航道",
+            "slug": "the-great-sail",
+            "id": "6.2",
+            "zone": 6
+        },
+        {
+            "name": "6.3 Ghost Blade",
+            "slug": "ghost-blade",
+            "id": "6.3",
+            "zone": 6
+        },
+        {
+            "name": "Slab King",
+            "slug": "slab-king",
+            "id": "6.4",
+            "zone": 6
+        },
+        {
+            "name": "The Submarine",
+            "slug": "the-submarine",
+            "id": "6.5",
+            "zone": 6
+        },
+        {
+            "name": "Jip",
+            "slug": "jip",
+            "id": "7.1",
+            "zone": 7
+        },
+        {
+            "name": "Sam & Frodo",
+            "slug": "sam-frodo",
+            "id": "8.1",
+            "zone": 8
+        },
+        {
+            "name": "Rock Slide",
+            "slug": "rock-slide",
+            "id": "8.2",
+            "zone": 8
+        },
+        {
+            "name": "Radiance",
+            "slug": "radiance",
+            "id": "8.3",
+            "zone": 8
+        },
+        {
+            "name": "Sunfire 日炎",
+            "slug": "sunfire",
+            "id": "8.4",
+            "zone": 8
+        },
+        {
+            "name": "Rakia",
+            "slug": "rakia",
+            "id": "8.5",
+            "zone": 8
+        },
+        {
+            "name": "Behind Rakia",
+            "slug": "behind-rakia",
+            "id": "8.6",
+            "zone": 8
+        },
+        {
+            "name": "Left of Rakia",
+            "slug": "left-of-rakia",
+            "id": "8.7",
+            "zone": 8
+        }
+    ]
+}
