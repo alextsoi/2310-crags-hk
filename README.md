@@ -9,7 +9,8 @@
 - by rating
 - by blocs
 - by zone
-- search
+- problem search
+- intro?? & access?
 
 # TODO
 - missing blocs image
