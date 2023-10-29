@@ -3,7 +3,7 @@ import routes from '@/app/data/routes.json'
 import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 
-export default function Blocs({ params }) {
+export default function Bloc({ params }) {
     const bloc = blocs.data.find((bloc) => bloc.slug === params.slug);
     const matchedRoutes = routes.data.filter((route) => route.blocs === bloc.id);
     const ratingText = ['', '*', '**', '***']
