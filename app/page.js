@@ -16,7 +16,7 @@ export default function Home() {
                         <ul className={styles.blocRoutes}>
                             {routes.data.filter(route => route.blocs === bloc.id).map((route) => {
                                 return <li className={styles.blocRoute} key={route.id}>
-                                    <Link href={`/route/${route.slug}`}>
+                                    <Link href={`#`}>
                                         <div className={styles.blocRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
                                         <div className={styles.blocRouteId}>{route.id} - </div>
                                         <div className={styles.blocRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>

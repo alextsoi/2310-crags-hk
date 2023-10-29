@@ -17,7 +17,7 @@ export default function Bloc({ params }) {
                     <ul className={styles.blocRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.blocRoute} key={route.id}>
-                                <Link href={`/route/${route.slug}`}>
+                                <Link href={`#`}>
                                     <div className={styles.blocRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
                                     <div className={styles.blocRouteId}>{route.id} - </div>
                                     <div className={styles.blocRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
