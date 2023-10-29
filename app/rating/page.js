@@ -4,7 +4,7 @@ import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 import _ from 'lodash'
 
-export default function Grade() {
+export default function Rating() {
     let allRatings = _.map(routes.data, 'rating');
     allRatings = _.uniq(allRatings);
     allRatings = _.sortBy(allRatings, String);
