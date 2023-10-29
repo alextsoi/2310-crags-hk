@@ -4,7 +4,8 @@ import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 import _ from 'lodash';
 
-export default function Rating({ params }) {
+export default function Grade({ params }) {
+    const ratingText = ['', '*', '**', '***']
     const { slug } = params;
     const matchedRoutes = routes.data.filter((route) => route.gradings.includes(params.slug === 'project' ? slug : parseInt(slug)));
     return (
@@ -18,7 +19,7 @@ export default function Rating({ params }) {
                                 <Link href={`/route/${route.slug}`}>
                                     <div className={styles.blocRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
                                     <div className={styles.blocRouteId}>{route.id} - </div>
-                                    <div className={styles.blocRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}</div>
+                                    <div className={styles.blocRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
                                 </Link>
                             </li>
                         })}
