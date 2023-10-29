@@ -3,8 +3,7 @@ import routes from '@/app/data/routes.json'
 import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 
-export default function Home() {
-    const ratingText = ['', '*', '**', '***']
+export default function Blocs() {
     return (
         <main className={styles.main}>
             <div className="container">
