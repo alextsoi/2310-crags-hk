@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <footer>
           <div className="container">
             feel free to create issue / pull request on my repo
-            <br/>- By alex
+            <br />- By alex
           </div>
         </footer>
       </body>
