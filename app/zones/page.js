@@ -8,7 +8,6 @@ export default function Zone() {
     let allZones = _.map(blocs.data, 'zone');
     allZones = _.uniq(allZones);
     allZones = _.sortBy(allZones, String);
-    console.log(allZones);
     return (
         <main className={styles.main}>
             <div className="container">

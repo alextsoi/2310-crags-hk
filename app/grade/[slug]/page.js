@@ -4,7 +4,7 @@ import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 import _ from 'lodash';
 
-export default function Grade({ params }) {
+export default function Grade({params}) {
     const ratingText = ['', '*', '**', '***']
     const { slug } = params;
     const matchedRoutes = routes.data.filter((route) => route.gradings.includes(params.slug === 'project' ? slug : parseInt(slug)));
@@ -35,11 +35,10 @@ export async function generateStaticParams() {
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
     allGradings = _.sortBy(allGradings, String);
+    console.log(allGradings);
     return allGradings.map((grade) => {
         return {
-            params: {
-                slug: grade
-            }
+            slug: '' + grade
         }
     })
 }

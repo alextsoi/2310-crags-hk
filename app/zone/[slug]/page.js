@@ -4,7 +4,7 @@ import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 import _ from 'lodash';
 
-export default function Zone({ params }) {
+export default function Zone({params}) {
     const ratingText = ['', '*', '**', '***']
     const { slug } = params;
     const matchedBlocs = blocs.data.filter((bloc) => bloc.zone === parseInt(params.slug));
@@ -39,9 +39,7 @@ export async function generateStaticParams() {
     let zones = _.uniq(_.map(blocs.data, 'zone'));
     return zones.map((zone) => {
         return {
-            params: {
-                slug: zone
-            }
+            slug: '' + zone
         }
     })
 }

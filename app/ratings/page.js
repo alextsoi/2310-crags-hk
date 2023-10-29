@@ -8,7 +8,6 @@ export default function Rating() {
     let allRatings = _.map(routes.data, 'rating');
     allRatings = _.uniq(allRatings);
     allRatings = _.sortBy(allRatings, String);
-    console.log(allRatings);
     return (
         <main className={styles.main}>
             <div className="container">

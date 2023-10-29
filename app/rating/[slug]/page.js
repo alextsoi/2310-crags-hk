@@ -34,9 +34,7 @@ export async function generateStaticParams() {
     let ratings = _.uniq(allRatings);
     return ratings.map((rating) => {
         return {
-            params: {
-                slug: rating
-            }
+            slug: '' + rating
         }
     })
 }

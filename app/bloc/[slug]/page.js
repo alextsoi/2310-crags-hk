@@ -4,7 +4,9 @@ import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 
 export default function Bloc({ params }) {
-    const bloc = blocs.data.find((bloc) => bloc.slug === params.slug);
+    const bloc = blocs.data.find((bloc) => {
+        return bloc.slug === params.slug
+    });
     const matchedRoutes = routes.data.filter((route) => route.blocs === bloc.id);
     const ratingText = ['', '*', '**', '***']
     return (
@@ -32,9 +34,7 @@ export default function Bloc({ params }) {
 export async function generateStaticParams() {
     return blocs.data.map((bloc) => {
         return {
-            params: {
-                slug: bloc.slug
-            }
+            slug: bloc.slug
         }
     })
 }
