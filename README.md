@@ -10,3 +10,7 @@
 - by blocs
 - by zone
 - search
+
+# TODO
+- missing blocs image
+- missing search feature
