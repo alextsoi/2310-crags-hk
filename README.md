@@ -14,3 +14,4 @@
 # TODO
 - missing blocs image
 - missing search feature
+- no individual page
