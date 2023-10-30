@@ -45,7 +45,7 @@ export default function sitemap() {
     // Add all blocs
     blocs.data.forEach(bloc => {
         sitemapList.push({
-            url: `${websiteHost}bloc/${bloc.slug}`,
+            url: `${websiteHost}sunset-forest/bloc/${bloc.slug}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
@@ -59,7 +59,7 @@ export default function sitemap() {
     allGradings = _.sortBy(allGradings, String);
     allGradings.forEach((grade) => {
         sitemapList.push({
-            url: `${websiteHost}grade/${grade}`,
+            url: `${websiteHost}sunset-forest/grade/${grade}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
@@ -72,7 +72,7 @@ export default function sitemap() {
     allZones = _.sortBy(allZones, String);
     allZones.forEach((zone) => {
         sitemapList.push({
-            url: `${websiteHost}zone/${zone}`,
+            url: `${websiteHost}sunset-forest/zone/${zone}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
@@ -85,7 +85,7 @@ export default function sitemap() {
     allRatings = _.sortBy(allRatings, String);
     allRatings.forEach((rating) => {
         sitemapList.push({
-            url: `${websiteHost}rating/${rating}`,
+            url: `${websiteHost}sunset-forest/rating/${rating}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
