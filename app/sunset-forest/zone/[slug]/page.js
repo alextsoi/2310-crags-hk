@@ -7,6 +7,7 @@ import { ratingText } from '@/app/_helpers/config';
 
 export default function Zone({ params }) {
     const { slug } = params;
+
     const matchedBoulders = boulders.data.filter((boulder) => boulder.zone === parseInt(params.slug));
     return (
         <main className={styles.main}>
@@ -18,8 +19,12 @@ export default function Zone({ params }) {
                             <h2>{boulder.id} - {boulder.name}</h2>
                             <ul className={styles.boulderRoutes}>
                                 {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
+                                    let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
                                     return <li className={styles.boulderRoute} key={route.id}>
-                                        <Link href={`#`}>
+                                        <Link href={{
+                                            pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
+                                            query: { problem: route.slug }
+                                        }}>
                                             <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
                                             <div className={styles.boulderRouteId}>{route.id} - </div>
                                             <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>

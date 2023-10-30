@@ -25,9 +25,9 @@ export async function generateMetadata({ params }) {
             gradingText = allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project';
         }
         let ratingText;
-        if(allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
+        if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
             ratingText = ' and rated with stars, we recommend you to come and try these problems.';
-        }else{
+        } else {
             ratingText = '.';
         }
         let description = `There are total ${matchedRoutes.length} routes on the ${boulder[0].name} Boulder that is located in zone ${boulder[0].zone}. The boulder problems are graded ${gradingText}${ratingText}`;
@@ -69,11 +69,9 @@ export default function Boulder({ params }) {
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>
-                                <Link href={`#`}>
-                                    <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade} ` : grade).join('/')}</div>
-                                    <div className={styles.boulderRouteId}>{route.id} - </div>
-                                    <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
-                                </Link>
+                                <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade} ` : `${grade} `).join('/')}</div>
+                                <div className={styles.boulderRouteId}>{route.id} - </div>
+                                <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
                             </li>
                         })}
                     </ul>

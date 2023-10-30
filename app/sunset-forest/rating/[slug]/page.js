@@ -14,8 +14,12 @@ export default function Rating({ params }) {
                     <h2>{parseInt(params.slug) === 0 ? 'Normal' : `${params.slug} Stars`}</h2>
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
+                            let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
                             return <li className={styles.boulderRoute} key={route.id}>
-                                <Link href={`#`}>
+                                <Link href={{
+                                    pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
+                                    query: { problem: route.slug }
+                                }}>
                                     <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
                                     <div className={styles.boulderRouteId}>{route.id} - </div>
                                     <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}</div>
