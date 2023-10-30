@@ -1,22 +1,18 @@
 .articleParagraphs {
     margin-top: 50dvh;
 }
+.boulderTitle {
+    a {
+        text-decoration: none;
+    }
+}
 .boulderRoutes {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 .boulderRoute {
-    display: flex;
-    &:before {
-        border: 1px solid #000;
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        content: "";
-        margin-right: 10px;
-    }
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     a {
         display: inline-flex;
         row-gap: 5px;
@@ -31,7 +27,20 @@
         }
     }
 }
-.boulderRouteId{
+.boulderRouteTitle {
+    display: flex;
+    font-weight: 500;
+    margin-bottom: 8px;
+    &:before {
+        border: 1px solid #000;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        content: "";
+        margin-right: 10px;
+    }
+}
+.boulderRouteId {
     white-space: pre;
 }
 .boulderRouteGrade {

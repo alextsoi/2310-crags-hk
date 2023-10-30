@@ -69,9 +69,12 @@ export default function Boulder({ params }) {
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>
-                                <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade} ` : `${grade} `).join('/')}</div>
-                                <div className={styles.boulderRouteId}>{route.id} - </div>
-                                <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
+                                <div className={styles.boulderRouteTitle}>
+                                    <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade} ` : `${grade} `).join('/')}</div>
+                                    <div className={styles.boulderRouteId}>{route.id} - </div>
+                                    <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
+                                </div>
+                                {route.description && <div className={styles.boulderRouteDescription}>{route.description}</div>}
                             </li>
                         })}
                     </ul>

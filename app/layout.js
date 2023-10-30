@@ -72,6 +72,10 @@ export default function RootLayout({ children }) {
               <a className="github-button" href="https://github.com/alextsoi/2310-crags-hk/issues" data-icon="octicon-issue-opened" aria-label="Issue alextsoi/2310-crags-hk on GitHub">Issue</a>
             </div>
           </div>
+          <div className="flex-container container footer-thanks">
+            Thanks Hoi / Sze / Matt / Alex / Gary / Jamie / Wai / Matt / Also friends & gym who helped grading, developing the site...
+          </div>
+          <div className="flex-container container footer-thanks">&copy; {(new Date()).getFullYear()} crags.hk All Rights Reserved.</div>
         </footer>
         <noscript
           dangerouslySetInnerHTML={{

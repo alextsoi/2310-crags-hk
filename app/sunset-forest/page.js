@@ -32,7 +32,7 @@ export default function Home() {
                 <p>Total <strong>{routes.data.length}</strong> boulder problems developed.</p>
                 {boulders.data.map((boulder) => {
                     return <section className={styles.boulder}>
-                        <h2>{boulder.id} - {boulder.name} Boulder</h2>
+                        <h2 className={styles.boulderTitle}><Link href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} - {boulder.name} Boulder</Link></h2>
                         <ul className={styles.boulderRoutes}>
                             {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
                                 let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);

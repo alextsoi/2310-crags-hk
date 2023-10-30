@@ -10,7 +10,8 @@
             ],
             "boulder": "1.1",
             "zone": 1,
-            "id": "1.1.1"
+            "id": "1.1.1",
+            "description": "Start on the sloping sidepull, use the slopers above."
         },
         {
             "name": "Unnamed",
@@ -22,7 +23,8 @@
             ],
             "boulder": "1.1",
             "zone": 1,
-            "id": "1.1.2"
+            "id": "1.1.2",
+            "description": "Start on the two small crimps."
         },
         {
             "name": "Happy Home",
@@ -34,7 +36,8 @@
             ],
             "boulder": "1.1",
             "zone": 1,
-            "id": "1.1.3"
+            "id": "1.1.3",
+            "description": "Start on the obvious big hold."
         },
         {
             "name": "Rock Blast",
@@ -46,7 +49,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.1"
+            "id": "1.2.1",
+            "description": "Start on the good crimp and launch up to the side pull, finish above."
         },
         {
             "name": "Hamstar The Cat",
@@ -58,7 +62,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.1a"
+            "id": "1.2.1a",
+            "description": "Stand start version of Rock Blast, double start on left hand good pinch, and right hand small crimp."
         },
         {
             "name": "The Crown",
@@ -70,7 +75,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.2"
+            "id": "1.2.2",
+            "description": "Starting with two sloping crimps, make moonboard moves."
         },
         {
             "name": "Hiking",
@@ -82,7 +88,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.3"
+            "id": "1.2.3",
+            "description": "Start on the sidepull, finish up the slab."
         },
         {
             "name": "Lone Wolf",
@@ -94,7 +101,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.4"
+            "id": "1.2.4",
+            "description": "Start on the good crimps, make technical moves to climb the arete."
         },
         {
             "name": "Crack Stairs",
@@ -106,7 +114,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.5"
+            "id": "1.2.5",
+            "description": "Start on a good sidepull, follow the crack head up the slab."
         },
         {
             "name": "Dark Portal",
@@ -118,7 +127,8 @@
             ],
             "boulder": "1.2",
             "zone": 1,
-            "id": "1.2.6"
+            "id": "1.2.6",
+            "description": "Start on the good undercut, make body tension moves to get through the lip of the overhang, finish above the slab."
         },
         {
             "name": "Lantern 燈籠",
@@ -130,7 +140,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.1"
+            "id": "1.3.1",
+            "description": "Start on the big ledge, head up above."
         },
         {
             "name": "Oblate 奉",
@@ -142,7 +153,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.2"
+            "id": "1.3.2",
+            "description": "Start on the undercut and side pull next to it, use good crimps to finish above the ledge."
         },
         {
             "name": "Monster Strength 怪力",
@@ -154,7 +166,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.3"
+            "id": "1.3.3",
+            "description": "Start on the big ledge and launch up to a good crimp on the right, finish as line 2."
         },
         {
             "name": "God of Chaos 亂神",
@@ -166,7 +179,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.4"
+            "id": "1.3.4",
+            "description": "Same start as line 3, but move up directly instead. Make use of the small crimps to do technical/balancy moves. Avoid using the good crimp (right after the start) of line 3."
         },
         {
             "name": "Treants 樹精",
@@ -178,7 +192,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.5"
+            "id": "1.3.5",
+            "description": "Start on the good jug and climb up, avoid the treant behind you !"
         },
         {
             "name": "Spectral 幽冥",
@@ -190,7 +205,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.6"
+            "id": "1.3.6",
+            "description": "Start on two sloping crimps and make powerful moves to gain the ledge above."
         },
         {
             "name": "Mojo’s crimp",
@@ -206,7 +222,8 @@
             "id": "1.3.6a",
             "comment": [
                 "初段"
-            ]
+            ],
+            "description": "Sds version on a sharp crimp."
         },
         {
             "name": "Ghost Fire 鬼火",
@@ -218,7 +235,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.7"
+            "id": "1.3.7",
+            "description": "Start on the big sidepull, launch up to get good holds."
         },
         {
             "name": "Scary Face 鬼臉",
@@ -230,7 +248,8 @@
             ],
             "boulder": "1.3",
             "zone": 1,
-            "id": "1.3.8"
+            "id": "1.3.8",
+            "description": "Fun slab starting on good crimps."
         },
         {
             "name": "Haunter",
@@ -254,7 +273,8 @@
             ],
             "boulder": "1.4",
             "zone": 1,
-            "id": "1.4.1"
+            "id": "1.4.1",
+            "description": "Start on the good crimps."
         },
         {
             "name": "Meat And Wine",
@@ -266,7 +286,8 @@
             ],
             "boulder": "1.4",
             "zone": 1,
-            "id": "1.4.2"
+            "id": "1.4.2",
+            "description": "Start on the big jug along the crack."
         },
         {
             "name": "Feast",
@@ -290,7 +311,8 @@
             ],
             "boulder": "1.4",
             "zone": 1,
-            "id": "1.4.4"
+            "id": "1.4.4",
+            "description": "Start on the good crimp on left and side pull on right, climb along the arete."
         },
         {
             "name": "Small Step",
@@ -338,7 +360,8 @@
             ],
             "boulder": "2.1",
             "zone": 2,
-            "id": "2.1.1"
+            "id": "2.1.1",
+            "description": "Start on the good jug and launch up."
         },
         {
             "name": "Frost Bite",
@@ -350,7 +373,8 @@
             ],
             "boulder": "2.1",
             "zone": 2,
-            "id": "2.1.1a"
+            "id": "2.1.1a",
+            "description": "Start on the left hand hold of line 2, traverse to the left to link line 1."
         },
         {
             "name": "Subzero",
@@ -362,7 +386,8 @@
             ],
             "boulder": "2.1",
             "zone": 2,
-            "id": "2.1.2"
+            "id": "2.1.2",
+            "description": "Start on two sloping crimps and get to the top by the slopers and crimps."
         },
         {
             "name": "Subzero",
@@ -374,7 +399,8 @@
             ],
             "boulder": "2.1",
             "zone": 2,
-            "id": "2.1.2a"
+            "id": "2.1.2a",
+            "description": "Sit start on the obvious side pull and the poor crimp, link to line 2."
         },
         {
             "name": "War Skull",
@@ -386,7 +412,8 @@
             ],
             "boulder": "2.2",
             "zone": 2,
-            "id": "2.2.1"
+            "id": "2.2.1",
+            "description": "Start on the big pinch and make powerful moves to gain the top."
         },
         {
             "name": "Bang",
@@ -398,7 +425,8 @@
             ],
             "boulder": "2.2",
             "zone": 2,
-            "id": "2.2.2"
+            "id": "2.2.2",
+            "description": "Start on the good side pull crimp."
         },
         {
             "name": "Hiding Mushroom",
@@ -410,7 +438,8 @@
             ],
             "boulder": "2.2",
             "zone": 2,
-            "id": "2.2.3"
+            "id": "2.2.3",
+            "description": "Sit on the rock bed and reach to the top."
         },
         {
             "name": "Sleepy High-way",
@@ -422,7 +451,8 @@
             ],
             "boulder": "2.2",
             "zone": 2,
-            "id": "2.2.3a"
+            "id": "2.2.3a",
+            "description": "Start of line3, traverse all the way to the top of 6."
         },
         {
             "name": "Two-story",
@@ -434,7 +464,8 @@
             ],
             "boulder": "2.2",
             "zone": 2,
-            "id": "2.2.4"
+            "id": "2.2.4",
+            "description": "Start on the sloping ledge and reach the top."
         },
         {
             "name": "Veins",
@@ -446,7 +477,8 @@
             ],
             "boulder": "2.2",
             "zone": 2,
-            "id": "2.2.5"
+            "id": "2.2.5",
+            "description": "Start on the good crimp, one move to the top."
         },
         {
             "name": "Humpback song",
@@ -458,7 +490,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.1"
+            "id": "2.3.1",
+            "description": "Start on two crimps, get the next good hold, top out above."
         },
         {
             "name": "Whale fall",
@@ -470,7 +503,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.2"
+            "id": "2.3.2",
+            "description": "Same start as line 1, traverse to the good ledge on the left, then top out above this."
         },
         {
             "name": "Minke",
@@ -482,7 +516,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.3"
+            "id": "2.3.3",
+            "description": "Start on a side pull crimp on left and sloper on right, get the next good crimp."
         },
         {
             "name": "Kun 鯤",
@@ -494,7 +529,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.4"
+            "id": "2.3.4",
+            "description": "Start of line 1, link up line2, then traverse all the way to the whale tail!"
         },
         {
             "name": "Orca",
@@ -506,7 +542,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.5"
+            "id": "2.3.5",
+            "description": "Start on a crimp, make powerful moves to get the next good hold."
         },
         {
             "name": "Big blue",
@@ -518,7 +555,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.6"
+            "id": "2.3.6",
+            "description": "Start at a small crimp, top right above."
         },
         {
             "name": "Small Blue",
@@ -530,7 +568,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.6a"
+            "id": "2.3.6a",
+            "description": "Start of line 6, but traverse to the left, making a long move to get the good side pull of line 6b, link up to this."
         },
         {
             "name": "Big Blue (left)",
@@ -542,7 +581,8 @@
             ],
             "boulder": "2.3",
             "zone": 2,
-            "id": "2.3.6b"
+            "id": "2.3.6b",
+            "description": "Start on a good V-shaped hold, traverse to the left, making a long move to get the good crimp, and finish up to the left."
         },
         {
             "name": "Falcon Wing",
@@ -554,7 +594,8 @@
             ],
             "boulder": "3.1",
             "zone": 3,
-            "id": "3.1.1"
+            "id": "3.1.1",
+            "description": "Start on the good crimps."
         },
         {
             "name": "Prey",
@@ -566,7 +607,8 @@
             ],
             "boulder": "3.1",
             "zone": 3,
-            "id": "3.1.2"
+            "id": "3.1.2",
+            "description": "Start on the big juggy side pull."
         },
         {
             "name": "Dragon Breath",
@@ -578,7 +620,8 @@
             ],
             "boulder": "3.2",
             "zone": 3,
-            "id": "3.2.1"
+            "id": "3.2.1",
+            "description": "Start on the poor crimps and fight your way up."
         },
         {
             "name": "Dragon Slayer",
@@ -590,7 +633,8 @@
             ],
             "boulder": "3.2",
             "zone": 3,
-            "id": "3.2.2"
+            "id": "3.2.2",
+            "description": "Start on the good crimp and side pull, make a dynamic move to get the good crimp above, finish follow up the slab."
         },
         {
             "name": "Drink Alone",
@@ -602,7 +646,8 @@
             ],
             "boulder": "3.3",
             "zone": 3,
-            "id": "3.3.1"
+            "id": "3.3.1",
+            "description": "Start on a good crimp on the left and a sloping crimp on the right, fight your way up through the face."
         },
         {
             "name": "Weaver",
@@ -614,7 +659,8 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.1"
+            "id": "4.1.1",
+            "description": "Start on a good sloper, climb up and avoid the tree."
         },
         {
             "name": "Prey",
@@ -638,7 +684,8 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.2"
+            "id": "4.1.2",
+            "description": "Start on the big sidepull, bump up."
         },
         {
             "name": "Fling",
@@ -650,7 +697,8 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.3"
+            "id": "4.1.3",
+            "description": "Start on a sidepull on right, and a low gaston crimp on left, make one powerful move."
         },
         {
             "name": "Danger",
@@ -662,7 +710,8 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.4"
+            "id": "4.1.4",
+            "description": "Start on the good crimp and a sloper, get the good holds on the right."
         },
         {
             "name": "Destiny 命運",
@@ -674,7 +723,8 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.5"
+            "id": "4.1.5",
+            "description": "Start on a crimp on the left and a sloper on the right. Fly up!"
         },
         {
             "name": "Destiny",
@@ -698,7 +748,8 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.6"
+            "id": "4.1.6",
+            "description": "Start on two sidepulls, make technical moves to get the good holds above."
         },
         {
             "name": "Wuji 無極",
@@ -710,7 +761,8 @@
             ],
             "boulder": "4.2",
             "zone": 4,
-            "id": "4.2.1"
+            "id": "4.2.1",
+            "description": "Start on two poor sloping crimp, make powerful move to get the top."
         },
         {
             "name": "Kaze 風",
@@ -722,7 +774,8 @@
             ],
             "boulder": "5.1",
             "zone": 5,
-            "id": "5.1.1"
+            "id": "5.1.1",
+            "description": "Start on a good side pull crimp on the right and a low crimp on the left, make a dynamic move to get the jug on top."
         },
         {
             "name": "Breeze",
@@ -734,7 +787,8 @@
             ],
             "boulder": "5.1",
             "zone": 5,
-            "id": "5.1.2"
+            "id": "5.1.2",
+            "description": "Start on a good ledge."
         },
         {
             "name": "Magatama 勾玉",
@@ -746,7 +800,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.1"
+            "id": "5.2.1",
+            "description": "Start on a side pull sloper, make technical moves to get the juggy top."
         },
         {
             "name": "Kagami",
@@ -758,7 +813,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.2"
+            "id": "5.2.2",
+            "description": "Start on the crack side pull, use the obvious crack to climb up."
         },
         {
             "name": "Kagami 八咫鏡",
@@ -770,7 +826,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.2a"
+            "id": "5.2.2a",
+            "description": "Sit start on lower side pull."
         },
         {
             "name": "Kagami (left)",
@@ -794,7 +851,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.4"
+            "id": "5.2.4",
+            "description": "Start on a good crimp, use the juggy line to climb up."
         },
         {
             "name": "Artifacts",
@@ -806,7 +864,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.5"
+            "id": "5.2.5",
+            "description": "Start on a crystal lump, climb up directly."
         },
         {
             "name": "Artifacts (left)",
@@ -818,7 +877,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.6"
+            "id": "5.2.6",
+            "description": "Make a dyno move to the jug on left."
         },
         {
             "name": "Tsurugi 天叢雲劍",
@@ -830,7 +890,8 @@
             ],
             "boulder": "5.2",
             "zone": 5,
-            "id": "5.2.7"
+            "id": "5.2.7",
+            "description": "Sit start on a good pinch, make heel hook moves to get the good ledge."
         },
         {
             "name": "Strength 力",
@@ -842,7 +903,8 @@
             ],
             "boulder": "6.1",
             "zone": 6,
-            "id": "6.1.1"
+            "id": "6.1.1",
+            "description": "Great one-move problem, start on a sloper."
         },
         {
             "name": "Striker",
@@ -854,7 +916,8 @@
             ],
             "boulder": "6.2",
             "zone": 6,
-            "id": "6.2.1"
+            "id": "6.2.1",
+            "description": "Start on a good crimp, get the next good ledge, top out above. (You can try to campus the whole line.)"
         },
         {
             "name": "Sail To The East",
@@ -866,7 +929,8 @@
             ],
             "boulder": "6.2",
             "zone": 6,
-            "id": "6.2.2"
+            "id": "6.2.2",
+            "description": "Same start as line 1, go all the way to the left."
         },
         {
             "name": "Thousand Sunny 千陽號",
@@ -878,7 +942,8 @@
             ],
             "boulder": "6.2",
             "zone": 6,
-            "id": "6.2.3"
+            "id": "6.2.3",
+            "description": "Start on two good slopers, get the next good side pull, then the jug above, top out above."
         },
         {
             "name": "Thousand Sunny Eliminate",
@@ -890,7 +955,8 @@
             ],
             "boulder": "6.2",
             "zone": 6,
-            "id": "6.2.3a"
+            "id": "6.2.3a",
+            "description": "Eliminate the good jug, start to trend left below it."
         },
         {
             "name": "Going Merry 黃金梅利號",
@@ -902,7 +968,8 @@
             ],
             "boulder": "6.2",
             "zone": 6,
-            "id": "6.2.4"
+            "id": "6.2.4",
+            "description": "Start on a sloper on the left and an undercut on right, make a powerful move to get the crimp on the right, finish following the slab."
         },
         {
             "name": "Ghost Blade",
@@ -914,7 +981,8 @@
             ],
             "boulder": "6.3",
             "zone": 6,
-            "id": "6.3.1"
+            "id": "6.3.1",
+            "description": "Start on the good crimps and climb up."
         },
         {
             "name": "True Damage",
@@ -926,7 +994,8 @@
             ],
             "boulder": "6.3",
             "zone": 6,
-            "id": "6.3.2"
+            "id": "6.3.2",
+            "description": "Start on the sloper, and a low good crimp."
         },
         {
             "name": "Emotional Damage",
@@ -938,7 +1007,8 @@
             ],
             "boulder": "6.3",
             "zone": 6,
-            "id": "6.3.3"
+            "id": "6.3.3",
+            "description": "Start on two slopers, make strong moves."
         },
         {
             "name": "Slab King",
@@ -950,7 +1020,8 @@
             ],
             "boulder": "6.4",
             "zone": 6,
-            "id": "6.4.1"
+            "id": "6.4.1",
+            "description": "Start on a good jug, use the thin side pull on the right."
         },
         {
             "name": "I Hate Slab",
@@ -962,7 +1033,8 @@
             ],
             "boulder": "6.4",
             "zone": 6,
-            "id": "6.4.2"
+            "id": "6.4.2",
+            "description": "Start on the same jug of line1, move left to get the arete on the left."
         },
         {
             "name": "Easy Crack",
@@ -974,7 +1046,8 @@
             ],
             "boulder": "6.4",
             "zone": 6,
-            "id": "6.4.3"
+            "id": "6.4.3",
+            "description": "Follow the big crack."
         },
         {
             "name": "Yellow Submarine",
@@ -986,7 +1059,8 @@
             ],
             "boulder": "6.5",
             "zone": 6,
-            "id": "6.5.1"
+            "id": "6.5.1",
+            "description": "Start on a side pull and an undercut, traverse all the way to the left, the crimps on the slab can be used, just try not to stand on the slab and walk…"
         },
         {
             "name": "Cock-pit",
@@ -998,7 +1072,8 @@
             ],
             "boulder": "6.5",
             "zone": 6,
-            "id": "6.5.2"
+            "id": "6.5.2",
+            "description": "Start on a good pinchy sidepull, climb up along the ridge."
         },
         {
             "name": "Bumper Head (Left)",
@@ -1022,7 +1097,8 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.2"
+            "id": "7.1.2",
+            "description": "Start at the good undercut beneath the roof, make technical moves to gain the top shelf."
         },
         {
             "name": "Stream Line",
@@ -1034,7 +1110,8 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.3"
+            "id": "7.1.3",
+            "description": "Start on a good jug, use the edge to traverse all the way right."
         },
         {
             "name": "Drive By",
@@ -1046,7 +1123,8 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.4"
+            "id": "7.1.4",
+            "description": "Start on two gaston crimps, move up the edge above."
         },
         {
             "name": "Highway To Hell",
@@ -1058,7 +1136,8 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.5"
+            "id": "7.1.5",
+            "description": "Same start as line 5, traverse to right using small crimps and side pulls. Avoid using the edge of the top."
         },
         {
             "name": "Torn",
@@ -1070,7 +1149,8 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.6"
+            "id": "7.1.6",
+            "description": "Start on a double gaston, make shouldery moves to get to the top."
         },
         {
             "name": "Boulderizer",
@@ -1082,7 +1162,8 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.7"
+            "id": "7.1.7",
+            "description": "Start on a side pull crimp, get the crimps above."
         },
         {
             "name": "Sam",
@@ -1094,7 +1175,8 @@
             ],
             "boulder": "8.1",
             "zone": 8,
-            "id": "8.1.1"
+            "id": "8.1.1",
+            "description": "Start on a sloper."
         },
         {
             "name": "Frodo",
@@ -1106,7 +1188,8 @@
             ],
             "boulder": "8.1",
             "zone": 8,
-            "id": "8.1.2"
+            "id": "8.1.2",
+            "description": "Start on a good crimp."
         },
         {
             "name": "Rock Slide",
@@ -1118,7 +1201,8 @@
             ],
             "boulder": "8.2",
             "zone": 8,
-            "id": "8.2.1"
+            "id": "8.2.1",
+            "description": "Start on a juggy edge, follow the edge to climb up, down climb on the “slide”, which is the big ledge behind the edge."
         },
         {
             "name": "Unnamed",
@@ -1142,7 +1226,8 @@
             ],
             "boulder": "8.3",
             "zone": 8,
-            "id": "8.3.1"
+            "id": "8.3.1",
+            "description": "Start on a poor pinch on left and an okay crimp on right, get the next left crimp above, finish above this."
         },
         {
             "name": "Wing Of Radiance",
@@ -1154,7 +1239,8 @@
             ],
             "boulder": "8.3",
             "zone": 8,
-            "id": "8.3.1a"
+            "id": "8.3.1a",
+            "description": "Even harder sit start version."
         },
         {
             "name": "Beam Of Hope",
@@ -1166,7 +1252,8 @@
             ],
             "boulder": "8.3",
             "zone": 8,
-            "id": "8.3.2"
+            "id": "8.3.2",
+            "description": "Start on a good crimp, make use of crimps on the right and above."
         },
         {
             "name": "Sunfire 日炎",
@@ -1178,7 +1265,8 @@
             ],
             "boulder": "8.4",
             "zone": 8,
-            "id": "8.4.1"
+            "id": "8.4.1",
+            "description": "Start at the low juggy ledge, get the crimp and then the deep side pull above."
         },
         {
             "name": "Blackfire 黑炎",
@@ -1190,7 +1278,8 @@
             ],
             "boulder": "8.4",
             "zone": 8,
-            "id": "8.4.2"
+            "id": "8.4.2",
+            "description": "Same as line 1, traverse left when you get the good side pull, using small crimps to top at the middle."
         },
         {
             "name": "Sunset Roller Coaster 日落飛車",
@@ -1226,7 +1315,8 @@
             ],
             "boulder": "8.5",
             "zone": 8,
-            "id": "8.5.1"
+            "id": "8.5.1",
+            "description": "Start on a good jug, get the good crimps above, finish up the slab."
         },
         {
             "name": "Rakia 蒼穹",
@@ -1238,7 +1328,8 @@
             ],
             "boulder": "8.5",
             "zone": 8,
-            "id": "8.5.2"
+            "id": "8.5.2",
+            "description": "Same start as line 1, use the holds on the left of the slab, avoid using the crimps of line 1."
         },
         {
             "name": "Moon Tower 月塔",
@@ -1250,7 +1341,8 @@
             ],
             "boulder": "8.5",
             "zone": 8,
-            "id": "8.5.3"
+            "id": "8.5.3",
+            "description": "Same start as line 1, get the undercut of the opposite side instead, climb up through that side."
         },
         {
             "name": "Crimson Arrow 紅蓮之矢",
@@ -1262,7 +1354,8 @@
             ],
             "boulder": "8.5",
             "zone": 8,
-            "id": "8.5.4"
+            "id": "8.5.4",
+            "description": "Start on a crimp on the left and a sloper on the right, make powerful moves to get up the slab, for safety reasons, when topping out the slab, the right side can also be used."
         },
         {
             "name": "Night Beauty",
@@ -1274,7 +1367,8 @@
             ],
             "boulder": "8.5",
             "zone": 8,
-            "id": "8.5.4a"
+            "id": "8.5.4a",
+            "description": "Start on a crimp on the left and a good sloper on the right, follow line 4 to get up the slab."
         },
         {
             "name": "Unnamed",
@@ -1286,7 +1380,8 @@
             ],
             "boulder": "8.5",
             "zone": 8,
-            "id": "8.5.5"
+            "id": "8.5.5",
+            "description": "Start on a pinchy side pull on left and a crimp on right, make a strong move to get the good crimp above, finish up the slab."
         },
         {
             "name": "Buttercup",
@@ -1298,7 +1393,8 @@
             ],
             "boulder": "8.6",
             "zone": 8,
-            "id": "8.6.1"
+            "id": "8.6.1",
+            "description": "Start on the crimps, make technical moves to get good holds above."
         },
         {
             "name": "Snake Crack",
@@ -1310,7 +1406,8 @@
             ],
             "boulder": "8.6",
             "zone": 8,
-            "id": "8.6.2"
+            "id": "8.6.2",
+            "description": "Start on the good side pull, climb up using lay back technique."
         },
         {
             "name": "Short Journey",
@@ -1322,7 +1419,8 @@
             ],
             "boulder": "8.7",
             "zone": 8,
-            "id": "8.7.1"
+            "id": "8.7.1",
+            "description": "Start on a good side pull, follow the edge to finish above."
         },
         {
             "name": "Long Journey",
@@ -1334,7 +1432,8 @@
             ],
             "boulder": "8.7",
             "zone": 8,
-            "id": "8.7.2"
+            "id": "8.7.2",
+            "description": "Same as line1, but traverse to the left once you are on the lip of the ledge."
         },
         {
             "name": "Pain Feast",
@@ -1346,7 +1445,8 @@
             ],
             "boulder": "8.7",
             "zone": 8,
-            "id": "8.7.3"
+            "id": "8.7.3",
+            "description": "Start on two poor crimps, get the painful crimps above, finish up the slab."
         }
     ]
 }
