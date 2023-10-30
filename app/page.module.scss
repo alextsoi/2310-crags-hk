@@ -4,6 +4,7 @@
     list-style: none;
 }
 .blocRoute {
+    display: flex;
     &:before {
         border: 1px solid #000;
         display: inline-block;
@@ -15,9 +16,16 @@
     margin-bottom: 10px;
     a {
         display: inline-flex;
-        gap: 10px;
+        row-gap: 5px;
+        flex-wrap: wrap;
         text-decoration: none;
-        border-bottom: 1px solid #000;
+        > * {
+            display: inline-flex;
+            border-bottom: 1px solid #000;
+            &:not(:first-child) {
+                padding-left: 10px;
+            }
+        }
     }
 }
 .blocRouteGrade {
