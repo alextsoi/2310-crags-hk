@@ -14,7 +14,7 @@ export default function Grade() {
                 <h2>Grades</h2>
                 {allGradings.map((grade) => {
                     return <section key={grade} className={styles.grade}>
-                        <h3><Link href={`/grade/${grade}`}>{grade !== 'project' ? `V${grade}` : 'Project'}</Link></h3>
+                        <h3><Link href={`/sunset-forest/grade/${grade}`}>{grade !== 'project' ? `V${grade}` : 'Project'}</Link></h3>
                     </section>;
                 })}
             </div>

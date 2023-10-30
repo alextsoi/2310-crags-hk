@@ -14,7 +14,7 @@ export default function Zone() {
                 <h2>Zones</h2>
                 {allZones.map((zone) => {
                     return <section key={zone} className={styles.zone}>
-                        <h3><Link href={`/zone/${zone}`}>Zone {zone}</Link></h3>
+                        <h3><Link href={`/sunset-forest/zone/${zone}`}>Zone {zone}</Link></h3>
                     </section>;
                 })}
             </div>

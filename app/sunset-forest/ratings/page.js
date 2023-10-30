@@ -14,7 +14,7 @@ export default function Rating() {
                 <h2>Ratings</h2>
                 {allRatings.map((rating) => {
                     return <section key={rating} className={styles.rating}>
-                        <h3><Link href={`/rating/${rating}`}>{rating !== 0 ? `${rating} star` : 'Normal'}</Link></h3>
+                        <h3><Link href={`/sunset-forest/rating/${rating}`}>{rating !== 0 ? `${rating} star` : 'Normal'}</Link></h3>
                     </section>;
                 })}
             </div>
