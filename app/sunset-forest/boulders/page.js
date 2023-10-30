@@ -9,7 +9,7 @@ export const metadata = {
     openGraph: {
         title: 'Sunset Forest Boulders | CRAGS.HK',
         description: 'Explore all developed boulders in Sunset Forest on CRAGS.HK. Navigate through our comprehensive list to find boulders that suit your skill level and preferences. Regularly updated for your bouldering adventures.',
-        url: websiteHost,
+        url: `${websiteHost}sunset-forest/boulders`,
         siteName: siteName,
         images: [
             {

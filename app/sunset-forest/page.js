@@ -10,7 +10,7 @@ export const metadata = {
     openGraph: {
         title: 'Sunset Forest Boulder Problem Listings | CRAGS.HK',
         description: 'Find all the boulder problems at Sunset Forest on CRAGS.HK, neatly organized by boulders. Stay updated with our regular updates and use our search function to find specific problems quickly and easily. Your complete guide to bouldering in Sunset Forest.',
-        url: websiteHost,
+        url: `${websiteHost}sunset-forest`,
         siteName: siteName,
         images: [
             {
