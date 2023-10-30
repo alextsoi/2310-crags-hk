@@ -1,31 +1,18 @@
-import Image from 'next/image'
 import styles from './page.module.scss'
-import routes from './data/routes.json'
-import blocs from './data/blocs.json'
-import Link from 'next/link'
 
 export default function Home() {
-    const ratingText = ['', '*', '**', '***']
     return (
         <main className={styles.main}>
             <div className="container">
-                <h1>Problems</h1>
-                {blocs.data.map((bloc) => {
-                    return <section className={styles.bloc}>
-                        <h2>{bloc.id} - {bloc.name}</h2>
-                        <ul className={styles.blocRoutes}>
-                            {routes.data.filter(route => route.blocs === bloc.id).map((route) => {
-                                return <li className={styles.blocRoute} key={route.id}>
-                                    <Link href={`#`}>
-                                        <div className={styles.blocRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
-                                        <div className={styles.blocRouteId}>{route.id} - </div>
-                                        <div className={styles.blocRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
-                                    </Link>
-                                </li>
-                            })}
-                        </ul>
-                    </section>;
-                })}
+                <h2>CRAGS.HK</h2>
+                <h1>Your Complete Guide to Bouldering and Climbing in Sunset Forest</h1>
+                <p>Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, all at your fingertips. At CRAGS.HK, we provide comprehensive access to detailed guides and information based on blocs, grades, and ratings, all segmented by specific zones within Sunset Forest.</p>
+                <p>Through our platform, you can enjoy minimal data usage and swift browsing speed, making it easy for you to get the latest updates and plan your climbing or bouldering adventure effortlessly. Even in areas with poor signal or when you're running low on data, we've designed our online guidebook to be easily accessible, anytime, anywhere.</p>
+                <p>Currently, our focus is solely on providing the most accurate, up-to-date information for the Sunset Forest bouldering site. We are committed to making your experience in Sunset Forest as enjoyable and fulfilling as possible, helping you discover the joy of bouldering and climbing in this remarkable location.</p>
+                <p>While Sunset Forest is our current area of focus, we are continually looking to expand and improve. We're excited to share that we have new features in the pipeline, designed to enhance your bouldering and climbing experience even further. Stay tuned for updates coming soon!</p>
+                <p>Join us at CRAGS.HK, your trusted companion in the world of bouldering and climbing, as we guide you through the wonders of Sunset Forest.</p>
+                <h3>Access</h3>
+
             </div>
         </main>
     )

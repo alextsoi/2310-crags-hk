@@ -11,6 +11,7 @@
 - by zone
 - problem search
 - intro?? & access?
+- copy the IG share
 
 # TODO
 - missing blocs image

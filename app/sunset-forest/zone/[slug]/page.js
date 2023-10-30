@@ -3,9 +3,9 @@ import routes from '@/app/data/routes.json'
 import blocs from '@/app/data/blocs.json'
 import Link from 'next/link'
 import _ from 'lodash';
+import { ratingText } from '@/app/_helpers/config';
 
-export default function Zone({params}) {
-    const ratingText = ['', '*', '**', '***']
+export default function Zone({ params }) {
     const { slug } = params;
     const matchedBlocs = blocs.data.filter((bloc) => bloc.zone === parseInt(params.slug));
     return (
