@@ -58,18 +58,19 @@ export default function RootLayout({ children }) {
                 <li><Link href={`/sunset-forest/zones`}>Zones</Link></li>
               </ul>
             </nav>
-            <div className="social-networks">
-              <a className="github-button" href="https://github.com/alextsoi" aria-label="Follow @alextsoi on GitHub">Follow @alextsoi</a>
-              <a className="github-button" href="https://github.com/alextsoi/2310-crags-hk/issues" data-icon="octicon-issue-opened" aria-label="Issue alextsoi/2310-crags-hk on GitHub">Issue</a>
-            </div>
           </div>
         </header>
         {children}
         <Script src="https://buttons.github.io/buttons.js" />
         <footer>
-          <div className="container">
-            feel free to create issue / pull request on my repo
-            <br />- By alex
+          <div className="flex-container container">
+            <div>
+              feel free to create issue / pull request on my repo - By alex
+            </div>
+            <div className="social-networks">
+              <a className="github-button" href="https://github.com/alextsoi" aria-label="Follow @alextsoi on GitHub">Follow @alextsoi</a>
+              <a className="github-button" href="https://github.com/alextsoi/2310-crags-hk/issues" data-icon="octicon-issue-opened" aria-label="Issue alextsoi/2310-crags-hk on GitHub">Issue</a>
+            </div>
           </div>
         </footer>
         <noscript
