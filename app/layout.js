@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: siteName,
-  description: 'Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, with ease. Our comprehensive online guidebook provides detailed guides and information based on blocs, grades, and ratings, segmented by specific zones. With minimal data usage and fast browsing speed, you can get the latest updates and plan your next adventure effortlessly, even in areas with poor signal or when low on data. Discover the joy of bouldering and climbing with us - your ultimate guide to Sunset Forest, designed for easy access anytime, anywhere.',
+  description: 'Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, with ease. Our comprehensive online guidebook provides detailed guides and information based on boulders, grades, and ratings, segmented by specific zones. With minimal data usage and fast browsing speed, you can get the latest updates and plan your next adventure effortlessly, even in areas with poor signal or when low on data. Discover the joy of bouldering and climbing with us - your ultimate guide to Sunset Forest, designed for easy access anytime, anywhere.',
   openGraph: {
     title: siteName,
-    description: 'Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, with ease. Our comprehensive online guidebook provides detailed guides and information based on blocs, grades, and ratings, segmented by specific zones. With minimal data usage and fast browsing speed, you can get the latest updates and plan your next adventure effortlessly, even in areas with poor signal or when low on data. Discover the joy of bouldering and climbing with us - your ultimate guide to Sunset Forest, designed for easy access anytime, anywhere.',
+    description: 'Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, with ease. Our comprehensive online guidebook provides detailed guides and information based on boulders, grades, and ratings, segmented by specific zones. With minimal data usage and fast browsing speed, you can get the latest updates and plan your next adventure effortlessly, even in areas with poor signal or when low on data. Discover the joy of bouldering and climbing with us - your ultimate guide to Sunset Forest, designed for easy access anytime, anywhere.',
     url: websiteHost,
     siteName: siteName,
     images: [
@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
               <ul>
                 <li><Link href={`/`}>Home</Link></li>
                 <li><Link href={`/sunset-forest`}>All Problems</Link></li>
-                <li><Link href={`/sunset-forest/blocs`}>Blocs</Link></li>
+                <li><Link href={`/sunset-forest/boulders`}>Boulders</Link></li>
                 <li><Link href={`/sunset-forest/grades`}>Grades</Link></li>
                 <li><Link href={`/sunset-forest/ratings`}>Ratings</Link></li>
                 <li><Link href={`/sunset-forest/zones`}>Zones</Link></li>

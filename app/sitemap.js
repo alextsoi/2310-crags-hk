@@ -1,5 +1,5 @@
 import { websiteHost } from "./_helpers/config"
-import blocs from '@/app/data/blocs.json'
+import boulders from '@/app/data/boulders.json'
 import routes from '@/app/data/routes.json'
 import _ from 'lodash'
 
@@ -18,7 +18,7 @@ export default function sitemap() {
             priority: 0.9,
         },
         {
-            url: `${websiteHost}sunset-forest/blocs`,
+            url: `${websiteHost}sunset-forest/boulders`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
@@ -42,10 +42,10 @@ export default function sitemap() {
             priority: 0.8,
         }
     ];
-    // Add all blocs
-    blocs.data.forEach(bloc => {
+    // Add all boulders
+    boulders.data.forEach(boulder => {
         sitemapList.push({
-            url: `${websiteHost}sunset-forest/bloc/${bloc.slug}`,
+            url: `${websiteHost}sunset-forest/boulder/${boulder.slug}`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.7,
@@ -67,7 +67,7 @@ export default function sitemap() {
     });
 
     // Add all zones
-    let allZones = _.map(blocs.data, 'zone');
+    let allZones = _.map(boulders.data, 'zone');
     allZones = _.uniq(allZones);
     allZones = _.sortBy(allZones, String);
     allZones.forEach((zone) => {

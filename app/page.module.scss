@@ -1,9 +1,9 @@
-.blocRoutes {
+.boulderRoutes {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-.blocRoute {
+.boulderRoute {
     display: flex;
     &:before {
         border: 1px solid #000;
@@ -28,8 +28,15 @@
         }
     }
 }
-.blocRouteGrade {
+.boulderRouteGrade {
     display: inline-flex;
     gap: 5px;
     align-items: center;
+}
+
+.problemCount {
+    font-weight: normal;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.8em;
 }

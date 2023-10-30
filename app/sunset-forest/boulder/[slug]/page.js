@@ -1,17 +1,20 @@
 import styles from '@/app/page.module.scss'
 import routes from '@/app/data/routes.json'
+import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
-import _ from 'lodash';
 import { ratingText } from '@/app/_helpers/config';
 
-export default function Grade({ params }) {
-    const { slug } = params;
-    const matchedRoutes = routes.data.filter((route) => route.gradings.includes(params.slug === 'project' ? slug : parseInt(slug)));
+export default function Boulder({ params }) {
+    const boulder = boulders.data.find((boulder) => {
+        return boulder.slug === params.slug
+    });
+    const matchedRoutes = routes.data.filter((route) => route.boulder === boulder.id);
     return (
         <main className={styles.main}>
             <div className="container">
                 <section className={styles.boulder}>
-                    <h2>{params.slug === 'project' ? 'Project' : `V${params.slug}`}</h2>
+                    <h2>Sunset Forest Boulders</h2>
+                    <h1>{boulder.id} - {boulder.name} Boulder</h1>
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>
@@ -30,14 +33,9 @@ export default function Grade({ params }) {
 }
 
 export async function generateStaticParams() {
-    let allGradings = _.map(routes.data, 'gradings');
-    allGradings = _.flattenDeep(allGradings);
-    allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
-    console.log(allGradings);
-    return allGradings.map((grade) => {
+    return boulders.data.map((boulder) => {
         return {
-            slug: '' + grade
+            slug: boulder.slug
         }
     })
 }
