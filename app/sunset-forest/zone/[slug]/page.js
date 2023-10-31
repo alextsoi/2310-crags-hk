@@ -25,18 +25,18 @@ export async function generateMetadata({ params }) {
         } else {
             gradingText = allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project';
         }
-        let ratingText;
+        let ratingTextDescription;
         if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
-            ratingText = ' and rated with stars, we recommend you to come and try these problems.';
+            ratingTextDescription = ' and rated with stars, we recommend you to come and try these problems.';
         } else {
-            ratingText = '.';
+            ratingTextDescription = '.';
         }
-        let description = `There are total ${matchedRoutes.length} routes in the Sunset Forest Bouldering Zone ${params.slug}. The boulder problems are graded ${gradingText}${ratingText}`;
+        let description = `There are total ${matchedRoutes.length} routes in the Sunset Forest Bouldering Zone ${params.slug}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
         return {
-            title: `Zone ${params.slug} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
+            title: `Sunset Forest Zone ${params.slug} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
             description: description,
             openGraph: {
-                title: `Zone ${params.slug} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
+                title: `Sunset Forest Zone ${params.slug} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
                 description: description,
                 url: `${websiteHost}sunset-forest/zone/${params.slug} `,
                 siteName: siteName,
