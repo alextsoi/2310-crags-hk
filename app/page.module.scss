@@ -12,6 +12,7 @@
     list-style: none;
 }
 .boulderRouteImages {
+    padding-top: 24px;
     img {
         width: 100%;
         margin-bottom: 16px;
@@ -19,6 +20,11 @@
 }
 .boulderRoute {
     margin-bottom: 16px;
+    &:first-child {
+        .boulderRouteImages {
+            padding-top: 0;
+        }
+    }
     a {
         display: inline-flex;
         row-gap: 5px;
@@ -33,7 +39,7 @@
         }
     }
 }
-.boulderRouteDescription{
+.boulderRouteDescription {
     font-size: 0.85em;
 }
 .boulderRouteTitle {

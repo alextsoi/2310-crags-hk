@@ -849,7 +849,10 @@
             "boulder": "4.2",
             "zone": 4,
             "id": "4.2.1",
-            "description": "Start on two poor sloping crimp, make powerful move to get the top."
+            "description": "Start on two poor sloping crimp, make powerful move to get the top.",
+            "images": [
+                "/boulders/wuji/wuji-1-w2448w.jpg"
+            ]
         },
         {
             "name": "Kaze 風",
@@ -862,7 +865,10 @@
             "boulder": "5.1",
             "zone": 5,
             "id": "5.1.1",
-            "description": "Start on a good side pull crimp on the right and a low crimp on the left, make a dynamic move to get the jug on top."
+            "description": "Start on a good side pull crimp on the right and a low crimp on the left, make a dynamic move to get the jug on top.",
+            "images": [
+                "/boulders/kaze/kaze-1-w4032w.jpg"
+            ]
         },
         {
             "name": "Breeze",
@@ -875,7 +881,10 @@
             "boulder": "5.1",
             "zone": 5,
             "id": "5.1.2",
-            "description": "Start on a good ledge."
+            "description": "Start on a good ledge.",
+            "images": [
+                "/boulders/kaze/kaze-2-w3264w.jpg"
+            ]
         },
         {
             "name": "Magatama 勾玉",
@@ -888,7 +897,10 @@
             "boulder": "5.2",
             "zone": 5,
             "id": "5.2.1",
-            "description": "Start on a side pull sloper, make technical moves to get the juggy top."
+            "description": "Start on a side pull sloper, make technical moves to get the juggy top.",
+            "images": [
+                "/boulders/the-three-artifacts/the-three-artifacts-1-w3024w.jpeg"
+            ]
         },
         {
             "name": "Kagami",
@@ -901,7 +913,10 @@
             "boulder": "5.2",
             "zone": 5,
             "id": "5.2.2",
-            "description": "Start on the crack side pull, use the obvious crack to climb up."
+            "description": "Start on the crack side pull, use the obvious crack to climb up.",
+            "images": [
+                "/boulders/the-three-artifacts/the-three-artifacts-2-3-w3024w.jpeg"
+            ]
         },
         {
             "name": "Kagami 八咫鏡",
@@ -939,7 +954,10 @@
             "boulder": "5.2",
             "zone": 5,
             "id": "5.2.4",
-            "description": "Start on a good crimp, use the juggy line to climb up."
+            "description": "Start on a good crimp, use the juggy line to climb up.",
+            "images": [
+                "/boulders/the-three-artifacts/the-three-artifacts-4-6-w4032w.jpeg"
+            ]
         },
         {
             "name": "Artifacts",
@@ -978,7 +996,10 @@
             "boulder": "5.2",
             "zone": 5,
             "id": "5.2.7",
-            "description": "Sit start on a good pinch, make heel hook moves to get the good ledge."
+            "description": "Sit start on a good pinch, make heel hook moves to get the good ledge.",
+            "images": [
+                "/boulders/the-three-artifacts/the-three-artifacts-7-w2268w.JPG"
+            ]
         },
         {
             "name": "Strength 力",
@@ -991,7 +1012,10 @@
             "boulder": "6.1",
             "zone": 6,
             "id": "6.1.1",
-            "description": "Great one-move problem, start on a sloper."
+            "description": "Great one-move problem, start on a sloper.",
+            "images": [
+                "/boulders/strength/strength-1-w4032w.jpg"
+            ]
         },
         {
             "name": "Striker",
@@ -1004,7 +1028,10 @@
             "boulder": "6.2",
             "zone": 6,
             "id": "6.2.1",
-            "description": "Start on a good crimp, get the next good ledge, top out above. (You can try to campus the whole line.)"
+            "description": "Start on a good crimp, get the next good ledge, top out above. (You can try to campus the whole line.)",
+            "images": [
+                "/boulders/the-great-sail/the-great-sail-1-w4032w.jpg"
+            ]
         },
         {
             "name": "Sail To The East",
@@ -1030,7 +1057,10 @@
             "boulder": "6.2",
             "zone": 6,
             "id": "6.2.3",
-            "description": "Start on two good slopers, get the next good side pull, then the jug above, top out above."
+            "description": "Start on two good slopers, get the next good side pull, then the jug above, top out above.",
+            "images": [
+                "/boulders/the-great-sail/the-great-sail-3-w4032w.jpg"
+            ]
         },
         {
             "name": "Thousand Sunny Eliminate",
@@ -1043,7 +1073,10 @@
             "boulder": "6.2",
             "zone": 6,
             "id": "6.2.3a",
-            "description": "Eliminate the good jug, start to trend left below it."
+            "description": "Eliminate the good jug, start to trend left below it.",
+            "images": [
+                "/boulders/the-great-sail/the-great-sail-3-4-w4032w.jpg"
+            ]
         },
         {
             "name": "Going Merry 黃金梅利號",
@@ -1069,7 +1102,10 @@
             "boulder": "6.3",
             "zone": 6,
             "id": "6.3.1",
-            "description": "Start on the good crimps and climb up."
+            "description": "Start on the good crimps and climb up.",
+            "images": [
+                "/boulders/ghost-blade/ghost-blade-1-3-w4032w.jpg"
+            ]
         },
         {
             "name": "True Damage",
@@ -1108,7 +1144,10 @@
             "boulder": "6.4",
             "zone": 6,
             "id": "6.4.1",
-            "description": "Start on a good jug, use the thin side pull on the right."
+            "description": "Start on a good jug, use the thin side pull on the right.",
+            "images": [
+                "/boulders/slab-king/slab-king-1-3-w768w.jpg"
+            ]
         },
         {
             "name": "I Hate Slab",
@@ -1147,7 +1186,10 @@
             "boulder": "6.5",
             "zone": 6,
             "id": "6.5.1",
-            "description": "Start on a side pull and an undercut, traverse all the way to the left, the crimps on the slab can be used, just try not to stand on the slab and walk…"
+            "description": "Start on a side pull and an undercut, traverse all the way to the left, the crimps on the slab can be used, just try not to stand on the slab and walk…",
+            "images": [
+                "/boulders/the-submarine/the-submarine-1-x-w4032w.jpg"
+            ]
         },
         {
             "name": "Cock-pit",
@@ -1160,7 +1202,10 @@
             "boulder": "6.5",
             "zone": 6,
             "id": "6.5.2",
-            "description": "Start on a good pinchy sidepull, climb up along the ridge."
+            "description": "Start on a good pinchy sidepull, climb up along the ridge.",
+            "images": [
+                "/boulders/the-submarine/the-submarine-2-w2448w.jpg"
+            ]
         },
         {
             "name": "Bumper Head (Left)",
@@ -1172,7 +1217,10 @@
             ],
             "boulder": "7.1",
             "zone": 7,
-            "id": "7.1.1"
+            "id": "7.1.1",
+            "images": [
+                "/boulders/jip/jip-1-2-w4032w.jpg"
+            ]
         },
         {
             "name": "Bumper Head",
@@ -1198,7 +1246,10 @@
             "boulder": "7.1",
             "zone": 7,
             "id": "7.1.3",
-            "description": "Start on a good jug, use the edge to traverse all the way right."
+            "description": "Start on a good jug, use the edge to traverse all the way right.",
+            "images": [
+                "/boulders/jip/jip-3-7-w3264w.jpg"
+            ]
         },
         {
             "name": "Drive By",
