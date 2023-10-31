@@ -35,25 +35,25 @@ export default function Approach() {
                 <p>To further enhance your experience, there's a convenience store close to the bouldering site. Whether you forgot to bring a snack, need a refreshing drink, or require some last-minute supplies, the convenience store has you covered. It's just another way we're making bouldering at Sunset Forest as enjoyable and hassle-free as possible.</p>
                 <div className={styles.approachWrapper}>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-1.jpg" alt="Sunset Forest Bouldering Site Approach Step 1 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-1.jpg" alt="Sunset Forest Bouldering Site Approach Step 1 | CRAGS.HK" />
                     </div>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-2.jpg" alt="Sunset Forest Bouldering Site Approach Step 2 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-2.jpg" alt="Sunset Forest Bouldering Site Approach Step 2 | CRAGS.HK" />
                     </div>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-3.jpg" alt="Sunset Forest Bouldering Site Approach Step 3 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-3.jpg" alt="Sunset Forest Bouldering Site Approach Step 3 | CRAGS.HK" />
                     </div>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-4.jpg" alt="Sunset Forest Bouldering Site Approach Step 4 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-4.jpg" alt="Sunset Forest Bouldering Site Approach Step 4 | CRAGS.HK" />
                     </div>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-5.jpg" alt="Sunset Forest Bouldering Site Approach Step 5 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-5.jpg" alt="Sunset Forest Bouldering Site Approach Step 5 | CRAGS.HK" />
                     </div>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-6.jpg" alt="Sunset Forest Bouldering Site Approach Step 6 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-6.jpg" alt="Sunset Forest Bouldering Site Approach Step 6 | CRAGS.HK" />
                     </div>
                     <div className={styles.approach}>
-                        <img width={396} height={704} src="/images/common/approach-7.jpg" alt="Sunset Forest Bouldering Site Approach Step 7 | CRAGS.HK" />
+                        <img loading="lazy" width={396} height={704} src="/images/common/approach-7.jpg" alt="Sunset Forest Bouldering Site Approach Step 7 | CRAGS.HK" />
                     </div>
                 </div>
                 <h4>The Journey</h4>
