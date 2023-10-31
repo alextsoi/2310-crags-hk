@@ -80,12 +80,25 @@
     font-size: 0.8em;
 }
 
+.approachWrapper{
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    @media(max-width: 1024px){
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .approach {
     line-height: 0;
+    @media(min-width: 1024px){
+        width: 375px;
+    }
     img {
         width: 100%;
-    }
-    & + .approach {
-        margin-top: 16px;
+        height: auto;
+        max-width: 375px;
     }
 }
