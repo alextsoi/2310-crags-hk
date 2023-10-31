@@ -360,7 +360,10 @@
             ],
             "boulder": "1.5",
             "zone": 1,
-            "id": "1.5.1"
+            "id": "1.5.1",
+            "images": [
+                "/boulders/tiny/tiny-1-w3024w.jpg"
+            ]
         },
         {
             "name": "Little Man",
@@ -372,7 +375,10 @@
             ],
             "boulder": "1.5",
             "zone": 1,
-            "id": "1.5.2"
+            "id": "1.5.2",
+            "images": [
+                "/boulders/tiny/tiny-2-3-w3024w.jpg"
+            ]
         },
         {
             "name": "Cap",
