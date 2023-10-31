@@ -403,7 +403,10 @@
             "boulder": "2.1",
             "zone": 2,
             "id": "2.1.1",
-            "description": "Start on the good jug and launch up."
+            "description": "Start on the good jug and launch up.",
+            "images": [
+                "/boulders/frost/frost-1-2-w4032w.jpg"
+            ]
         },
         {
             "name": "Frost Bite",
@@ -455,7 +458,10 @@
             "boulder": "2.2",
             "zone": 2,
             "id": "2.2.1",
-            "description": "Start on the big pinch and make powerful moves to gain the top."
+            "description": "Start on the big pinch and make powerful moves to gain the top.",
+            "images": [
+                "/boulders/iron-wing/iron-wing-1-w3024w.jpg"
+            ]
         },
         {
             "name": "Bang",
@@ -468,7 +474,10 @@
             "boulder": "2.2",
             "zone": 2,
             "id": "2.2.2",
-            "description": "Start on the good side pull crimp."
+            "description": "Start on the good side pull crimp.",
+            "images": [
+                "/boulders/iron-wing/iron-wing-2-3-w3264w.jpg"
+            ]
         },
         {
             "name": "Hiding Mushroom",
@@ -494,7 +503,10 @@
             "boulder": "2.2",
             "zone": 2,
             "id": "2.2.3a",
-            "description": "Start of line3, traverse all the way to the top of 6."
+            "description": "Start of line3, traverse all the way to the top of 6.",
+            "images": [
+                "/boulders/iron-wing/iron-wing-3-4-w3264w.jpg"
+            ]
         },
         {
             "name": "Two-story",
@@ -520,7 +532,10 @@
             "boulder": "2.2",
             "zone": 2,
             "id": "2.2.5",
-            "description": "Start on the good crimp, one move to the top."
+            "description": "Start on the good crimp, one move to the top.",
+            "images": [
+                "/boulders/iron-wing/iron-wing-3-5-w3024w.jpg"
+            ]
         },
         {
             "name": "Humpback song",
@@ -533,7 +548,10 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.1",
-            "description": "Start on two crimps, get the next good hold, top out above."
+            "description": "Start on two crimps, get the next good hold, top out above.",
+            "images": [
+                "/boulders/the-whale/the-whale-1-4-w4032w.jpg"
+            ]
         },
         {
             "name": "Whale fall",
@@ -559,7 +577,10 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.3",
-            "description": "Start on a side pull crimp on left and sloper on right, get the next good crimp."
+            "description": "Start on a side pull crimp on left and sloper on right, get the next good crimp.",
+            "images": [
+                "/boulders/the-whale/the-whale-3-5-w4032w.jpg"
+            ]
         },
         {
             "name": "Kun 鯤",
@@ -585,7 +606,10 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.5",
-            "description": "Start on a crimp, make powerful moves to get the next good hold."
+            "description": "Start on a crimp, make powerful moves to get the next good hold.",
+            "images": [
+                "/boulders/the-whale/the-whale-5-6-w4032w.jpg"
+            ]
         },
         {
             "name": "Big blue",
