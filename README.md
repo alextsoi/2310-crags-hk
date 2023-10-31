@@ -14,6 +14,5 @@
 - copy the IG share
 
 # TODO
-- missing boulders image
 - missing search feature
-- no individual page
+- copy the share caption
