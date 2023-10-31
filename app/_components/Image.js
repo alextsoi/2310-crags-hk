@@ -21,8 +21,11 @@ function getWidthFromPath(path) {
 
 export default function Image(props) {
     const { path, alt } = props;
-    return <img src={getSmallerSizeImage(path)} srcSet={
-        getSmallerSizeImage(path) + ' 960w, ' +
-        getNormalSizeImage(path) + ' ' + getWidthFromPath(path)
-    } alt={images[path]} />
+    return <div>
+        <img src={getSmallerSizeImage(path)} srcSet={
+            getSmallerSizeImage(path) + ' 960w, ' +
+            getNormalSizeImage(path) + ' ' + getWidthFromPath(path)
+        } alt={images[path]} />
+        <div><a href={getNormalSizeImage(path)} target="_blank" title={images[path]}>View full size</a></div>
+    </div>
 }
