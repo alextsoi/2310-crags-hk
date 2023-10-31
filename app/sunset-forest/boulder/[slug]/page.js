@@ -38,7 +38,7 @@ export async function generateMetadata({ params }) {
             openGraph: {
                 title: `${boulder[0].name} Boulder | Sunset Forest Boulders | CRAGS.HK`,
                 description: description,
-                url: `${websiteHost} sunset - forest / boulder / ${boulder.slug} `,
+                url: `${websiteHost}sunset-forest/boulder/${boulder.slug} `,
                 siteName: siteName,
                 images: [
                     {

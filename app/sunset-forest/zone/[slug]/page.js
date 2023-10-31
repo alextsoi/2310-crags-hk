@@ -3,7 +3,58 @@ import routes from '@/app/data/routes.json'
 import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import _ from 'lodash';
-import { ratingText } from '@/app/_helpers/config';
+import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+
+export async function generateMetadata({ params }) {
+    let matchedBoulders = boulders.data.filter((boulder) => {
+        return boulder.zone === parseInt(params.slug)
+    });
+    let matchedBoulderIds = _.map(matchedBoulders, 'id');
+    if (matchedBoulders.length > 0) {
+        let matchedRoutes = routes.data.filter((route) => matchedBoulderIds.includes(route.boulder));
+        let allGradings = _.map(matchedRoutes, 'gradings');
+        allGradings = _.flattenDeep(allGradings);
+        allGradings = _.uniq(allGradings);
+        allGradings = _.sortBy(allGradings, String);
+        let allRatings = _.map(matchedRoutes, 'rating');
+        allRatings = _.uniq(allRatings);
+        allRatings = _.sortBy(allRatings, String);
+        let gradingText;
+        if (allGradings.length > 1) {
+            gradingText = `${allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project'} - ${allGradings[allGradings.length - 1] !== 'project' ? `V${allGradings[allGradings.length - 1]}` : 'project'}`;
+        } else {
+            gradingText = allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project';
+        }
+        let ratingText;
+        if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
+            ratingText = ' and rated with stars, we recommend you to come and try these problems.';
+        } else {
+            ratingText = '.';
+        }
+        let description = `There are total ${matchedRoutes.length} routes in the Sunset Forest Bouldering Zone ${params.slug}. The boulder problems are graded ${gradingText}${ratingText}`;
+        return {
+            title: `Zone ${params.slug} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
+            description: description,
+            openGraph: {
+                title: `Zone ${params.slug} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
+                description: description,
+                url: `${websiteHost}sunset-forest/zone/${params.slug} `,
+                siteName: siteName,
+                images: [
+                    {
+                        url: `${websiteHost} og - image.jpg`,
+                        width: 1200,
+                        height: 630,
+                    },
+                ],
+                locale: 'en_US',
+                type: 'website',
+            },
+        }
+    } else {
+        return null;
+    }
+}
 
 export default function Zone({ params }) {
     const { slug } = params;
@@ -26,8 +77,8 @@ export default function Zone({ params }) {
                                             query: { problem: route.slug }
                                         }}>
                                             <div className={styles.boulderRouteId}>{route.id} -</div>
-                                        <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
-                                        <div className={styles.boulderRouteGrade}>({route.gradings.map(grade => grade !== 'project' ? `V${grade}` : `${grade}`).join('/')})</div>
+                                            <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
+                                            <div className={styles.boulderRouteGrade}>({route.gradings.map(grade => grade !== 'project' ? `V${grade}` : `${grade}`).join('/')})</div>
                                         </Link>
                                     </li>
                                 })}
