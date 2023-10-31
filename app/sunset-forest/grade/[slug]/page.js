@@ -3,7 +3,41 @@ import routes from '@/app/data/routes.json'
 import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import _ from 'lodash';
-import { ratingText } from '@/app/_helpers/config';
+import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+
+export async function generateMetadata({ params }) {
+    let currentGrading = params.slug === 'project' ? params.slug : parseInt(params.slug);
+    let matchedRoutes = routes.data.filter((route) => route.gradings.includes(currentGrading));
+    let allRatings = _.map(matchedRoutes, 'rating');
+    allRatings = _.uniq(allRatings);
+    allRatings = _.sortBy(allRatings, String);
+    let ratingTextDescription;
+    if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
+        ratingTextDescription = ' The bouldering problems are rated with stars, we recommend you to come and try these problems.';
+    } else {
+        ratingTextDescription = '';
+    }
+    let description = `There are total ${matchedRoutes.length} routes graded as ${params.slug !== 'project' ? `V${params.slug}` : params.slug}.${ratingTextDescription}`;
+    return {
+        title: `${params.slug !== 'project' ? `V${params.slug} graded` : `Project graded`} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
+        description: description,
+        openGraph: {
+            title: `${params.slug !== 'project' ? `V${params.slug} graded` : `Project graded`} Bouldering Problems | Sunset Forest Boulders | CRAGS.HK`,
+            description: description,
+            url: `${websiteHost}sunset-forest/grade/${params.slug}`,
+            siteName: siteName,
+            images: [
+                {
+                    url: `${websiteHost} og - image.jpg`,
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+            locale: 'en_US',
+            type: 'website',
+        },
+    }
+}
 
 export default function Grade({ params }) {
     const { slug } = params;
