@@ -24,5 +24,5 @@ export default function Image(props) {
     return <img src={getSmallerSizeImage(path)} srcSet={
         getSmallerSizeImage(path) + ' 960w, ' +
         getNormalSizeImage(path) + ' ' + getWidthFromPath(path)
-    } alt={alt} />
+    } alt={images[path]} />
 }
