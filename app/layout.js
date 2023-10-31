@@ -50,12 +50,13 @@ export default function RootLayout({ children }) {
           <div className="container flex-container">
             <nav className="primary-menu">
               <ul>
-                <li><Link href={`/`}>Home</Link></li>
-                <li><Link href={`/sunset-forest`}>All Problems</Link></li>
-                <li><Link href={`/sunset-forest/boulders`}>Boulders</Link></li>
-                <li><Link href={`/sunset-forest/grades`}>Grades</Link></li>
-                <li><Link href={`/sunset-forest/ratings`}>Ratings</Link></li>
-                <li><Link href={`/sunset-forest/zones`}>Zones</Link></li>
+                <li><Link title="Sunset Forest Homepage | CRAGS.HK" href={`/`}>Home</Link></li>
+                <li><Link title="Sunset Forest Approach | CRAGS.HK" href={`/sunset-forest/approach`}>Approach</Link></li>
+                <li><Link title="Sunset Forest Boulder Problems | CRAGS.HK" href={`/sunset-forest`}>All Problems</Link></li>
+                <li><Link title="Sunset Forest Boulders | CRAGS.HK" href={`/sunset-forest/boulders`}>Boulders</Link></li>
+                <li><Link title="Sunset Forest Grades | CRAGS.HK" href={`/sunset-forest/grades`}>Grades</Link></li>
+                <li><Link title="Sunset Forest Ratings | CRAGS.HK" href={`/sunset-forest/ratings`}>Ratings</Link></li>
+                <li><Link title="Sunset Forest Zones | CRAGS.HK" href={`/sunset-forest/zones`}>Zones</Link></li>
               </ul>
             </nav>
           </div>

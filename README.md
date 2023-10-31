@@ -16,3 +16,5 @@
 # TODO
 - missing search feature
 - copy the share caption
+- approach SEO
+- alt check
