@@ -4,6 +4,7 @@ import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import _ from 'lodash';
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+import Image from '@/app/_components/Image';
 
 export async function generateMetadata({ params }) {
     let matchedBoulders = boulders.data.filter((boulder) => {
@@ -67,15 +68,18 @@ export default function Zone({ params }) {
                     <h2>Zone {params.slug}</h2>
                     {matchedBoulders.map((boulder) => {
                         return <section className={styles.boulder}>
-                            <h2 className={styles.boulderTitle}><Link href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
+                            <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulder | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
+                            {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulder | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
                             <ul className={styles.boulderRoutes}>
                                 {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
                                     let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
                                     return <li className={styles.boulderRoute} key={route.id}>
-                                        <Link href={{
-                                            pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
-                                            query: { problem: route.slug }
-                                        }}>
+                                        <Link
+                                            title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problem | CRAGS.HK`}
+                                            href={{
+                                                pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
+                                                query: { problem: route.slug }
+                                            }}>
                                             <div className={styles.boulderRouteId}>{route.id} -</div>
                                             <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
                                             <div className={styles.boulderRouteGrade}>({route.gradings.map(grade => grade !== 'project' ? `V${grade}` : `${grade}`).join('/')})</div>
