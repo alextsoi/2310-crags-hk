@@ -20,9 +20,9 @@ export default function Rating({ params }) {
                                     pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
                                     query: { problem: route.slug }
                                 }}>
-                                    <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
-                                    <div className={styles.boulderRouteId}>{route.id} - </div>
+                                    <div className={styles.boulderRouteId}>{route.id} -</div>
                                     <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}</div>
+                                    <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade}` : grade).join('/')}</div>
                                 </Link>
                             </li>
                         })}

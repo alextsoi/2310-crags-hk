@@ -4,6 +4,7 @@ import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import _ from 'lodash';
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+import Image from '@/app/_components/Image';
 
 export async function generateMetadata({ params }) {
     let boulder = boulders.data.filter((boulder) => {
@@ -69,10 +70,15 @@ export default function Boulder({ params }) {
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>
+                                {route.images && <div className={styles.boulderRouteImages}>
+                                    {route.images.map((imagePath) => {
+                                        return <Image path={imagePath} key={imagePath} />
+                                    })}
+                                </div>}
                                 <div className={styles.boulderRouteTitle}>
-                                    <div className={styles.boulderRouteGrade}>{route.gradings.map(grade => grade !== 'project' ? `V${grade} ` : `${grade} `).join('/')}</div>
-                                    <div className={styles.boulderRouteId}>{route.id} - </div>
+                                    <div className={styles.boulderRouteId}>{route.id} -</div>
                                     <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
+                                    <div className={styles.boulderRouteGrade}>({route.gradings.map(grade => grade !== 'project' ? `V${grade}` : `${grade}`).join('/')})</div>
                                 </div>
                                 {route.description && <div className={styles.boulderRouteDescription}>{route.description}</div>}
                             </li>

@@ -11,6 +11,12 @@
     margin: 0;
     list-style: none;
 }
+.boulderRouteImages {
+    img {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+}
 .boulderRoute {
     margin-bottom: 16px;
     a {
@@ -22,23 +28,28 @@
             display: inline-flex;
             border-bottom: 1px solid #000;
             &:not(:first-child) {
-                padding-left: 10px;
+                padding-left: 8px;
             }
         }
     }
+}
+.boulderRouteDescription{
+    font-size: 0.85em;
 }
 .boulderRouteTitle {
     display: flex;
     font-weight: 500;
     margin-bottom: 8px;
-    &:before {
-        border: 1px solid #000;
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        content: "";
-        margin-right: 10px;
-    }
+    flex-wrap: wrap;
+    gap: 8px;
+    // &:before {
+    //     border: 1px solid #000;
+    //     display: inline-block;
+    //     width: 12px;
+    //     height: 12px;
+    //     content: "";
+    //     margin-right: 10px;
+    // }
 }
 .boulderRouteId {
     white-space: pre;
