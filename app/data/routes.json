@@ -661,7 +661,10 @@
             "boulder": "3.1",
             "zone": 3,
             "id": "3.1.1",
-            "description": "Start on the good crimps."
+            "description": "Start on the good crimps.",
+            "images": [
+                "/boulders/falcon/falcon-1-2-w4032w.jpg"
+            ]
         },
         {
             "name": "Prey",
@@ -687,7 +690,10 @@
             "boulder": "3.2",
             "zone": 3,
             "id": "3.2.1",
-            "description": "Start on the poor crimps and fight your way up."
+            "description": "Start on the poor crimps and fight your way up.",
+            "images": [
+                "/boulders/dragon-head/dragon-head-1-2-w4032w.jpg"
+            ]
         },
         {
             "name": "Dragon Slayer",
@@ -713,7 +719,10 @@
             "boulder": "3.3",
             "zone": 3,
             "id": "3.3.1",
-            "description": "Start on a good crimp on the left and a sloping crimp on the right, fight your way up through the face."
+            "description": "Start on a good crimp on the left and a sloping crimp on the right, fight your way up through the face.",
+            "images": [
+                "/boulders/drink-alone/drink-alone-1-w4032w.jpg"
+            ]
         },
         {
             "name": "Weaver",
@@ -726,7 +735,10 @@
             "boulder": "4.1",
             "zone": 4,
             "id": "4.1.1",
-            "description": "Start on a good sloper, climb up and avoid the tree."
+            "description": "Start on a good sloper, climb up and avoid the tree.",
+            "images": [
+                "/boulders/destiny/destiny-1-w3024w.jpg"
+            ]
         },
         {
             "name": "Prey",
@@ -738,7 +750,10 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.X"
+            "id": "4.1.X",
+            "images": [
+                "/boulders/destiny/destiny-x-w3264w.jpg"
+            ]
         },
         {
             "name": "Short Fuse",
@@ -751,7 +766,10 @@
             "boulder": "4.1",
             "zone": 4,
             "id": "4.1.2",
-            "description": "Start on the big sidepull, bump up."
+            "description": "Start on the big sidepull, bump up.",
+            "images": [
+                "/boulders/destiny/destiny-2-5-w3264w.jpg"
+            ]
         },
         {
             "name": "Fling",
@@ -802,7 +820,10 @@
             ],
             "boulder": "4.1",
             "zone": 4,
-            "id": "4.1.5a"
+            "id": "4.1.5a",
+            "images": [
+                "/boulders/destiny/destiny-5-6-w2448w.jpg"
+            ]
         },
         {
             "name": "Black Hound",

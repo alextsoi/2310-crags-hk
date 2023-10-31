@@ -66,7 +66,7 @@ export default function Boulder({ params }) {
             <div className="container">
                 <section className={styles.boulder}>
                     <h2>Sunset Forest Boulders</h2>
-                    <h1>{boulder.id} - {boulder.name} Boulder</h1>
+                    <h1>{boulder.id} {boulder.name} Boulder</h1>
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>

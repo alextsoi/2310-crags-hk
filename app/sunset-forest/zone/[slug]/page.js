@@ -16,7 +16,7 @@ export default function Zone({ params }) {
                     <h2>Zone {params.slug}</h2>
                     {matchedBoulders.map((boulder) => {
                         return <section className={styles.boulder}>
-                            <h2>{boulder.id} - {boulder.name}</h2>
+                            <h2>{boulder.id} {boulder.name}</h2>
                             <ul className={styles.boulderRoutes}>
                                 {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
                                     let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
