@@ -12,37 +12,37 @@ export default function sitemap() {
             priority: 1,
         },
         {
-            url: `${websiteHost}sunset-forest`,
+            url: `${websiteHost}sunset-forest/`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
-            url: `${websiteHost}sunset-forest/approach`,
+            url: `${websiteHost}sunset-forest/approach/`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
-            url: `${websiteHost}sunset-forest/boulders`,
+            url: `${websiteHost}sunset-forest/boulders/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
-            url: `${websiteHost}sunset-forest/grades`,
+            url: `${websiteHost}sunset-forest/grades/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
-            url: `${websiteHost}sunset-forest/ratings`,
+            url: `${websiteHost}sunset-forest/ratings/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
-            url: `${websiteHost}sunset-forest/zones`,
+            url: `${websiteHost}sunset-forest/zones/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
@@ -51,7 +51,7 @@ export default function sitemap() {
     // Add all boulders
     boulders.data.forEach(boulder => {
         sitemapList.push({
-            url: `${websiteHost}sunset-forest/boulder/${boulder.slug}`,
+            url: `${websiteHost}sunset-forest/boulder/${boulder.slug}/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.8,
@@ -65,7 +65,7 @@ export default function sitemap() {
     allGradings = _.sortBy(allGradings, String);
     allGradings.forEach((grade) => {
         sitemapList.push({
-            url: `${websiteHost}sunset-forest/grade/${grade}`,
+            url: `${websiteHost}sunset-forest/grade/${grade}/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.7,
@@ -78,7 +78,7 @@ export default function sitemap() {
     allZones = _.sortBy(allZones, String);
     allZones.forEach((zone) => {
         sitemapList.push({
-            url: `${websiteHost}sunset-forest/zone/${zone}`,
+            url: `${websiteHost}sunset-forest/zone/${zone}/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.7,
@@ -91,7 +91,7 @@ export default function sitemap() {
     allRatings = _.sortBy(allRatings, String);
     allRatings.forEach((rating) => {
         sitemapList.push({
-            url: `${websiteHost}sunset-forest/rating/${rating}`,
+            url: `${websiteHost}sunset-forest/rating/${rating}/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.7,
