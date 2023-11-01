@@ -26,25 +26,25 @@ export default function sitemap() {
         {
             url: `${websiteHost}sunset-forest/boulders`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.8,
         },
         {
             url: `${websiteHost}sunset-forest/grades`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.8,
         },
         {
             url: `${websiteHost}sunset-forest/ratings`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.8,
         },
         {
             url: `${websiteHost}sunset-forest/zones`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.8,
         }
     ];
@@ -53,8 +53,8 @@ export default function sitemap() {
         sitemapList.push({
             url: `${websiteHost}sunset-forest/boulder/${boulder.slug}`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7,
+            changeFrequency: 'daily',
+            priority: 0.8,
         });
     });
 
@@ -67,7 +67,7 @@ export default function sitemap() {
         sitemapList.push({
             url: `${websiteHost}sunset-forest/grade/${grade}`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.7,
         });
     });
@@ -80,7 +80,7 @@ export default function sitemap() {
         sitemapList.push({
             url: `${websiteHost}sunset-forest/zone/${zone}`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.7,
         });
     });
@@ -93,7 +93,7 @@ export default function sitemap() {
         sitemapList.push({
             url: `${websiteHost}sunset-forest/rating/${rating}`,
             lastModified: new Date(),
-            changeFrequency: 'weekly',
+            changeFrequency: 'daily',
             priority: 0.7,
         });
     });
