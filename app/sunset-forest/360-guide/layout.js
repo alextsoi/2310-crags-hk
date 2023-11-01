@@ -1,11 +1,10 @@
 import { Inter } from 'next/font/google'
-import './globals.scss'
+import '../../globals.scss'
 import Script from 'next/script'
 import Link from 'next/link'
-import { gtmCode, siteName, websiteHost } from './_helpers/config'
+import { gtmCode, siteName, websiteHost } from '@/app/_helpers/config'
 
 const inter = Inter({ subsets: ['latin'] })
-
 
 export default function RootLayout({ children }) {
   return (
