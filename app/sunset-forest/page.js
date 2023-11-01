@@ -33,13 +33,13 @@ export default function Home() {
                 <div className="map"><a href="/images/common/sunset-forest-phase1a.jpg" target="_blank" title="Sunset Forest Bouldering Site Map | CRAGS.HK"><img loading="lazy" src="/images/common/sunset-forest-phase1a.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" /></a></div>
                 {boulders.data.map((boulder) => {
                     return <section className={styles.boulder}>
-                        <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulder | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name} Boulder</Link></h2>
+                        <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name} Boulder</Link></h2>
                         <ul className={styles.boulderRoutes}>
                             {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
                                 let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
                                 return <li className={styles.boulderRoute} key={route.id}>
                                     <Link
-                                        title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problem | CRAGS.HK`}
+                                        title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}
                                         href={{
                                             pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
                                             query: { problem: route.slug }
