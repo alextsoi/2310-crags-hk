@@ -43,6 +43,19 @@ export async function generateMetadata({ params }) {
 export default function Rating({ params }) {
     const { slug } = params;
     const matchedRoutes = routes.data.filter((route) => route.rating === parseInt(slug));
+    let description = null;
+    let allGradings = _.map(matchedRoutes, 'gradings');
+    allGradings = _.flattenDeep(allGradings);
+    allGradings = _.uniq(allGradings);
+    allGradings = _.sortBy(allGradings, String);
+    let gradingText;
+    if (allGradings.length > 1) {
+        gradingText = `${allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project'} - ${allGradings[allGradings.length - 1] !== 'project' ? `V${allGradings[allGradings.length - 1]}` : 'project'}`;
+    } else {
+        gradingText = allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project';
+    }
+    let ratingTextDescription = '.';
+    description = `There are total ${matchedRoutes.length} routes in the Sunset Forest Bouldering Site rated with ${params.slug === '0' ? 'normal' : `${params.slug} stars`}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
     return (
         <main className={styles.main}>
             <div className="container">
@@ -66,6 +79,7 @@ export default function Rating({ params }) {
                         })}
                     </ul>
                 </section>
+                {description && <article className={styles.articleParagraphs}>{description}</article>}
             </div>
         </main>
     )

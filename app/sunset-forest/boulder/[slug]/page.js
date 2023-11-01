@@ -61,6 +61,27 @@ export default function Boulder({ params }) {
         return boulder.slug === params.slug
     });
     const matchedRoutes = routes.data.filter((route) => route.boulder === boulder.id);
+    let description = null;
+    let allGradings = _.map(matchedRoutes, 'gradings');
+    allGradings = _.flattenDeep(allGradings);
+    allGradings = _.uniq(allGradings);
+    allGradings = _.sortBy(allGradings, String);
+    let allRatings = _.map(matchedRoutes, 'rating');
+    allRatings = _.uniq(allRatings);
+    allRatings = _.sortBy(allRatings, String);
+    let gradingText;
+    if (allGradings.length > 1) {
+        gradingText = `${allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project'} - ${allGradings[allGradings.length - 1] !== 'project' ? `V${allGradings[allGradings.length - 1]}` : 'project'}`;
+    } else {
+        gradingText = allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project';
+    }
+    let ratingTextDescription;
+    if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
+        ratingTextDescription = ' and rated with stars, we recommend you to come and try these problems.';
+    } else {
+        ratingTextDescription = '.';
+    }
+    description = `There are total ${matchedRoutes.length} routes on the ${boulder.name} Boulder that is located in zone ${boulder.zone}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
     return (
         <main className={styles.main}>
             <div className="container">
@@ -85,6 +106,7 @@ export default function Boulder({ params }) {
                         })}
                     </ul>
                 </section>
+                {description && <article className={styles.articleParagraphs}>{description}</article>}
             </div>
         </main>
     )

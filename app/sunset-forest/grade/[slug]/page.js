@@ -42,6 +42,18 @@ export async function generateMetadata({ params }) {
 export default function Grade({ params }) {
     const { slug } = params;
     const matchedRoutes = routes.data.filter((route) => route.gradings.includes(params.slug === 'project' ? slug : parseInt(slug)));
+    let description = null;
+    let allRatings = _.map(matchedRoutes, 'rating');
+    allRatings = _.uniq(allRatings);
+    allRatings = _.sortBy(allRatings, String);
+    let ratingTextDescription;
+    if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
+        ratingTextDescription = ' The bouldering problems are rated with stars, we recommend you to come and try these problems.';
+    } else {
+        ratingTextDescription = '';
+    }
+    description = `There are total ${matchedRoutes.length} routes graded as ${params.slug !== 'project' ? `V${params.slug}` : params.slug}.${ratingTextDescription}`;
+
     return (
         <main className={styles.main}>
             <div className="container">
@@ -65,6 +77,7 @@ export default function Grade({ params }) {
                         })}
                     </ul>
                 </section>
+                {description && <article className={styles.articleParagraphs}>{description}</article>}
             </div>
         </main>
     )

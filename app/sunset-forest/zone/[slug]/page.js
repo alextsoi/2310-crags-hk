@@ -61,6 +61,30 @@ export default function Zone({ params }) {
     const { slug } = params;
 
     const matchedBoulders = boulders.data.filter((boulder) => boulder.zone === parseInt(params.slug));
+    let description = null;
+    let matchedBoulderIds = _.map(matchedBoulders, 'id');
+    let matchedRoutes = routes.data.filter((route) => matchedBoulderIds.includes(route.boulder));
+    let allGradings = _.map(matchedRoutes, 'gradings');
+    allGradings = _.flattenDeep(allGradings);
+    allGradings = _.uniq(allGradings);
+    allGradings = _.sortBy(allGradings, String);
+    let allRatings = _.map(matchedRoutes, 'rating');
+    allRatings = _.uniq(allRatings);
+    allRatings = _.sortBy(allRatings, String);
+    let gradingText;
+    if (allGradings.length > 1) {
+        gradingText = `${allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project'} - ${allGradings[allGradings.length - 1] !== 'project' ? `V${allGradings[allGradings.length - 1]}` : 'project'}`;
+    } else {
+        gradingText = allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project';
+    }
+    let ratingTextDescription;
+    if (allRatings.length > 0 && allRatings[allRatings.length - 1] > 0) {
+        ratingTextDescription = ' and rated with stars, we recommend you to come and try these problems.';
+    } else {
+        ratingTextDescription = '.';
+    }
+    description = `There are total ${matchedRoutes.length} routes in the Sunset Forest Bouldering Zone ${params.slug}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
+
     return (
         <main className={styles.main}>
             <div className="container">
@@ -90,6 +114,7 @@ export default function Zone({ params }) {
                         </section>;
                     })}
                 </section>
+                {description && <article className={styles.articleParagraphs}>{description}</article>}
             </div>
         </main>
     )
