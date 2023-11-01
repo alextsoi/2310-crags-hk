@@ -31,7 +31,7 @@ export default function Boulders() {
                 <p>Total <strong>{boulders.data.length}</strong> boulders developed.</p>
                 {boulders.data.map((boulder) => {
                     return <section className={styles.boulder}>
-                        <h3><Link href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h3>
+                        <h3><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h3>
                     </section>;
                 })}
                 <br />

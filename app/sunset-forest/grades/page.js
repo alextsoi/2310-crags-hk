@@ -36,7 +36,9 @@ export default function Grade() {
                 <h1>Sunset Forest Grade Listings</h1>
                 {allGradings.map((grade) => {
                     return <section key={grade} className={styles.grade}>
-                        <h3><Link href={`/sunset-forest/grade/${grade}`}>{grade !== 'project' ? `V${grade}` : 'Project'}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.gradings.includes(grade)).length} problems</span></h3>
+                        <h3><Link
+                            title={`${grade !== 'project'?`V${grade} problems`:'Project Problems'} | Sunset Forest Bouldering Grades | CRAGS.HK`}
+                            href={`/sunset-forest/grade/${grade}`}>{grade !== 'project' ? `V${grade}` : 'Project'}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.gradings.includes(grade)).length} problems</span></h3>
                     </section>;
                 })}
                 <article className={styles.articleParagraphs}>

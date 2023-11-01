@@ -52,7 +52,9 @@ export default function Rating({ params }) {
                         {matchedRoutes.map((route) => {
                             let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
                             return <li className={styles.boulderRoute} key={route.id}>
-                                <Link href={{
+                                <Link 
+                                title={`${route.id} ${route.name} | ${foundBoulder.id} ${foundBoulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}
+                                href={{
                                     pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
                                     query: { problem: route.slug }
                                 }}>

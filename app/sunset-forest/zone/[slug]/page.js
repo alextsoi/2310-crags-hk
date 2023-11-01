@@ -68,14 +68,14 @@ export default function Zone({ params }) {
                     <h2>Zone {params.slug}</h2>
                     {matchedBoulders.map((boulder) => {
                         return <section className={styles.boulder}>
-                            <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulder | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
-                            {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulder | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
+                            <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
+                            {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
                             <ul className={styles.boulderRoutes}>
                                 {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
                                     let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
                                     return <li className={styles.boulderRoute} key={route.id}>
                                         <Link
-                                            title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problem | CRAGS.HK`}
+                                            title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}
                                             href={{
                                                 pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
                                                 query: { problem: route.slug }

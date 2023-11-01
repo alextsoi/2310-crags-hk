@@ -35,7 +35,9 @@ export default function Zone() {
                 <h1>Sunset Forest Zone Listings</h1>
                 {allZones.map((zone) => {
                     return <section key={zone} className={styles.zone}>
-                        <h3><Link href={`/sunset-forest/zone/${zone}`}>Zone {zone}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.zone === zone).length} problems</span></h3>
+                        <h3><Link
+                            title={`Sunset Forest Bouldering Zone ${zone} | Sunset Forest Bouldering Grades | CRAGS.HK`}
+                            href={`/sunset-forest/zone/${zone}`}>Zone {zone}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.zone === zone).length} problems</span></h3>
                     </section>;
                 })}
                 <article className={styles.articleParagraphs}>
