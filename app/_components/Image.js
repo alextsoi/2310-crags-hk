@@ -27,7 +27,7 @@ export default function Image(props) {
             src={getSmallerSizeImage(path)} srcSet={
                 getSmallerSizeImage(path) + ' 960w, ' +
                 getNormalSizeImage(path) + ' ' + getWidthFromPath(path)
-            } alt={images[path]} />
-        {(typeof hideFullView === 'undefined' || !hideFullView || hideFullView === false) && <div><a href={getNormalSizeImage(path)} target="_blank" title={images[path]}>View full size</a></div>}
+            } alt={alt || images[path]} />
+        {(typeof hideFullView === 'undefined' || !hideFullView || hideFullView === false) && <div><a href={getNormalSizeImage(path)} target="_blank" title={alt || images[path]}>View full size</a></div>}
     </div>
 }
