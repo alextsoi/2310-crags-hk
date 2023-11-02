@@ -3,6 +3,7 @@ import './globals.scss'
 import Script from 'next/script'
 import Link from 'next/link'
 import { gtmCode, siteName, websiteHost } from './_helpers/config'
+import HeaderHamburgerMenu from './_components/HeaderHambugerMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -48,8 +49,17 @@ export default function RootLayout({ children }) {
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
       <body className={inter.className}>
+        <div className="root-header-quickaccess">
+          <div id="root-logo">
+            <Link title="Sunset Forest Bouldering Problems | CRAGS.HK" href={`/sunset-forest`}>
+              {/* <img src="/logo.png" alt="Sunset Forest Bouldering Problems | CRAGS.HK" /> */}
+              <div>SUNSET FOREST</div>
+            </Link>
+          </div>
+          <HeaderHamburgerMenu />
+        </div>
         <header className="root-header">
-          <div className="container flex-container">
+          <div className="root-header-inner container flex-container">
             <nav className="primary-menu">
               <ul>
                 <li><Link title="Sunset Forest Homepage | CRAGS.HK" href={`/`}>Home</Link></li>

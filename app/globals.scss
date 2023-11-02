@@ -426,5 +426,129 @@ footer {
   img {
     width: 640px;
     max-width: 100%;
+    height: auto;
+  }
+}
+
+#root-logo {
+  dipslay: none;
+}
+.root-header-quickaccess {
+  display: none;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+  .root-header-inner {
+    display: none;
+  }
+  .root-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 10;
+  }
+  .root-header-quickaccess {
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    padding: 0 25px;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #root-logo {
+    > a {
+      text-decoration: none;
+      gap: 6px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 50px;
+      img {
+        width: 36px;
+      }
+    }
+  }
+  #root-primary-menu {
+    transform: translateX(12px);
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+    span {
+      display: block;
+      height: 2px;
+      width: 26px;
+      background-color: #000;
+      position: absolute;
+      left: 12px;
+      transition: all 0.3s ease-in-out;
+      &:first-child {
+        top: 14px;
+      }
+      &:nth-child(2) {
+        top: 23px;
+      }
+      &:last-child {
+        top: 32px;
+      }
+    }
+    &.active {
+      span {
+        &:first-child {
+          transform: rotate(45deg);
+          top: 23px;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 23px;
+        }
+      }
+    }
+  }
+  body.menu-open {
+    overflow: hidden;
+    .root-header-inner {
+      position: fixed;
+      display: block;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      padding: 25px;
+      padding-top: 65px;
+      background-color: #ffffff;
+      .primary-menu {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          font-size: 24px;
+          font-weight: 600;
+        }
+      }
+    }
   }
 }

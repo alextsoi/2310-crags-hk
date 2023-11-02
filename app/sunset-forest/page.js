@@ -30,7 +30,7 @@ export default function Home() {
             <div className="container">
                 <h1>Sunset Forest Boulder Problem Listings</h1>
                 <p>Total <strong>{routes.data.length}</strong> boulder problems developed.</p>
-                <div className="map"><a href="/images/common/sunset-forest-phase1a.jpg" target="_blank" title="Sunset Forest Bouldering Site Map | CRAGS.HK"><img loading="lazy" src="/images/common/sunset-forest-phase1a.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" /></a></div>
+                <div className="map"><a href="/images/common/sunset-forest-phase1a.jpg" width="1266" height="1166" target="_blank" title="Sunset Forest Bouldering Site Map | CRAGS.HK"><img loading="lazy" src="/images/common/sunset-forest-phase1a.jpg" width="1266" height="1166" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" /></a></div>
                 {boulders.data.map((boulder) => {
                     return <section className={styles.boulder}>
                         <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name} Boulder</Link></h2>
