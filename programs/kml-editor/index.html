@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>KML Editor</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='map'></div>
+  <script>
+    // load the points from the ./data.json
+    var points = [];
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './data.json');
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        var data = JSON.parse(xhr.responseText);
+        data.features.filter(feature => {
+          return feature.geometry.type === 'Point';
+        }).forEach(feature => {
+          points.push({
+            name: feature.properties.name,
+            lat: feature.geometry.coordinates[1],
+            lng: feature.geometry.coordinates[0]
+          });
+        });
+        // add the points to the map
+        points.forEach(function(point) {
+          var marker = L.marker([point.lat, point.lng]).addTo(map);
+          marker.bindPopup(point.name);
+        });
+
+        // set the center to the middle of points
+        var lat = points.reduce((sum, point) => {
+          return sum + point.lat;
+        }, 0) / points.length;
+        var lng = points.reduce((sum, point) => {
+          return sum + point.lng;
+        }, 0) / points.length;
+        map.setView([lat, lng], 13);
+      }
+    };
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoieWZ0c29peWZ0c29pIiwiYSI6ImNqcnAweTdsbTE5OG40NHA5b2VvaW05Y3UifQ.W_WnayZjcP21QE4h-eFYYQ';
+    // Create a map in the div #map
+    var map = L.mapbox.map('map', 'mapbox.outdoors');
+    // Set the center to the middle of points OR { "lat": 22.337941302554572, "lng": 114.21932648512598 }
+    map.setView([22.337941302554572, 114.21932648512598], 13);
+  </script>
+</body>
+
+</html>
