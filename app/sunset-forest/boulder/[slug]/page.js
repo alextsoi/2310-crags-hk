@@ -88,6 +88,7 @@ export default function Boulder({ params }) {
                 <section className={styles.boulder}>
                     <h2>Sunset Forest Boulders</h2>
                     <h1>{boulder.id} {boulder.name} Boulder</h1>
+                    {boulder.access && <div className={styles.boulderAccess}><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>

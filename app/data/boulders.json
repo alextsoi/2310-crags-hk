@@ -82,7 +82,13 @@
             "slug": "destiny",
             "id": "4.1",
             "zone": 4,
-            "image": "/boulders/destiny/destiny-2-5-w3264w.jpg"
+            "image": "/boulders/destiny/destiny-2-5-w3264w.jpg",
+            "access": {
+                "link": "https://www.instagram.com/reel/CzNvNbjSm3p/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+                "text": "Access",
+                "title": "Guide to Destiny Boulder from The Crown Boulder | Sunset Forest Access Guide | CRAGS.HK",
+                "target": "_blank"
+            }
         },
         {
             "name": "Wuji",
@@ -131,7 +137,13 @@
             "slug": "the-great-sail",
             "id": "6.2",
             "zone": 6,
-            "image": "/boulders/the-great-sail/the-great-sail-3-4-w4032w.jpg"
+            "image": "/boulders/the-great-sail/the-great-sail-3-4-w4032w.jpg",
+            "access": {
+                "link": "https://www.instagram.com/reel/CzNgP9fyiLs/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==",
+                "text": "Access",
+                "title": "Guide to The Great Sail Boulder from The Crown Boulder | Sunset Forest Access Guide | CRAGS.HK",
+                "target": "_blank"
+            }
         },
         {
             "name": "Ghost Blade",

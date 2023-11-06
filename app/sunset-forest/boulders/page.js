@@ -30,8 +30,9 @@ export default function Boulders() {
                 <h1>Sunset Forest Boulder Listings</h1>
                 <p>Total <strong>{boulders.data.length}</strong> boulders developed.</p>
                 {boulders.data.map((boulder) => {
-                    return <section className={styles.boulder}>
+                    return <section className={`${styles.boulder} ${styles.accessContainer}`}>
                         <h3><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h3>
+                        {boulder.access && <div><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
                     </section>;
                 })}
                 <br />

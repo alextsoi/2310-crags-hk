@@ -35,6 +35,7 @@ export default function Home() {
                 {boulders.data.map((boulder) => {
                     return <section className={styles.boulder}>
                         <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name} Boulder</Link></h2>
+                        {boulder.access && <div className={styles.boulderAccess}><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
                         <ul className={styles.boulderRoutes}>
                             {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
                                 let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);

@@ -6,13 +6,17 @@
         text-decoration: none;
     }
 }
+.boulderAccess{
+    margin-top: -10px;
+    margin-bottom: 16px;
+}
 .boulderRoutes {
     padding: 0;
     margin: 0;
     list-style: none;
 }
-.boulderSignautreImage{
-    img{
+.boulderSignautreImage {
+    img {
         max-width: 100%;
         margin-bottom: 16px;
     }
@@ -86,12 +90,12 @@
     font-size: 0.8em;
 }
 
-.approachWrapper{
+.approachWrapper {
     display: flex;
     gap: 16px;
     align-items: flex-start;
     flex-wrap: wrap;
-    @media(max-width: 1024px){
+    @media (max-width: 1024px) {
         flex-direction: column;
         align-items: center;
     }
@@ -99,12 +103,32 @@
 
 .approach {
     line-height: 0;
-    @media(min-width: 1024px){
+    @media (min-width: 1024px) {
         width: 375px;
     }
     img {
         width: 100%;
         height: auto;
         max-width: 375px;
+    }
+}
+
+.zone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.accessContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    > h3 {
+        margin: 0;
+    }
+    & + .boulder {
+        margin-top: 16px;
     }
 }
