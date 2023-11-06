@@ -393,6 +393,18 @@
             "id": "1.5.3"
         },
         {
+            "name": "Immortals",
+            "slug": "immortals",
+            "isSds": false,
+            "rating": 3,
+            "gradings": [
+                8
+            ],
+            "boulder": "1.6",
+            "zone": 1,
+            "id": "1.6.1"
+        },
+        {
             "name": "Frost",
             "slug": "frost",
             "isSds": true,

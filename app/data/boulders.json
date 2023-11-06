@@ -36,6 +36,12 @@
             "image": "/boulders/tiny/tiny-1-w3024w.jpg"
         },
         {
+            "name": "Temple",
+            "slug": "temple",
+            "id": "1.6",
+            "zone": 1
+        },
+        {
             "name": "Frost",
             "slug": "frost",
             "id": "2.1",
