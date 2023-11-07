@@ -8,7 +8,7 @@ export default function Home() {
                 <h2>CRAGS.HK</h2>
                 <h1>Your Complete Guide to Bouldering and Climbing in Sunset Forest</h1>
                 <div className="map">
-                    <Image path="/common/sunset-forest-phase1a-w1720w.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" />
+                    <Image path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" />
                 </div>
                 <p>Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, all at your fingertips. At CRAGS.HK, we provide comprehensive access to detailed guides and information based on boulders, grades, and ratings, all segmented by specific zones within Sunset Forest.</p>
                 <p>Through our platform, you can enjoy minimal data usage and swift browsing speed, making it easy for you to get the latest updates and plan your climbing or bouldering adventure effortlessly. Even in areas with poor signal or when you're running low on data, we've designed our online guidebook to be easily accessible, anytime, anywhere.</p>

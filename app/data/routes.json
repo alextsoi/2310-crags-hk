@@ -1,6 +1,62 @@
 {
     "data": [
         {
+            "name": "Basking Shark",
+            "slug": "basking-shark",
+            "isSds": true,
+            "rating": 2,
+            "gradings": [
+                2
+            ],
+            "boulder": "0.1",
+            "zone": 0,
+            "id": "0.1.1",
+            "description": "Sit start at a flat big pinch hold, next hold will be the sloper abover, move left and find some good jug, then climb up using some slopers and at the top, you will find a good jug during top out.",
+            "images": [
+                "/boulders/beginner/beginner-1-2-w2529w.jpg"
+            ]
+        },
+        {
+            "name": "Great White Shark",
+            "slug": "great-white-shark",
+            "isSds": true,
+            "rating": 2,
+            "gradings": [
+                2
+            ],
+            "boulder": "0.1",
+            "zone": 0,
+            "id": "0.1.2",
+            "description": "Sit start and find a big flat hold near the number marker on the images, t[hen move up and you will see a jug above the start of your left hand hold. Keep climbing up, you will see some crimps and good slopers."
+        },
+        {
+            "name": "Whale Shark",
+            "slug": "whale-shark",
+            "isSds": true,
+            "rating": 2,
+            "gradings": [
+                4
+            ],
+            "boulder": "0.1",
+            "zone": 0,
+            "id": "0.1.3",
+            "images": ["/boulders/beginner/beginner-3-4-w2305w.jpg"],
+            "description": "Probably the most challenging beginner route in this boulder. Sit start and double start with left hand on a sloper, right hand on a slopery crimp. There is a good sharp jug above your hand hand start hold, and right hand with a pinch hold on the same level. Once you get the right hand pinch, you can switch your left hand to a sidepull. Stand up and find a good sloper above and match hand on it. Then you can top out with the remaining good holds."
+        },
+        {
+            "name": "Megamouth Shark",
+            "slug": "megamouth-shark",
+            "isSds": true,
+            "rating": 2,
+            "gradings": [
+                2
+            ],
+            "boulder": "0.1",
+            "zone": 0,
+            "id": "0.1.4",
+            "description": "Sit start on 2 good crimps near the number marker, then bump up to the good jug above. Move your left feet up a bit on a good foot hold, twist the body to get another jug above. Then you can top out with the remaining good jugs."
+        },
+        {
             "name": "New World Order",
             "slug": "new-world-order",
             "isSds": true,
@@ -403,7 +459,10 @@
             "boulder": "1.6",
             "zone": 1,
             "id": "1.6.1",
-            "description": "Start on a triangular hold on right and sloper on left, get the next pinchy sloper, finish up above the crimpy hold and painful pocket."
+            "description": "Start on a triangular hold on right and sloper on left, get the next pinchy sloper, finish up above the crimpy hold and painful pocket.",
+            "images": [
+                "/boulders/temple/temple-1-w2305w.jpg"
+            ]
         },
         {
             "name": "Frost",

@@ -1,6 +1,12 @@
 {
     "data": [
         {
+            "name": "Beginner",
+            "slug": "beginner",
+            "id": "0.1",
+            "zone": 0
+        },
+        {
             "name": "Welcome",
             "slug": "welcome",
             "id": "1.1",
