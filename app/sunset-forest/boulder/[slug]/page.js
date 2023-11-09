@@ -5,6 +5,7 @@ import Link from 'next/link'
 import _ from 'lodash';
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 import Image from '@/app/_components/Image';
+import Copy from '@/app/_components/Copy';
 
 export async function generateMetadata({ params }) {
     let boulder = boulders.data.filter((boulder) => {
@@ -89,6 +90,7 @@ export default function Boulder({ params }) {
                     <h2>Sunset Forest Boulders</h2>
                     <h1>{boulder.id} {boulder.name} Boulder</h1>
                     {boulder.access && <div className={styles.boulderAccess}><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
+                    {boulder.gps && <div className={styles.boulderGps}><a href={`https://www.google.com/maps/search/?api=1&query=${boulder.gps.lat},${boulder.gps.lng}`} title="Google Map" target="_blank">Google Map</a> or <Copy value={`${boulder.gps.lat}, ${boulder.gps.lng}`} text={`Click to copy (${boulder.gps.lat}, ${boulder.gps.lng})`} /></div>}
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>
