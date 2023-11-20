@@ -1,3 +1,4 @@
+import boulders from '@/app/data/boulders.json'
 import Image from './_components/Image'
 import styles from './page.module.scss'
 
@@ -8,7 +9,20 @@ export default function Home() {
                 <h2>CRAGS.HK</h2>
                 <h1>Your Complete Guide to Bouldering and Climbing in Sunset Forest</h1>
                 <div className="map">
-                    <Image path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" />
+                    <Image hideFullView={true} path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" useMap="#image-map" />
+                    <map name="image-map">
+                        {boulders.data.filter((boulder) => boulder.image_map?.coords).map((boulder) => {
+                            // ImageMap coords were generated from https://www.image-map.net/ using the resized smaller image
+                            // FIXME: Only circle & rectangle are supported
+                            // TODO: Use library to handle responsive resize
+                            let { image_map: { coords: coords } } = boulder
+                            let [x, y, radius] = coords.split(",").map((v) => parseInt(v))
+                            let ratio = 1 / 1200 * 640
+                            let resized_x = Math.round(x * ratio)
+                            let resized_y = Math.round(y * ratio)
+                            return <area target="_blank" coords={`${resized_x},${resized_y},${radius}`} shape={boulder.image_map.shape} alt={`${boulder.id} ${boulder.name}`} title={`${boulder.id} ${boulder.name}`} href={`/sunset-forest/boulder/${boulder.slug}`} />;
+                        })}
+                    </map>
                 </div>
                 <p>Explore Sunset Forest, one of the premier bouldering and climbing sites in Hong Kong, all at your fingertips. At CRAGS.HK, we provide comprehensive access to detailed guides and information based on boulders, grades, and ratings, all segmented by specific zones within Sunset Forest.</p>
                 <p>Through our platform, you can enjoy minimal data usage and swift browsing speed, making it easy for you to get the latest updates and plan your climbing or bouldering adventure effortlessly. Even in areas with poor signal or when you're running low on data, we've designed our online guidebook to be easily accessible, anytime, anywhere.</p>
