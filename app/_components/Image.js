@@ -20,16 +20,14 @@ function getWidthFromPath(path) {
 }
 
 export default function Image(props) {
-    const { path, alt, hideFullView, useMap } = props;
+    const { path, alt, hideFullView } = props;
     return <div>
         <img
             loading="lazy"
             src={getSmallerSizeImage(path)} srcSet={
                 getSmallerSizeImage(path) + ' 960w, ' +
                 getNormalSizeImage(path) + ' ' + getWidthFromPath(path)
-            } alt={alt || images[path]}
-            useMap={useMap ?? undefined}
-        />
+            } alt={alt || images[path]} />
         {(typeof hideFullView === 'undefined' || !hideFullView || hideFullView === false) && <div><a href={getNormalSizeImage(path)} target="_blank" title={alt || images[path]}>View full size</a></div>}
     </div>
 }
