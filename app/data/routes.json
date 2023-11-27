@@ -275,7 +275,7 @@
             "isSds": false,
             "rating": 0,
             "gradings": [
-                3
+                4
             ],
             "boulder": "1.3",
             "zone": 1,
@@ -1121,10 +1121,10 @@
         {
             "name": "Thousand Sunny 千陽號",
             "slug": "thousand-sunny",
-            "isSds": true,
+            "isSds": false,
             "rating": 3,
             "gradings": [
-                5
+                4
             ],
             "boulder": "6.2",
             "zone": 6,
@@ -1137,10 +1137,10 @@
         {
             "name": "Thousand Sunny Eliminate",
             "slug": "thousand-sunny-eliminate",
-            "isSds": true,
+            "isSds": false,
             "rating": 2,
             "gradings": [
-                6
+                5
             ],
             "boulder": "6.2",
             "zone": 6,
@@ -1153,10 +1153,10 @@
         {
             "name": "Going Merry 黃金梅利號",
             "slug": "going-merry",
-            "isSds": true,
+            "isSds": false,
             "rating": 2,
             "gradings": [
-                6
+                5
             ],
             "boulder": "6.2",
             "zone": 6,
