@@ -640,10 +640,10 @@
         {
             "name": "Minke",
             "slug": "minke",
-            "isSds": true,
+            "isSds": false,
             "rating": 2,
             "gradings": [
-                4
+                3
             ],
             "boulder": "2.3",
             "zone": 2,
@@ -679,7 +679,7 @@
             "id": "2.3.5",
             "description": "Start on a crimp, make powerful moves to get the next good hold.",
             "images": [
-                "/boulders/the-whale/the-whale-5-6-w4032w.jpg"
+                "/boulders/the-whale/the-whale-5-w4032w.jpg"
             ]
         },
         {
@@ -693,7 +693,10 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.6",
-            "description": "Start at a small crimp, top right above."
+            "description": "Start at a small crimp, top right above.",
+            "images": [
+                "/boulders/the-whale/the-whale-6-7-w4032w.jpg"
+            ]
         },
         {
             "name": "Small Blue",
@@ -720,6 +723,19 @@
             "zone": 2,
             "id": "2.3.6b",
             "description": "Start on a good V-shaped hold, traverse to the left, making a long move to get the good crimp, and finish up to the left."
+        },
+        {
+            "name": "Beluga",
+            "slug": "beluga",
+            "isSds": true,
+            "rating": 1,
+            "gradings": [
+                3
+            ],
+            "boulder": "2.3",
+            "zone": 2,
+            "id": "2.3.7",
+            "description": "Start on a left good insert and right crimp , get the good crimp up ahead, finish above."
         },
         {
             "name": "Falcon Wing",
