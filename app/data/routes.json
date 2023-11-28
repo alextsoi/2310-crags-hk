@@ -693,7 +693,7 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.6",
-            "description": "Start at a small crimp, top right above.",
+            "description": "Start at a v-shape good hold and a small crimp, top right above.",
             "images": [
                 "/boulders/the-whale/the-whale-6-7-w4032w.jpg"
             ]
@@ -709,7 +709,7 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.6a",
-            "description": "Start of line 6, but traverse to the left, making a long move to get the good side pull of line 6b, link up to this."
+            "description": "Start at a crimp on right and sloper on left,  traverse to the left, link up to Big blue left."
         },
         {
             "name": "Big Blue (left)",
@@ -722,7 +722,7 @@
             "boulder": "2.3",
             "zone": 2,
             "id": "2.3.6b",
-            "description": "Start on a good V-shaped hold, traverse to the left, making a long move to get the good crimp, and finish up to the left."
+            "description": "Start on a good V-shaped hold and a crimp, traverse to the left, making a long move to get the good crimp, and finish up to the left."
         },
         {
             "name": "Beluga",
