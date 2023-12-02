@@ -502,6 +502,17 @@
                 "lat": 22.33844,
                 "lng": 114.21818
             }
+        },
+        {
+            "name": "Pansi Cave 盤絲洞",
+            "slug": "pansi-cave",
+            "id": "8.8",
+            "zone": 8,
+            "image": "/boulders/pansi-cave/pansi-w4032w.jpg",
+            "gps": {
+                "lat": 22.3386,
+                "lng": 114.21848
+            }
         }
     ]
 }

@@ -40,7 +40,9 @@
             "boulder": "0.1",
             "zone": 0,
             "id": "0.1.3",
-            "images": ["/boulders/beginner/beginner-3-4-w2305w.jpg"],
+            "images": [
+                "/boulders/beginner/beginner-3-4-w2305w.jpg"
+            ],
             "description": "Probably the most challenging beginner route in this boulder. Sit start and double start with left hand on a sloper, right hand on a slopery crimp. There is a good sharp jug above your hand hand start hold, and right hand with a pinch hold on the same level. Once you get the right hand pinch, you can switch your left hand to a sidepull. Stand up and find a good sloper above and match hand on it. Then you can top out with the remaining good holds."
         },
         {
@@ -1699,6 +1701,61 @@
             "zone": 8,
             "id": "8.7.3",
             "description": "Start on two poor crimps, get the painful crimps above, finish up the slab."
+        },
+        {
+            "name": "Moonlight Chest Low",
+            "slug": "moonlight-chest-low",
+            "isSds": false,
+            "rating": 2,
+            "gradings": [
+                6
+            ],
+            "boulder": "8.8",
+            "zone": 8,
+            "id": "8.8.1",
+            "description": "Extension of the line 2, start on a pinch, and step on a good hold, then do a POGO move to start hold of line 2, and then follow line 2.",
+            "images": [
+                "/boulders/pansi-cave/pansi-w4032w.jpg"
+            ]
+        },
+        {
+            "name": "Moonlight Chest 月光寶盒",
+            "slug": "moonlight-chest",
+            "isSds": false,
+            "rating": 3,
+            "gradings": [
+                4
+            ],
+            "boulder": "8.8",
+            "zone": 8,
+            "id": "8.8.2",
+            "description": "Start on the good crimp, and either trust some small foot holds or just campus first few moves, then use the arete to adjust the body position, then use 2 slopers on top to stand up and reach the further jug to help you top out."
+        },
+        {
+            "name": "Mighty Monkey King 齊天大聖",
+            "slug": "mighty-monkey-king",
+            "isSds": false,
+            "rating": 3,
+            "gradings": [
+                5
+            ],
+            "boulder": "8.8",
+            "zone": 8,
+            "id": "8.8.3",
+            "description": "Start on a volcano-like hold, follow the edge and traverse. After you reach the pinch, you can continue use the line 2 crimp and use the same beta to top out."
+        },
+        {
+            "name": "Boyabolomi 波若波囉咪",
+            "slug": "boyabolomi",
+            "isSds": false,
+            "rating": 0,
+            "gradings": [
+                2
+            ],
+            "boulder": "8.8",
+            "zone": 8,
+            "id": "8.8.4",
+            "description": "Same start as line 3, but top out in the middle."
         }
     ]
 }
