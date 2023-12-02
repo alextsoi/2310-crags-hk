@@ -504,11 +504,11 @@
             }
         },
         {
-            "name": "Pansi Cave 盤絲洞",
-            "slug": "pansi-cave",
+            "name": "Silken cave 盤絲洞",
+            "slug": "silken-cave",
             "id": "8.8",
             "zone": 8,
-            "image": "/boulders/pansi-cave/pansi-w4032w.jpg",
+            "image": "/boulders/silken-cave/silken-w4032w.jpg",
             "gps": {
                 "lat": 22.3386,
                 "lng": 114.21848
