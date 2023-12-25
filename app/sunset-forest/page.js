@@ -4,6 +4,7 @@ import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 import Image from '../_components/Image';
+import ImageMap from '../_components/ImageMap';
 
 export const metadata = {
     title: 'Sunset Forest Boulder Problem Listings | CRAGS.HK',
@@ -31,8 +32,8 @@ export default function Home() {
             <div className="container">
                 <h1>Sunset Forest Boulder Problem Listings</h1>
                 <p>Total <strong>{routes.data.length}</strong> boulder problems developed.</p>
-                <div className="map"><Image path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" /></div>
-                <div className="map"><Image path="/common/sunset-forest-phase1b-w4800w.jpg" alt="Sunset Forest Bouldering Site Map | CRAGS.HK" /></div>
+                <div className="map"><ImageMap path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map Phase 1a | CRAGS.HK" /></div>
+                <div className="map"><Image path="/common/sunset-forest-phase1b-w3200w.jpg" alt="Sunset Forest Bouldering Site Map Phase 1b | CRAGS.HK" /></div>
                 {boulders.data.map((boulder) => {
                     return <section className={styles.boulder}>
                         <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name} Boulder</Link></h2>
