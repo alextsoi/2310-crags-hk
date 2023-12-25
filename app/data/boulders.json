@@ -513,6 +513,48 @@
                 "lat": 22.3386,
                 "lng": 114.21848
             }
+        },
+        {
+            "name": "",
+            "slug": "9.1",
+            "id": "9.1",
+            "zone": 9,
+            "image": "/boulders/titans-ruin/9-1-w2706w.jpg"
+        },
+        {
+            "name": "",
+            "slug": "9.2",
+            "id": "9.2",
+            "zone": 9,
+            "image": "/boulders/titans-ruin/9-2-w3024w.jpg"
+        },
+        {
+            "name": "",
+            "slug": "9.3",
+            "id": "9.3",
+            "zone": 9,
+            "image": "/boulders/titans-ruin/9-3-1-w3024w.jpg"
+        },
+        {
+            "name": "",
+            "slug": "9.4",
+            "id": "9.4",
+            "zone": 9,
+            "image": "/boulders/titans-ruin/9-4-w3024w.jpg"
+        },
+        {
+            "name": "",
+            "slug": "9.5",
+            "id": "9.5",
+            "zone": 9,
+            "image": "/boulders/titans-ruin/9-5-1-w3032w.jpg"
+        },
+        {
+            "name": "",
+            "slug": "9.6",
+            "id": "9.6",
+            "zone": 9,
+            "image": "/boulders/titans-ruin/9-6-1-w3024w.jpg"
         }
     ]
 }
