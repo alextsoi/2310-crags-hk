@@ -1876,7 +1876,7 @@
             "description": ""
         },
         {
-            "name": "Titan's force 泰旦之力",
+            "name": "Titan's force 泰坦之力",
             "slug": "titans-force",
             "isSds": false,
             "rating": 3,
@@ -1902,7 +1902,7 @@
             "description": ""
         },
         {
-            "name": "Titan's edge 泰旦之劍",
+            "name": "Titan's edge 泰坦之劍",
             "slug": "titans-edge",
             "isSds": false,
             "rating": 3,
@@ -1915,7 +1915,7 @@
             "description": ""
         },
         {
-            "name": "Titan's shield 泰旦之盾",
+            "name": "Titan's shield 泰坦之盾",
             "slug": "titans-shield",
             "isSds": false,
             "rating": 1,

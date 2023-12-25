@@ -515,43 +515,43 @@
             }
         },
         {
-            "name": "",
-            "slug": "9.1",
+            "name": "Overhang",
+            "slug": "overhang",
             "id": "9.1",
             "zone": 9,
             "image": "/boulders/titans-ruin/9-1-w2706w.jpg"
         },
         {
-            "name": "",
-            "slug": "9.2",
+            "name": "Armor Tech",
+            "slug": "armor-tech",
             "id": "9.2",
             "zone": 9,
             "image": "/boulders/titans-ruin/9-2-w3024w.jpg"
         },
         {
-            "name": "",
-            "slug": "9.3",
+            "name": "Titan Clash",
+            "slug": "titan-clash",
             "id": "9.3",
             "zone": 9,
             "image": "/boulders/titans-ruin/9-3-1-w3024w.jpg"
         },
         {
-            "name": "",
-            "slug": "9.4",
+            "name": "Tiny Chilli",
+            "slug": "tiny-chilli",
             "id": "9.4",
             "zone": 9,
             "image": "/boulders/titans-ruin/9-4-w3024w.jpg"
         },
         {
-            "name": "",
-            "slug": "9.5",
+            "name": "Titan's Edge",
+            "slug": "titans-edge",
             "id": "9.5",
             "zone": 9,
             "image": "/boulders/titans-ruin/9-5-1-w3032w.jpg"
         },
         {
-            "name": "",
-            "slug": "9.6",
+            "name": "Titan's Shield",
+            "slug": "titans-shield",
             "id": "9.6",
             "zone": 9,
             "image": "/boulders/titans-ruin/9-6-1-w3024w.jpg"
