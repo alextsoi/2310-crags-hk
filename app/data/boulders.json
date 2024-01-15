@@ -519,42 +519,66 @@
             "slug": "overhang",
             "id": "9.1",
             "zone": 9,
-            "image": "/boulders/titans-ruin/9-1-w2706w.jpg"
+            "image": "/boulders/titans-ruin/9-1-w2706w.jpg",
+            "gps": {
+                "lat": 22.3386,
+                "lng": 114.21863
+            }
         },
         {
             "name": "Armor Tech",
             "slug": "armor-tech",
             "id": "9.2",
             "zone": 9,
-            "image": "/boulders/titans-ruin/9-2-w3024w.jpg"
+            "image": "/boulders/titans-ruin/9-2-w3024w.jpg",
+            "gps": {
+                "lat": 22.3386,
+                "lng": 114.2187
+            }
         },
         {
             "name": "Titan Clash",
             "slug": "titan-clash",
             "id": "9.3",
             "zone": 9,
-            "image": "/boulders/titans-ruin/9-3-1-w3024w.jpg"
+            "image": "/boulders/titans-ruin/9-3-1-w3024w.jpg",
+            "gps": {
+                "lat": 22.33863,
+                "lng": 114.21882
+            }
         },
         {
             "name": "Tiny Chilli",
             "slug": "tiny-chilli",
             "id": "9.4",
             "zone": 9,
-            "image": "/boulders/titans-ruin/9-4-w3024w.jpg"
+            "image": "/boulders/titans-ruin/9-4-w3024w.jpg",
+            "gps": {
+                "lat": 22.33868,
+                "lng": 114.21883
+            }
         },
         {
             "name": "Titan's Edge",
             "slug": "titans-edge",
             "id": "9.5",
             "zone": 9,
-            "image": "/boulders/titans-ruin/9-5-1-w3032w.jpg"
+            "image": "/boulders/titans-ruin/9-5-1-w3032w.jpg",
+            "gps": {
+                "lat": 22.33871,
+                "lng": 114.21883
+            }
         },
         {
             "name": "Titan's Shield",
             "slug": "titans-shield",
             "id": "9.6",
             "zone": 9,
-            "image": "/boulders/titans-ruin/9-6-1-w3024w.jpg"
+            "image": "/boulders/titans-ruin/9-6-1-w3024w.jpg",
+            "gps": {
+                "lat": 22.33871,
+                "lng": 114.21883
+            }
         }
     ]
 }
