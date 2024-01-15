@@ -1953,6 +1953,223 @@
             "images": [
                 "/boulders/titans-ruin/9-6-1-w3024w.jpg"
             ]
+        },
+        {
+            "name": "Coco sds",
+            "slug": "coco-sds",
+            "isSds": true,
+            "gradings": [
+                6
+            ],
+            "rating": 3,
+            "boulder": "9.7",
+            "zone": "9",
+            "id": "9.7.1",
+            "description": "",
+            "images": [
+                "/boulders/graveward/9-7-1-w4032w.jpg"
+            ]
+        },
+        {
+            "name": "Coco",
+            "slug": "coco",
+            "isSds": false,
+            "gradings": [
+                4
+            ],
+            "rating": 2,
+            "boulder": "9.7",
+            "zone": "9",
+            "id": "9.7.2",
+            "description": ""
+        },
+        {
+            "name": "Graveward",
+            "slug": "graveward",
+            "isSds": false,
+            "gradings": [
+                5
+            ],
+            "rating": 2,
+            "boulder": "9.7",
+            "zone": "9",
+            "id": "9.7.3",
+            "description": "",
+            "images": [
+                "/boulders/graveward/9-7-2-w4032w.jpg"
+            ]
+        },
+        {
+            "name": "Dead Rising",
+            "slug": "dead-rising",
+            "isSds": false,
+            "gradings": [
+                2
+            ],
+            "rating": 1,
+            "boulder": "9.7",
+            "zone": "9",
+            "id": "9.7.4",
+            "description": ""
+        },
+        {
+            "name": "Dead Rising Right",
+            "slug": "dead-rising-right",
+            "isSds": false,
+            "gradings": [
+                1
+            ],
+            "rating": 1,
+            "boulder": "9.7",
+            "zone": "9",
+            "id": "9.7.5",
+            "description": ""
+        },
+        {
+            "name": "Gold Shine",
+            "slug": "gold-shine",
+            "isSds": false,
+            "gradings": [
+                7
+            ],
+            "rating": 1,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.1",
+            "description": "",
+            "images": [
+                "/boulders/gold-golem/9-8-1-w3024w.jpg"
+            ]
+        },
+        {
+            "name": "A Hero Is Born 英雄降世",
+            "slug": "a-hero-is-born",
+            "isSds": false,
+            "gradings": [
+                6
+            ],
+            "rating": 3,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.2",
+            "description": "",
+            "images": [
+                "/boulders/gold-golem/9-8-2-w3024w.jpg"
+            ]
+        },
+        {
+            "name": "Sparkle",
+            "slug": "sparkle",
+            "isSds": false,
+            "gradings": [
+                3
+            ],
+            "rating": 1,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.3",
+            "description": ""
+        },
+        {
+            "name": "Golem",
+            "slug": "golem",
+            "isSds": false,
+            "gradings": [
+                2
+            ],
+            "rating": 3,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.4",
+            "description": "",
+            "images": [
+                "/boulders/gold-golem/9-8-3-w3024w.jpg"
+            ]
+        },
+        {
+            "name": "Pang's Wing 鵬之翼",
+            "slug": "pangs-wing",
+            "isSds": false,
+            "gradings": [
+                5
+            ],
+            "rating": 3,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.5",
+            "description": ""
+        },
+        {
+            "name": "Golden Hour 黃金時刻",
+            "slug": "golden-hour",
+            "isSds": false,
+            "gradings": [
+                9
+            ],
+            "rating": 2,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.6",
+            "description": "",
+            "images": [
+                "/boulders/gold-golem/9-8-4-w4032w.jpg"
+            ]
+        },
+        {
+            "name": "Golden Hour 黃金時刻",
+            "slug": "golden-hour-sds",
+            "isSds": true,
+            "gradings": [
+                10
+            ],
+            "rating": 3,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.7",
+            "description": ""
+        },
+        {
+            "name": "Forge In Fire 千錘百鍊",
+            "slug": "forge-in-fire-sds",
+            "isSds": true,
+            "gradings": [
+                8
+            ],
+            "rating": 3,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.8",
+            "description": ""
+        },
+        {
+            "name": "Forge In Fire",
+            "slug": "forge-in-fire",
+            "isSds": false,
+            "gradings": [
+                5,
+                6
+            ],
+            "rating": 2,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.9",
+            "description": ""
+        },
+        {
+            "name": "Green Gold",
+            "slug": "green-gold",
+            "isSds": false,
+            "gradings": [
+                6
+            ],
+            "rating": 1,
+            "boulder": "9.8",
+            "zone": "9",
+            "id": "9.8.10",
+            "description": "",
+            "images": [
+                "/boulders/gold-golem/9-8-5-w3024w.jpg"
+            ]
         }
     ]
 }
