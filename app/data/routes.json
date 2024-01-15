@@ -1918,7 +1918,7 @@
                 7
             ],
             "boulder": "9.5",
-            "zone": "9",
+            "zone": 9,
             "id": "9.5.2",
             "description": ""
         },
@@ -1931,7 +1931,7 @@
                 4
             ],
             "boulder": "9.5",
-            "zone": "9",
+            "zone": 9,
             "id": "9.5.3",
             "description": "",
             "images": [
@@ -1947,7 +1947,7 @@
                 3
             ],
             "boulder": "9.6",
-            "zone": "9",
+            "zone": 9,
             "id": "9.6.1",
             "description": "",
             "images": [
@@ -1963,7 +1963,7 @@
             ],
             "rating": 3,
             "boulder": "9.7",
-            "zone": "9",
+            "zone": 9,
             "id": "9.7.1",
             "description": "",
             "images": [
@@ -1979,7 +1979,7 @@
             ],
             "rating": 2,
             "boulder": "9.7",
-            "zone": "9",
+            "zone": 9,
             "id": "9.7.2",
             "description": ""
         },
@@ -1992,7 +1992,7 @@
             ],
             "rating": 2,
             "boulder": "9.7",
-            "zone": "9",
+            "zone": 9,
             "id": "9.7.3",
             "description": "",
             "images": [
@@ -2008,7 +2008,7 @@
             ],
             "rating": 1,
             "boulder": "9.7",
-            "zone": "9",
+            "zone": 9,
             "id": "9.7.4",
             "description": ""
         },
@@ -2021,7 +2021,7 @@
             ],
             "rating": 1,
             "boulder": "9.7",
-            "zone": "9",
+            "zone": 9,
             "id": "9.7.5",
             "description": ""
         },
@@ -2034,7 +2034,7 @@
             ],
             "rating": 1,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.1",
             "description": "",
             "images": [
@@ -2050,7 +2050,7 @@
             ],
             "rating": 3,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.2",
             "description": "",
             "images": [
@@ -2066,7 +2066,7 @@
             ],
             "rating": 1,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.3",
             "description": ""
         },
@@ -2079,7 +2079,7 @@
             ],
             "rating": 3,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.4",
             "description": "",
             "images": [
@@ -2095,7 +2095,7 @@
             ],
             "rating": 3,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.5",
             "description": ""
         },
@@ -2108,7 +2108,7 @@
             ],
             "rating": 2,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.6",
             "description": "",
             "images": [
@@ -2124,7 +2124,7 @@
             ],
             "rating": 3,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.7",
             "description": ""
         },
@@ -2137,7 +2137,7 @@
             ],
             "rating": 3,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.8",
             "description": ""
         },
@@ -2151,7 +2151,7 @@
             ],
             "rating": 2,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.9",
             "description": ""
         },
@@ -2164,7 +2164,7 @@
             ],
             "rating": 1,
             "boulder": "9.8",
-            "zone": "9",
+            "zone": 9,
             "id": "9.8.10",
             "description": "",
             "images": [
