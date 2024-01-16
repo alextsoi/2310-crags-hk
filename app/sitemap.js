@@ -62,7 +62,7 @@ export default function sitemap() {
     let allGradings = _.map(routes.data, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
+    allGradings = _.sortBy(allGradings, Number);
     allGradings.forEach((grade) => {
         sitemapList.push({
             url: `${websiteHost}sunset-forest/grade/${grade}/`,

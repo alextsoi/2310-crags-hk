@@ -29,7 +29,11 @@ export default function Grade() {
     let allGradings = _.map(routes.data, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
+    // First number, then string
+    allGradings = _.sortBy(allGradings, Number);
+
+
+
     return (
         <main className={styles.main}>
             <div className="container">

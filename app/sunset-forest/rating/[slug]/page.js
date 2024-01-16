@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
     let allGradings = _.map(matchedRoutes, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
+    allGradings = _.sortBy(allGradings, Number);
     let gradingText;
     if (allGradings.length > 1) {
         gradingText = `${allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project'} - ${allGradings[allGradings.length - 1] !== 'project' ? `V${allGradings[allGradings.length - 1]}` : 'project'}`;
@@ -47,7 +47,7 @@ export default function Rating({ params }) {
     let allGradings = _.map(matchedRoutes, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
+    allGradings = _.sortBy(allGradings, Number);
     let gradingText;
     if (allGradings.length > 1) {
         gradingText = `${allGradings[0] !== 'project' ? `V${allGradings[0]}` : 'project'} - ${allGradings[allGradings.length - 1] !== 'project' ? `V${allGradings[allGradings.length - 1]}` : 'project'}`;

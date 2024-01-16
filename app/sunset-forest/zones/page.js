@@ -29,7 +29,7 @@ export const metadata = {
 export default function Zone() {
     let allZones = _.map(boulders.data, 'zone');
     allZones = _.uniq(allZones);
-    allZones = _.sortBy(allZones, String);
+    allZones = _.sortBy(allZones, Number);
     return (
         <main className={styles.main}>
             <div className="container">

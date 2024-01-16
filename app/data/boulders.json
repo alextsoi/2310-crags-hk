@@ -579,18 +579,19 @@
                 "lat": 22.33871,
                 "lng": 114.21883
             }
-        },{
+        },
+        {
             "name": "Graveward",
             "slug": "graveward",
-            "id": "9.7",
-            "zone": 9,
+            "id": "10.1",
+            "zone": 10,
             "image": "/boulders/graveward/9-7-1-w4032w.jpg"
         },
         {
             "name": "Gold Golem",
             "slug": "gold-golem",
-            "id": "9.8",
-            "zone": 9,
+            "id": "10.2",
+            "zone": 10,
             "image": "/boulders/gold-golem/9-8-4-w4032w.jpg"
         }
     ]

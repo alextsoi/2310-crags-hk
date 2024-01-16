@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
         let allGradings = _.map(matchedRoutes, 'gradings');
         allGradings = _.flattenDeep(allGradings);
         allGradings = _.uniq(allGradings);
-        allGradings = _.sortBy(allGradings, String);
+        allGradings = _.sortBy(allGradings, Number);
         let allRatings = _.map(matchedRoutes, 'rating');
         allRatings = _.uniq(allRatings);
         allRatings = _.sortBy(allRatings, String);
@@ -67,7 +67,7 @@ export default function Zone({ params }) {
     let allGradings = _.map(matchedRoutes, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
+    allGradings = _.sortBy(allGradings, Number);
     let allRatings = _.map(matchedRoutes, 'rating');
     allRatings = _.uniq(allRatings);
     allRatings = _.sortBy(allRatings, String);

@@ -1962,10 +1962,10 @@
                 6
             ],
             "rating": 3,
-            "boulder": "9.7",
-            "zone": 9,
-            "id": "9.7.1",
-            "description": "",
+            "boulder": "10.1",
+            "zone": 10,
+            "id": "10.1.1",
+            "description": "Start on the glued crimp, launch to the higher crimps and finish above the platform",
             "images": [
                 "/boulders/graveward/9-7-1-w4032w.jpg"
             ]
@@ -1978,10 +1978,10 @@
                 4
             ],
             "rating": 2,
-            "boulder": "9.7",
-            "zone": 9,
-            "id": "9.7.2",
-            "description": ""
+            "boulder": "10.1",
+            "zone": 10,
+            "id": "10.1.2",
+            "description": "Start ona crimp and a side pull crimp"
         },
         {
             "name": "Graveward",
@@ -1991,10 +1991,10 @@
                 5
             ],
             "rating": 2,
-            "boulder": "9.7",
-            "zone": 9,
-            "id": "9.7.3",
-            "description": "",
+            "boulder": "10.1",
+            "zone": 10,
+            "id": "10.1.3",
+            "description": "Start on a sloper and a side pull",
             "images": [
                 "/boulders/graveward/9-7-2-w4032w.jpg"
             ]
@@ -2007,10 +2007,10 @@
                 2
             ],
             "rating": 1,
-            "boulder": "9.7",
-            "zone": 9,
-            "id": "9.7.4",
-            "description": ""
+            "boulder": "10.1",
+            "zone": 10,
+            "id": "10.1.4",
+            "description": "Start on a good sloper, get the sloper above ,use the crimps slightly on the left to finish leftward above"
         },
         {
             "name": "Dead Rising Right",
@@ -2020,10 +2020,10 @@
                 1
             ],
             "rating": 1,
-            "boulder": "9.7",
-            "zone": 9,
-            "id": "9.7.5",
-            "description": ""
+            "boulder": "10.1",
+            "zone": 10,
+            "id": "10.1.5",
+            "description": "Start on a good sloper use good holds to trend right "
         },
         {
             "name": "Gold Shine",
@@ -2033,10 +2033,10 @@
                 7
             ],
             "rating": 1,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.1",
-            "description": "",
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.1",
+            "description": "Start on a sloper on left and good undercut on right, make powerful moves to slap the slopers above, finish towards left",
             "images": [
                 "/boulders/gold-golem/9-8-1-w3024w.jpg"
             ]
@@ -2049,10 +2049,10 @@
                 6
             ],
             "rating": 3,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.2",
-            "description": "",
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.2",
+            "description": "Start on a line of slopping crimps, get the slopers above by making body tension moves, after getting the jug between the rocks, use both side to top out",
             "images": [
                 "/boulders/gold-golem/9-8-2-w3024w.jpg"
             ]
@@ -2065,23 +2065,23 @@
                 3
             ],
             "rating": 1,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.3",
-            "description": ""
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.3",
+            "description": "Start on a crimp and a side pull, finish by linking to the end hold of Golem v2"
         },
         {
             "name": "Golem",
             "slug": "golem",
-            "isSds": false,
+            "isSds": true,
             "gradings": [
                 2
             ],
             "rating": 3,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.4",
-            "description": "",
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.4",
+            "description": "Sit start on a good side pull, make technical moves using the line of side pulls, finish by matching hands on the good jug",
             "images": [
                 "/boulders/gold-golem/9-8-3-w3024w.jpg"
             ]
@@ -2094,10 +2094,10 @@
                 5
             ],
             "rating": 3,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.5",
-            "description": ""
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.5",
+            "description": "Start on a sloper, kick to the left to get a toe hook on the side pulls of Golem v2, make technical moves to traverse to left, finish at the same jug of Golm v2"
         },
         {
             "name": "Golden Hour 黃金時刻",
@@ -2107,10 +2107,10 @@
                 9
             ],
             "rating": 2,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.6",
-            "description": "",
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.6",
+            "description": "Stand start on the good undercut, use the poor holds above to make dynamic moves to get the good sloper on the edge",
             "images": [
                 "/boulders/gold-golem/9-8-4-w4032w.jpg"
             ]
@@ -2123,10 +2123,10 @@
                 10
             ],
             "rating": 3,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.7",
-            "description": ""
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.7",
+            "description": "Sit start on the sloper"
         },
         {
             "name": "Forge In Fire 千錘百鍊",
@@ -2136,10 +2136,10 @@
                 8
             ],
             "rating": 3,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.8",
-            "description": ""
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.8",
+            "description": "Sit start on the crimpy side pulls, get the holds on the right arete, finish above."
         },
         {
             "name": "Forge In Fire",
@@ -2150,23 +2150,23 @@
                 6
             ],
             "rating": 2,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.9",
-            "description": ""
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.9",
+            "description": "Start on a good side pull crimp on left and a sloper on right, make compression moves to get the good hold on the edge, finish above"
         },
         {
             "name": "Green Gold",
             "slug": "green-gold",
-            "isSds": false,
+            "isSds": true,
             "gradings": [
                 6
             ],
             "rating": 1,
-            "boulder": "9.8",
-            "zone": 9,
-            "id": "9.8.10",
-            "description": "",
+            "boulder": "10.2",
+            "zone": 10,
+            "id": "10.2.10",
+            "description": "Sit start on the side pull slopers, stand up to get the side pulls and crimps, finish by matching hand on the slopping crimp marked on the topos",
             "images": [
                 "/boulders/gold-golem/9-8-5-w3024w.jpg"
             ]

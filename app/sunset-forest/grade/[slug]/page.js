@@ -87,7 +87,7 @@ export async function generateStaticParams() {
     let allGradings = _.map(routes.data, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, String);
+    allGradings = _.sortBy(allGradings, Number);
     return allGradings.map((grade) => {
         return {
             slug: '' + grade
