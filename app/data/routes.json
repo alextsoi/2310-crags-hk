@@ -246,7 +246,7 @@
             "description": "Start on the big ledge and launch up to a good crimp on the right, finish as line 2."
         },
         {
-            "name": "God of Chaos 亂神",
+            "name": "God Of Chaos 亂神",
             "slug": "god-of-chaos",
             "isSds": true,
             "rating": 3,
@@ -288,7 +288,7 @@
             ]
         },
         {
-            "name": "Mojo’s crimp",
+            "name": "Mojo’s Crimp",
             "slug": "mojos-crimp",
             "isSds": true,
             "rating": 0,
@@ -611,7 +611,7 @@
             ]
         },
         {
-            "name": "Humpback song",
+            "name": "Humpback Song",
             "slug": "humpback-song",
             "isSds": true,
             "rating": 2,
@@ -627,7 +627,7 @@
             ]
         },
         {
-            "name": "Whale fall",
+            "name": "Whale Fall",
             "slug": "whale-fall",
             "isSds": true,
             "rating": 2,
@@ -685,7 +685,7 @@
             ]
         },
         {
-            "name": "Big blue",
+            "name": "Big Blue",
             "slug": "big-blue",
             "isSds": true,
             "rating": 2,
@@ -1758,7 +1758,7 @@
             "description": "Same start as line 3, but top out in the middle."
         },
         {
-            "name": "Leap on moon",
+            "name": "Leap On Moon",
             "slug": "leap-on-moon",
             "isSds": false,
             "rating": 3,
@@ -1774,7 +1774,7 @@
             ]
         },
         {
-            "name": "Armor core v4",
+            "name": "Armor Core v4",
             "slug": "armor-core",
             "isSds": false,
             "rating": 2,
@@ -1790,7 +1790,7 @@
             ]
         },
         {
-            "name": "Titan fall",
+            "name": "Titan Fall",
             "slug": "titan-fall",
             "isSds": false,
             "rating": 1,
@@ -1803,7 +1803,7 @@
             "description": "Simiar to line 1, but after getting slopery crimps, change the right hand position to gaston and then a long move to the left top jug using left hand."
         },
         {
-            "name": "Nightfall raven",
+            "name": "Nightfall Raven",
             "slug": "nightfall-raven",
             "isSds": true,
             "rating": 3,
@@ -1819,7 +1819,7 @@
             ]
         },
         {
-            "name": "Finger armor",
+            "name": "Finger Armor",
             "slug": "finger-armor",
             "isSds": true,
             "rating": 1,
@@ -1832,7 +1832,7 @@
             "description": "Start on a left hand circled crimp, and right hand on a L-shaped crimp, climb up using different sharp crimps and top out."
         },
         {
-            "name": "Shadow rail",
+            "name": "Shadow Rail",
             "slug": "shadow-rail",
             "isSds": false,
             "rating": 0,
@@ -1864,7 +1864,7 @@
             ]
         },
         {
-            "name": "Pacific rim 環太平洋",
+            "name": "Pacific Rim 環太平洋",
             "slug": "pacific-rim",
             "isSds": false,
             "rating": 2,
@@ -1878,7 +1878,7 @@
             "description": ""
         },
         {
-            "name": "Tiny chilli",
+            "name": "Tiny Chilli",
             "slug": "tiny-chilli",
             "isSds": true,
             "rating": 2,
@@ -1894,7 +1894,7 @@
             ]
         },
         {
-            "name": "Titan's force 泰坦之力",
+            "name": "Titan's Force 泰坦之力",
             "slug": "titans-force",
             "isSds": false,
             "rating": 3,
@@ -1910,8 +1910,8 @@
             ]
         },
         {
-            "name": "Trun and flip 七轉八倒",
-            "slug": "trun-and-flip",
+            "name": "Turn And Flip 七轉八倒",
+            "slug": "Turn-and-flip",
             "isSds": false,
             "rating": 3,
             "gradings": [
@@ -1939,7 +1939,7 @@
             ]
         },
         {
-            "name": "Titan's shield 泰坦之盾",
+            "name": "Titan's Shield 泰坦之盾",
             "slug": "titans-shield",
             "isSds": false,
             "rating": 1,
@@ -1955,7 +1955,7 @@
             ]
         },
         {
-            "name": "Coco sds",
+            "name": "Coco Sds",
             "slug": "coco-sds",
             "isSds": true,
             "gradings": [
