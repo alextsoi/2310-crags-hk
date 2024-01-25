@@ -101,12 +101,13 @@
             "description": "Start on the obvious big hold."
         },
         {
-            "name": "Rock Blast",
+            "name": "Rock Blast 石破天驚",
             "slug": "rock-blast",
             "isSds": false,
             "rating": 0,
             "gradings": [
-                "project"
+                10,
+                11
             ],
             "boulder": "1.2",
             "zone": 1,
