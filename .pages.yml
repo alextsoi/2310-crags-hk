@@ -1,4 +1,6 @@
-media: public/images
+media:
+  input: public/images
+  output: /images
 content:
   - name: landing
     label: Landing

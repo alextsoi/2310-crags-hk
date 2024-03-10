@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "next": "13.4.19",
     "react": "^18",

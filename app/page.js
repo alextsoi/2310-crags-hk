@@ -1,8 +1,17 @@
 import Image from './_components/Image'
 import ImageMap from './_components/ImageMap'
 import styles from './page.module.scss'
+// read md file and convert to json
+import { promises as fs } from 'fs'
+import path from 'path';
+import matter from 'gray-matter'
 
-export default function Home() {
+export default async function Home() {
+    const filename = './src/landing.md';
+    const file = path.join(process.cwd(), filename);
+    const fileContent = await fs.readFile(file, 'utf8');
+    const data = matter(fileContent).data;
+    console.log(data);
     return (
         <main className={styles.main}>
             <div className="container">
