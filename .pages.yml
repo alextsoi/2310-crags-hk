@@ -1,0 +1,14 @@
+media: public/images
+content:
+  - name: title
+    type: text
+    label: Title
+    required: true
+  - name: content
+    type: markdown
+    label: Content
+    required: true
+  - name: maps
+    type: images
+    label: Maps
+    list: true
