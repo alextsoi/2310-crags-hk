@@ -10,7 +10,7 @@ content:
         label: Title
         required: true
       - name: content
-        type: markdown
+        type: rich-text
         label: Content
         required: true
       - name: maps
