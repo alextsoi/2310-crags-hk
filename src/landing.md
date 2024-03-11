@@ -23,6 +23,9 @@ content: >-
 
 
   We already created a Google marker of Sunset Forest, please click [here](https://maps.app.goo.gl/imrdXQzcdumx23VM6) to check the location
+
+
+  Please let us know if any mistake is found on the guidebook. We will correct and update as soon as possible.
 maps:
   - /images/common/sunset-forest-phase1a-w4800w.jpg
 ---
