@@ -19,3 +19,21 @@ content:
         type: image
         label: Maps
         list: true
+  - name: approach
+    label: Approach
+    type: file
+    path: src/approach.md
+    fields:
+      - name: title
+        type: text
+        label: Title
+        required: true
+      - name: content
+        type: rich-text
+        label: Content
+        required: true
+      - name: content2
+        type: rich-text
+        label: Content 2
+        required: true
+      
