@@ -14,6 +14,14 @@ content: >-
 
 
   To further enhance your experience, there's a convenience store close to the bouldering site. Whether you forgot to bring a snack, need a refreshing drink, or require some last-minute supplies, the convenience store has you covered. It's just another way we're making bouldering at Sunset Forest as enjoyable and hassle-free as possible.
+images:
+  - /images/common/approach-1.jpg
+  - /images/common/approach-2.jpg
+  - /images/common/approach-3.jpg
+  - /images/common/approach-4.jpg
+  - /images/common/approach-5.jpg
+  - /images/common/approach-6.jpg
+  - /images/common/approach-7.jpg
 content2: >-
   #### The Journey
 
