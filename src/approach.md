@@ -21,7 +21,7 @@ content2: "<h4 style=\"text-align: start\">The Journey</h4><p
   style=\"text-align: start\">At <a href=\"http://CRAGS.HK\">CRAGS.HK</a>, we
   are committed to making your bouldering experience in Sunset Forest smooth and
   memorable. We hope this guide helps you easily approach our site and maximize
-  your time spent on the fantastic boulders.</p><p style=\"text-align:
-  start\">Join us, and let's enjoy the beauty and challenge of Sunset Forest
-  together!</p>"
+  your time spent on the fantasti<a href=\"http://crags.hk/\">c
+  boulde</a>rs.</p><p style=\"text-align: start\">Join us, and let's enjoy the
+  beauty and challenge of Sunset Forest together!</p>"
 ---
