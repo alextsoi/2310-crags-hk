@@ -5,8 +5,9 @@ import styles from './page.module.scss'
 import { promises as fs } from 'fs'
 import path from 'path';
 import matter from 'gray-matter'
-import { remark } from 'remark'
 import html from 'remark-html'
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
 
 export default async function Home() {
     const filename = './src/landing.md';
@@ -14,7 +15,8 @@ export default async function Home() {
     const fileContent = await fs.readFile(file, 'utf8');
     const data = matter(fileContent).data;
     const content = data.content;
-    let contentResult = await remark().use(html).process(content);
+    let processor = unified().use(remarkParse).use(html);
+    let contentResult = await processor.process(content);
     contentResult = contentResult.toString();
     console.log(contentResult);
     return (

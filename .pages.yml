@@ -32,6 +32,10 @@ content:
         type: rich-text
         label: Content
         required: true
+      - name: images
+        type: image
+        label: Images
+        list: true
       - name: content2
         type: rich-text
         label: Content 2
