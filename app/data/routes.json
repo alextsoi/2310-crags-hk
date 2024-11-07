@@ -2184,6 +2184,101 @@
             "images": [
                 "/boulders/gold-golem/9-8-5-w3024w.jpg"
             ]
+        },
+        {
+            "name": "Odin’s rage",
+            "slug": "odins-rage",
+            "isSds": false,
+            "gradings": [
+                9
+            ],
+            "rating": 3,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.1",
+            "description": "Double start on a right hand side pull and left hand crimp, make dynamic moves to get the big edge, finish above",
+            "images": [
+                "/boulders/valhalla/11-2-w4096w.jpg"
+            ]
+        },
+        {
+            "name": "God of War",
+            "slug": "god-of-war",
+            "isSds": false,
+            "gradings": [
+                9,
+                10
+            ],
+            "rating": 3,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.2",
+            "description": "Start on two circled crimps, do a shoulder move to reach the sloper, and then finish above"
+        },
+        {
+            "name": "God of War Sds",
+            "slug": "god-of-war-sds",
+            "isSds": true,
+            "gradings": [
+                "project"
+            ],
+            "rating": 0,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.2b",
+            "description": "Sit start on the pinch and undercut, and then connect to the start hold of God of War"
+        },
+        {
+            "name": "Valhalla",
+            "slug": "valhalla",
+            "isSds": false,
+            "gradings": [
+                5
+            ],
+            "rating": 3,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.3",
+            "description": "Start on a left hand undercut and right hand slopery crimp, then do few body tension moves to get the good crimps and jump to another jug, and then topout"
+        },
+        {
+            "name": "Valhalla High Start",
+            "slug": "valhalla-high-start",
+            "isSds": false,
+            "gradings": [
+                "3"
+            ],
+            "rating": 2,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.3b",
+            "description": "Start on the good crimps and do a dynamic move to jug and then topout"
+        },
+        {
+            "name": "Valhalla Sds",
+            "slug": "valhalla-sds",
+            "isSds": true,
+            "gradings": [
+                "project"
+            ],
+            "rating": 0,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.3c",
+            "description": "Sit start on the undercut and then connect to the start hold of Valhalla"
+        },
+        {
+            "name": "Mimir",
+            "slug": "mimir",
+            "isSds": true,
+            "gradings": [
+                8
+            ],
+            "rating": 3,
+            "boulder": "11.2",
+            "zone": 11,
+            "id": "11.2.4",
+            "description": "Double start, and then do a toehook, find yourself some holds you can use to finish above"
         }
     ]
 }
