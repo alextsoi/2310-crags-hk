@@ -799,9 +799,9 @@
             "name": "Dragon Breath",
             "slug": "dragon-breath",
             "isSds": true,
-            "rating": 0,
+            "rating": 1,
             "gradings": [
-                "project"
+                6
             ],
             "boulder": "3.2",
             "zone": 3,
