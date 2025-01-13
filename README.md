@@ -18,3 +18,6 @@
 - copy the share caption
 - approach SEO
 - alt check
+
+# Resize image
+node programs/resize-image.js

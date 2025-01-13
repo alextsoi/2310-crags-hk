@@ -595,11 +595,25 @@
             "image": "/boulders/gold-golem/9-8-4-w4032w.jpg"
         },
         {
+            "name": "Star Walking",
+            "slug": "star-walking",
+            "id": "11.1",
+            "zone": 11,
+            "image": "/boulders/star-walking/11-1-starwalking-a.jpg"
+        },
+        {
             "name": "Valhalla",
             "slug": "valhalla",
             "id": "11.3",
             "zone": 11,
             "image": "/boulders/valhalla/11-2-w4096w.jpg"
+        },
+        {
+            "name": "Gungnir",
+            "slug": "gungnir",
+            "id": "11.4",
+            "zone": 11,
+            "image": "/boulders/gungnir/11-4-gungnir.jpg"
         }
     ]
 }
