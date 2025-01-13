@@ -2206,9 +2206,9 @@
                 9
             ],
             "rating": 3,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.1",
+            "id": "11.3.1",
             "description": "Double start on a right hand side pull and left hand crimp, make dynamic moves to get the big edge, finish above",
             "images": [
                 "/boulders/valhalla/11-2-w4096w.jpg"
@@ -2223,9 +2223,9 @@
                 10
             ],
             "rating": 3,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.2",
+            "id": "11.3.2",
             "description": "Start on two circled crimps, do a shoulder move to reach the sloper, and then finish above"
         },
         {
@@ -2236,9 +2236,9 @@
                 "project"
             ],
             "rating": 0,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.2b",
+            "id": "11.3.2b",
             "description": "Sit start on the pinch and undercut, and then connect to the start hold of God of War"
         },
         {
@@ -2249,9 +2249,9 @@
                 5
             ],
             "rating": 3,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.3",
+            "id": "11.3.3",
             "description": "Start on a left hand undercut and right hand slopery crimp, then do few body tension moves to get the good crimps and jump to another jug, and then topout"
         },
         {
@@ -2262,9 +2262,9 @@
                 "3"
             ],
             "rating": 2,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.3b",
+            "id": "11.3.3b",
             "description": "Start on the good crimps and do a dynamic move to jug and then topout"
         },
         {
@@ -2275,9 +2275,9 @@
                 "project"
             ],
             "rating": 0,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.3c",
+            "id": "11.3.3c",
             "description": "Sit start on the undercut and then connect to the start hold of Valhalla"
         },
         {
@@ -2288,9 +2288,9 @@
                 8
             ],
             "rating": 3,
-            "boulder": "11.2",
+            "boulder": "11.3",
             "zone": 11,
-            "id": "11.2.4",
+            "id": "11.3.4",
             "description": "Double start, and then do a toehook, find yourself some holds you can use to finish above"
         }
     ]
