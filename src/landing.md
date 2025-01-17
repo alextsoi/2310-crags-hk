@@ -44,4 +44,7 @@ content: >-
 mapUrl: https://www.alltrails.com/widget/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt
 maps:
   - /images/common/sunset-forest-phase1a-w4800w.jpg
+externalMapUrl:
+  url: https://www.alltrails.com/explore/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt
+  title: Save Sunset Forest Map on AllTrails
 ---
