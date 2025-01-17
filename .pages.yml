@@ -27,6 +27,18 @@ content:
         type: image
         label: Maps
         list: true
+      - name: externalMapUrl
+        type: object
+        label: External Map Url
+        fields:
+          - name: url
+            type: text
+            label: URL
+            required: true
+          - name: title
+            type: text
+            label: Title
+            required: true
   - name: approach
     label: Approach
     type: file
