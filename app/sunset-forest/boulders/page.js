@@ -24,6 +24,17 @@ export const metadata = {
 }
 
 export default function Boulders() {
+    const boulderFiles = await fs.readdir('src/boulders');
+    let allBoulders = [];
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allBoulders.push(data);
+        }
+    }
+    allBoulders = _.sortBy(allBoulders, 'order');
+    console.log(allBoulders);
     return (
         <main className={styles.main}>
             <div className="container">

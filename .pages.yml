@@ -73,6 +73,10 @@ content:
         type: number
         label: ID
         required: true
+      - name: published
+        type: boolean
+        label: Published
+        required: true
       - name: order
         type: number
         label: Order
