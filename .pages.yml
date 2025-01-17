@@ -64,4 +64,37 @@ content:
         type: rich-text
         label: Content 2
         required: true
+  - name: zones
+    label: Zones
+    type: collection
+    path: src/zones
+    fields:
+      - name: id
+        type: number
+        label: ID
+        required: true
+      - name: name
+        type: text
+        label: Name
+        required: true
+      - name: access
+        type: object
+        label: Access
+        fields:
+          - name: link
+            type: text
+            label: Link
+            required: true
+          - name: text
+            type: text
+            label: Text
+            required: true
+          - name: title
+            type: text
+            label: Title
+            required: true
+          - name: target
+            type: text
+            label: Target
+            required: true
       
