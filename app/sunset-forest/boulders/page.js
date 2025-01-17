@@ -2,6 +2,9 @@ import styles from '@/app/page.module.scss'
 import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+import fs from 'fs/promises';
+import matter from 'gray-matter';
+import _ from 'lodash';
 
 export const metadata = {
     title: 'Sunset Forest Boulders | CRAGS.HK',
@@ -23,7 +26,7 @@ export const metadata = {
     },
 }
 
-export default function Boulders() {
+export default async function Boulders() {
     const boulderFiles = await fs.readdir('src/boulders');
     let allBoulders = [];
     for (const file of boulderFiles) {
@@ -39,8 +42,8 @@ export default function Boulders() {
         <main className={styles.main}>
             <div className="container">
                 <h1>Sunset Forest Boulder Listings</h1>
-                <p>Total <strong>{boulders.data.length}</strong> boulders developed.</p>
-                {boulders.data.map((boulder) => {
+                <p>Total <strong>{allBoulders.length}</strong> boulders developed.</p>
+                {allBoulders.map(boulder => {
                     return <section className={`${styles.boulder} ${styles.accessContainer}`}>
                         <h3><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h3>
                         {boulder.access && <div><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}

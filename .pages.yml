@@ -99,6 +99,23 @@ content:
         type: image
         label: Image
         description: Please use the signature image of the boulder
+      - name: access
+        type: object
+        label: Access
+        required: false
+        fields:
+          - name: link
+            type: text
+            label: Link
+          - name: text
+            type: text
+            label: Text
+          - name: title
+            type: text
+            label: Title
+          - name: target
+            type: text
+            label: Target
   - name: zones
     label: Zones
     type: collection
