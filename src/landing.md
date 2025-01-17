@@ -47,4 +47,10 @@ maps:
 externalMapUrl:
   url: https://www.alltrails.com/explore/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt
   title: Save Sunset Forest Map on AllTrails
+  description: We disabled the old quick view maps on this page because it is
+    difficult to maintain and locate yourself on the map. Through the above
+    AllTrails map, you can explore all the locations of the boulders. Clicking
+    the above save link will redirect you to install the AllTrails app on your
+    phone and bookmark the map, so that you can identify yourself's GPS location
+    on the map.
 ---
