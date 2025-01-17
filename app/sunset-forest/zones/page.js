@@ -50,11 +50,11 @@ export default async function Zone() {
                 {allZones.map((zone) => {
                     // TODO: find number of boulders in the zone
                     // let matchedZone = zones.data.find(z => z.id === zone);
-                    // routes.data.filter(route => route.zone === zone).length
+                    const length = routes.data.filter(route => route.zone === zone.id).length;
                     return <section key={zone} className={styles.zone}>
                         <h3><Link
                             title={`Sunset Forest Bouldering ${zone.name} | Sunset Forest Bouldering Grades | CRAGS.HK`}
-                            href={`/sunset-forest/zone/${zone.id}`}>{zone.name}</Link><span className={styles.problemCount}>x 0 problems</span></h3>
+                            href={`/sunset-forest/zone/${zone.id}`}>{zone.name}</Link><span className={styles.problemCount}>x {length} problems</span></h3>
                         {zone.access && <div><a href={zone.access.link} title={zone.access.title} target={zone.access.target ? zone.access.target : '_blank'}>{zone.access.text}</a></div>}
                     </section>;
                 })}
