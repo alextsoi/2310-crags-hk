@@ -37,6 +37,8 @@ export default async function Home() {
         }
     }
 
+    allBoulders = _.sortBy(allBoulders, 'order');
+
     const routeFiles = await fs.readdir('src/routes');
     let allRoutes = [];
     for (const file of routeFiles) {
