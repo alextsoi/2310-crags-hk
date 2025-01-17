@@ -80,21 +80,18 @@ content:
       - name: access
         type: object
         label: Access
+        required: false
         fields:
           - name: link
             type: text
             label: Link
-            required: true
           - name: text
             type: text
             label: Text
-            required: true
           - name: title
             type: text
             label: Title
-            required: true
           - name: target
             type: text
             label: Target
-            required: true
       
