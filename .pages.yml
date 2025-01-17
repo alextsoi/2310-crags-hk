@@ -84,11 +84,13 @@ content:
         required: true
       - name: zone
         type: number
-        label: Zone ( Please use the defined zone ID)
+        label: Zone
+        description: Please use the defined zone ID
         required: true
       - name: image
         type: image
-        label: Image (Signature Boulder Image)
+        label: Image
+        description: Please use the signature image of the boulder
   - name: zones
     label: Zones
     type: collection
