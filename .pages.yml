@@ -81,6 +81,10 @@ content:
         type: text
         label: Name
         required: true
+      - name: published
+        type: boolean
+        label: Published
+        required: true
       - name: access
         type: object
         label: Access

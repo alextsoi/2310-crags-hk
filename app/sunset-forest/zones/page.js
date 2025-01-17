@@ -5,6 +5,9 @@ import zones from '@/app/data/zones.json'
 import Link from 'next/link'
 import _ from 'lodash'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+import { promises as fs } from 'fs'
+import path from 'path';
+import matter from 'gray-matter'
 
 export const metadata = {
     title: 'Sunset Forest Boulders Zones | CRAGS.HK',
@@ -26,21 +29,33 @@ export const metadata = {
     },
 }
 
-export default function Zone() {
-    let allZones = _.map(boulders.data, 'zone');
-    allZones = _.uniq(allZones);
-    allZones = _.sortBy(allZones, Number);
+export default async function Zone() {
+    // read all the files under src/zones
+    const zoneFiles = await fs.readdir('src/zones');
+    let allZones = [];
+    for (const file of zoneFiles) {
+        const fileContent = await fs.readFile(`src/zones/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allZones.push(data);
+        }
+    }
+    allZones = _.sortBy(allZones, 'order');
+    console.log(allZones);
+
     return (
         <main className={styles.main}>
             <div className="container">
                 <h1>Sunset Forest Zone Listings</h1>
                 {allZones.map((zone) => {
-                    let matchedZone = zones.data.find(z => z.id === zone);
+                    // TODO: find number of boulders in the zone
+                    // let matchedZone = zones.data.find(z => z.id === zone);
+                    // routes.data.filter(route => route.zone === zone).length
                     return <section key={zone} className={styles.zone}>
                         <h3><Link
-                            title={`Sunset Forest Bouldering Zone ${zone} | Sunset Forest Bouldering Grades | CRAGS.HK`}
-                            href={`/sunset-forest/zone/${zone}`}>Zone {zone}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.zone === zone).length} problems</span></h3>
-                        {matchedZone.access && <div><a href={matchedZone.access.link} title={matchedZone.access.title} target={matchedZone.access.target ? matchedZone.access.target : '_blank'}>{matchedZone.access.text}</a></div>}
+                            title={`Sunset Forest Bouldering ${zone.name} | Sunset Forest Bouldering Grades | CRAGS.HK`}
+                            href={`/sunset-forest/zone/${zone.id}`}>{zone.name}</Link><span className={styles.problemCount}>x 0 problems</span></h3>
+                        {zone.access && <div><a href={zone.access.link} title={zone.access.title} target={zone.access.target ? zone.access.target : '_blank'}>{zone.access.text}</a></div>}
                     </section>;
                 })}
                 <article className={styles.articleParagraphs}>
