@@ -28,7 +28,7 @@ async function generateRouteFiles() {
             zone: route.zone,
             id: route.id,
             description: route.description || '',
-            ...(route.images && { image: route.images[0] }),
+            ...(route.images && { image: '/images' + route.images[0] }),
             ...(route.comment && { comment: route.comment[0] })
         };
 
