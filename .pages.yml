@@ -86,6 +86,9 @@ content:
         type: number
         label: Zone ( Please use the defined zone ID)
         required: true
+      - name: image
+        type: image
+        label: Image (Signature Boulder Image)
   - name: zones
     label: Zones
     type: collection
