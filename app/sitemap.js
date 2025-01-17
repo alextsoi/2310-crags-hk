@@ -1,5 +1,4 @@
 import { websiteHost } from "./_helpers/config"
-import boulders from '@/app/data/boulders.json'
 import routes from '@/app/data/routes.json'
 import _ from 'lodash'
 import fs from 'fs/promises';
@@ -50,8 +49,17 @@ export default async function sitemap() {
             priority: 0.8,
         }
     ];
+    const boulderFiles = await fs.readdir('src/boulders');
+    let allBoulders = [];
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allBoulders.push(data);
+        }
+    }
     // Add all boulders
-    boulders.data.forEach(boulder => {
+    allBoulders.forEach(boulder => {
         sitemapList.push({
             url: `${websiteHost}sunset-forest/boulder/${boulder.slug}/`,
             lastModified: new Date(),

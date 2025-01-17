@@ -1,18 +1,54 @@
 import styles from '@/app/page.module.scss'
-import routes from '@/app/data/routes.json'
-import boulders from '@/app/data/boulders.json'
-import Link from 'next/link'
 import _ from 'lodash';
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 import Image from '@/app/_components/Image';
 import Copy from '@/app/_components/Copy';
+import fs from 'fs/promises';
+import matter from 'gray-matter';
+
+async function getBoulder(slug) {
+    const boulderFiles = await fs.readdir('src/boulders');
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            if (typeof data.slug !== 'undefined' && data.slug === slug) {
+                return data;
+            }
+        }
+    }
+    return null;
+}
 
 export async function generateMetadata({ params }) {
-    let boulder = boulders.data.filter((boulder) => {
-        return boulder.slug === params.slug
-    });
-    if (boulder.length > 0) {
-        let matchedRoutes = routes.data.filter((route) => route.boulder === boulder[0].id);
+    let boulder = await getBoulder(params.slug);
+    if (boulder) {
+        const routeFiles = await fs.readdir('src/routes');
+        let matchedRoutes = [];
+        for (const file of routeFiles) {
+            const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+            const data = matter(fileContent).data;
+            if (typeof data.published !== 'undefined' && data.published) {
+                if (typeof data.boulder !== 'undefined' && `${data.boulder}` === `${boulder.id}`) {
+                    matchedRoutes.push(data);
+                }
+            }
+        }
+        matchedRoutes = matchedRoutes.map(route => {
+            if (!Array.isArray(route.gradings)) {
+                route.gradings = route.gradings.split(',');
+                route.gradings = route.gradings.map(grading => {
+                    if (!isNaN(parseInt(grading))) {
+                        return parseInt(grading);
+                    } else {
+                        return grading.trim();
+                    }
+                });
+            }
+            return route;
+        });
+        matchedRoutes = _.sortBy(matchedRoutes, 'id');
+
         let allGradings = _.map(matchedRoutes, 'gradings');
         allGradings = _.flattenDeep(allGradings);
         allGradings = _.uniq(allGradings);
@@ -32,12 +68,12 @@ export async function generateMetadata({ params }) {
         } else {
             ratingTextDescription = '.';
         }
-        let description = `There are total ${matchedRoutes.length} routes on the ${boulder[0].name} Boulder that is located in zone ${boulder[0].zone}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
+        let description = `There are total ${matchedRoutes.length} routes on the ${boulder.name} Boulder that is located in zone ${boulder.zone}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
         return {
-            title: `${boulder[0].name} Boulder | Sunset Forest Boulders | CRAGS.HK`,
+            title: `${boulder.name} Boulder | Sunset Forest Boulders | CRAGS.HK`,
             description: description,
             openGraph: {
-                title: `${boulder[0].name} Boulder | Sunset Forest Boulders | CRAGS.HK`,
+                title: `${boulder.name} Boulder | Sunset Forest Boulders | CRAGS.HK`,
                 description: description,
                 url: `${websiteHost}sunset-forest/boulder/${boulder.slug} `,
                 siteName: siteName,
@@ -57,11 +93,33 @@ export async function generateMetadata({ params }) {
     }
 }
 
-export default function Boulder({ params }) {
-    const boulder = boulders.data.find((boulder) => {
-        return boulder.slug === params.slug
+export default async function Boulder({ params }) {
+    let boulder = await getBoulder(params.slug);
+    const routeFiles = await fs.readdir('src/routes');
+    let matchedRoutes = [];
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            if (typeof data.boulder !== 'undefined' && `${data.boulder}` === `${boulder.id}`) {
+                matchedRoutes.push(data);
+            }
+        }
+    }
+    matchedRoutes = matchedRoutes.map(route => {
+        if (!Array.isArray(route.gradings)) {
+            route.gradings = route.gradings.split(',');
+            route.gradings = route.gradings.map(grading => {
+                if (!isNaN(parseInt(grading))) {
+                    return parseInt(grading);
+                } else {
+                    return grading.trim();
+                }
+            });
+        }
+        return route;
     });
-    const matchedRoutes = routes.data.filter((route) => route.boulder === boulder.id);
+    matchedRoutes = _.sortBy(matchedRoutes, 'id');
     let description = null;
     let allGradings = _.map(matchedRoutes, 'gradings');
     allGradings = _.flattenDeep(allGradings);
@@ -94,10 +152,8 @@ export default function Boulder({ params }) {
                     <ul className={styles.boulderRoutes}>
                         {matchedRoutes.map((route) => {
                             return <li className={styles.boulderRoute} key={route.id}>
-                                {route.images && <div className={styles.boulderRouteImages}>
-                                    {route.images.map((imagePath) => {
-                                        return <Image path={imagePath} key={imagePath} />
-                                    })}
+                                {route.image && <div className={styles.boulderRouteImages}>
+                                    <Image path={route.image} />
                                 </div>}
                                 <div className={styles.boulderRouteTitle}>
                                     <div className={styles.boulderRouteId}>{route.id} -</div>
@@ -116,7 +172,16 @@ export default function Boulder({ params }) {
 }
 
 export async function generateStaticParams() {
-    return boulders.data.map((boulder) => {
+    const boulderFiles = await fs.readdir('src/boulders');
+    let allBoulders = [];
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allBoulders.push(data);
+        }
+    }
+    return allBoulders.map((boulder) => {
         return {
             slug: boulder.slug
         }
