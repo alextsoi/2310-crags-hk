@@ -1,5 +1,4 @@
 import { websiteHost } from "./_helpers/config"
-import routes from '@/app/data/routes.json'
 import _ from 'lodash'
 import fs from 'fs/promises';
 import matter from 'gray-matter';
@@ -68,20 +67,6 @@ export default async function sitemap() {
         });
     });
 
-    // Add all grades
-    let allGradings = _.map(routes.data, 'gradings');
-    allGradings = _.flattenDeep(allGradings);
-    allGradings = _.uniq(allGradings);
-    allGradings = _.sortBy(allGradings, Number);
-    allGradings.forEach((grade) => {
-        sitemapList.push({
-            url: `${websiteHost}sunset-forest/grade/${grade}/`,
-            lastModified: new Date(),
-            changeFrequency: 'daily',
-            priority: 0.7,
-        });
-    });
-
     // Add all zones
     const zoneFiles = await fs.readdir('src/zones');
     let allZones = [];
@@ -101,8 +86,46 @@ export default async function sitemap() {
         });
     });
 
+    let allRoutes = [];
+    const routeFiles = await fs.readdir('src/routes');
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allRoutes.push(data);
+        }
+    }
+
+    allRoutes = allRoutes.map(route => {
+        if (!Array.isArray(route.gradings)) {
+            route.gradings = route.gradings.split(',');
+            route.gradings = route.gradings.map(grading => {
+                if (!isNaN(parseInt(grading))) {
+                    return parseInt(grading);
+                } else {
+                    return grading.trim();
+                }
+            });
+        }
+        return route;
+    });
+
+    // Add all grades
+    let allGradings = _.map(allRoutes, 'gradings');
+    allGradings = _.flattenDeep(allGradings);
+    allGradings = _.uniq(allGradings);
+    allGradings = _.sortBy(allGradings, Number);
+    allGradings.forEach((grade) => {
+        sitemapList.push({
+            url: `${websiteHost}sunset-forest/grade/${grade}/`,
+            lastModified: new Date(),
+            changeFrequency: 'daily',
+            priority: 0.7,
+        });
+    });
+
     // Add all ratings
-    let allRatings = _.map(routes.data, 'rating');
+    let allRatings = _.map(allRoutes, 'rating');
     allRatings = _.uniq(allRatings);
     allRatings = _.sortBy(allRatings, String);
     allRatings.forEach((rating) => {

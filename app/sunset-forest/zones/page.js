@@ -38,16 +38,17 @@ export default async function Zone() {
         }
     }
     allZones = _.sortBy(allZones, 'order');
-    console.log(allZones);
 
     const routeFiles = await fs.readdir('src/routes');
-    const allRoutes = [];
+    let  allRoutes = [];
     for (const file of routeFiles) {
         const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
         const data = matter(fileContent).data;
-        allRoutes.push(data);
+        if (typeof data.published !== 'undefined' && data.published) {
+            allRoutes.push(data);
+        }
     }
-    console.log(allRoutes);
+    allRoutes = _.sortBy(allRoutes, 'id');
 
     return (
         <main className={styles.main}>

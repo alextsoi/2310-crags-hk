@@ -1,9 +1,9 @@
 import styles from '@/app/page.module.scss'
-import routes from '@/app/data/routes.json'
-import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import _ from 'lodash'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+import fs from 'fs/promises';
+import matter from 'gray-matter';
 
 export const metadata = {
     title: 'Sunset Forest Boulder Problem Ratings | CRAGS.HK',
@@ -25,8 +25,18 @@ export const metadata = {
     },
 }
 
-export default function Rating() {
-    let allRatings = _.map(routes.data, 'rating');
+export default async function Rating() {
+    let allRoutes = [];
+    const routeFiles = await fs.readdir('src/routes');
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allRoutes.push(data);
+        }
+    }
+
+    let allRatings = _.map(allRoutes, 'rating');
     allRatings = _.uniq(allRatings);
     allRatings = _.sortBy(allRatings, String);
     return (
@@ -37,7 +47,7 @@ export default function Rating() {
                     return <section key={rating} className={styles.rating}>
                         <h3><Link
                             title={`${rating !== 0 ? `Problems rated with ${rating} stars` : 'Normal Problems'} | Sunset Forest Bouldering Grades | CRAGS.HK`}
-                            href={`/sunset-forest/rating/${rating}`}>{rating !== 0 ? `${rating} star` : 'Normal'}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.rating === rating).length} problems</span></h3>
+                            href={`/sunset-forest/rating/${rating}`}>{rating !== 0 ? `${rating} star` : 'Normal'}</Link><span className={styles.problemCount}>x {allRoutes.filter(route => route.rating === rating).length} problems</span></h3>
                     </section>;
                 })}
                 <article className={styles.articleParagraphs}>

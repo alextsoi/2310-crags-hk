@@ -1,7 +1,8 @@
 import styles from '@/app/page.module.scss'
-import routes from '@/app/data/routes.json'
 import Link from 'next/link'
 import _ from 'lodash'
+import fs from 'fs/promises';
+import matter from 'gray-matter';
 
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 
@@ -25,8 +26,32 @@ export const metadata = {
     },
 }
 
-export default function Grade() {
-    let allGradings = _.map(routes.data, 'gradings');
+export default async function Grade() {
+    let allRoutes = [];
+    const routeFiles = await fs.readdir('src/routes');
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allRoutes.push(data);
+        }
+    }
+
+    allRoutes = allRoutes.map(route => {
+        if (!Array.isArray(route.gradings)) {
+            route.gradings = route.gradings.split(',');
+            route.gradings = route.gradings.map(grading => {
+                if (!isNaN(parseInt(grading))) {
+                    return parseInt(grading);
+                } else {
+                    return grading.trim();
+                }
+            });
+        }
+        return route;
+    });
+
+    let allGradings = _.map(allRoutes, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
     // First number, then string
@@ -41,8 +66,8 @@ export default function Grade() {
                 {allGradings.map((grade) => {
                     return <section key={grade} className={styles.grade}>
                         <h3><Link
-                            title={`${grade !== 'project'?`V${grade} problems`:'Project Problems'} | Sunset Forest Bouldering Grades | CRAGS.HK`}
-                            href={`/sunset-forest/grade/${grade}`}>{grade !== 'project' ? `V${grade}` : 'Project'}</Link><span className={styles.problemCount}>x {routes.data.filter(route => route.gradings.includes(grade)).length} problems</span></h3>
+                            title={`${grade !== 'project' ? `V${grade} problems` : 'Project Problems'} | Sunset Forest Bouldering Grades | CRAGS.HK`}
+                            href={`/sunset-forest/grade/${grade}`}>{grade !== 'project' ? `V${grade}` : 'Project'}</Link><span className={styles.problemCount}>x {allRoutes.filter(route => route.gradings.includes(grade)).length} problems</span></h3>
                     </section>;
                 })}
                 <article className={styles.articleParagraphs}>

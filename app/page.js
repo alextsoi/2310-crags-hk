@@ -1,5 +1,3 @@
-import Image from './_components/Image'
-import ImageMap from './_components/ImageMap'
 import styles from './page.module.scss'
 // read md file and convert to json
 import { promises as fs } from 'fs'
@@ -33,12 +31,6 @@ export default async function Home() {
                         {data.externalMapUrl.description && <div>{data.externalMapUrl.description}</div>}
                     </div>}
                 </div>
-                {/* <div className="map">
-                    <ImageMap path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map Phase 1a | CRAGS.HK" />
-                </div>
-                <div className="map">
-                    <Image path="/common/sunset-forest-phase1b-1-w3200w.jpg" alt="Sunset Forest Bouldering Site Map Phase 1b | CRAGS.HK" />
-                </div> */}
                 <div dangerouslySetInnerHTML={{ __html: contentResult }}></div>
             </div>
         </main >

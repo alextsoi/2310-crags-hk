@@ -1,8 +1,10 @@
 import styles from '@/app/page.module.scss'
-import routes from '@/app/data/routes.json'
-import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
+import { promises as fs } from 'fs'
+import path from 'path';
+import matter from 'gray-matter'
+import _ from 'lodash';
 
 export const metadata = {
     title: 'Sunset Forest Boulder Problem Listings | CRAGS.HK',
@@ -24,24 +26,58 @@ export const metadata = {
     },
 }
 
-export default function Home() {
+export default async function Home() {
+    const boulderFiles = await fs.readdir('src/boulders');
+    let allBoulders = [];
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allBoulders.push(data);
+        }
+    }
+
+    const routeFiles = await fs.readdir('src/routes');
+    let allRoutes = [];
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allRoutes.push(data);
+        }
+    }
+
+    allRoutes = allRoutes.map(route => {
+        if (!Array.isArray(route.gradings)) {
+            route.gradings = route.gradings.split(',');
+            route.gradings = route.gradings.map(grading => {
+                if (!isNaN(parseInt(grading))) {
+                    return parseInt(grading);
+                } else {
+                    return grading.trim();
+                }
+            });
+        }
+        return route;
+    });
+
+    allRoutes = _.sortBy(allRoutes, 'id');
+
     return (
         <main className={styles.main}>
             <div className="container">
                 <h1>Sunset Forest Boulder Problem Listings</h1>
-                <p>Total <strong>{routes.data.length}</strong> boulder problems developed.</p>
+                <p>Total <strong>{allRoutes.length}</strong> boulder problems developed.</p>
                 <iframe className={styles.alltrails} src="https://www.alltrails.com/widget/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt" width="100%" style={{ height: '75vh', minHeight: '400px' }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
                 <br /><br />
                 <div><a href="https://www.alltrails.com/explore/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt" target="_blank" rel="noopener noreferrer">Save Sunset Forest Map on AllTrails</a></div>
-                {/* <div className="map"><ImageMap path="/common/sunset-forest-phase1a-w4800w.jpg" alt="Sunset Forest Bouldering Site Map Phase 1a | CRAGS.HK" /></div>
-                <div className="map"><Image path="/common/sunset-forest-phase1b-1-w3200w.jpg" alt="Sunset Forest Bouldering Site Map Phase 1b | CRAGS.HK" /></div> */}
-                {boulders.data.map((boulder) => {
+                {allBoulders.map((boulder) => {
                     return <section className={styles.boulder}>
                         <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name} Boulder</Link></h2>
                         {boulder.access && <div className={styles.boulderAccess}><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
                         <ul className={styles.boulderRoutes}>
-                            {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
-                                let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
+                            {allRoutes.filter(route => `${route.boulder}` === `${boulder.id}`).map((route) => {
+                                let foundBoulder = allBoulders.find((boulder) => `${boulder.id}` === `${route.boulder}`);
                                 return <li className={styles.boulderRoute} key={route.id}>
                                     <Link
                                         title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}

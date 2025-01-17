@@ -1,6 +1,4 @@
 import styles from '@/app/page.module.scss'
-import boulders from '@/app/data/boulders.json'
-import Link from 'next/link'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 // read md file and convert to json
 import { promises as fs } from 'fs'

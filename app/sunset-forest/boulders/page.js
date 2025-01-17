@@ -1,5 +1,4 @@
 import styles from '@/app/page.module.scss'
-import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 import fs from 'fs/promises';
@@ -37,7 +36,6 @@ export default async function Boulders() {
         }
     }
     allBoulders = _.sortBy(allBoulders, 'order');
-    console.log(allBoulders);
     return (
         <main className={styles.main}>
             <div className="container">
