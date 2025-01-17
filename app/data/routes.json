@@ -729,7 +729,7 @@
         },
         {
             "name": "Small Blue",
-            "slig": "small-blue",
+            "slug": "small-blue",
             "isSds": true,
             "rating": 2,
             "gradings": [
@@ -2037,7 +2037,7 @@
             "boulder": "10.1",
             "zone": 10,
             "id": "10.1.4",
-            "description": "Start on a good sloper, get the sloper above ,use the crimps slightly on the left to finish leftward above"
+            "description": "Start on a good sloper, get the sloper above ,use the crimps slughtly on the left to finish leftward above"
         },
         {
             "name": "Dead Rising Right",

@@ -64,6 +64,61 @@ content:
         type: rich-text
         label: Content 2
         required: true
+  - name: routes
+    label: Routes
+    type: collection
+    path: src/routes
+    fields:
+      - name: id
+        type: number
+        label: ID
+        required: true
+        description: Will bed sorted by id
+      - name: published
+        type: boolean
+        label: Published
+        required: true
+      - name: slug
+        type: text
+        label: Slug
+        required: true
+        description: Small case, no spaces, no special characters
+      - name: boulder
+        type: text
+        label: Boulder
+        required: true
+        description: Please use the defined boulder ID
+      - name: zone
+        type: number
+        label: Zone
+        required: true
+        description: Please use the defined zone ID
+      - name: name
+        type: text
+        label: Name
+        required: true
+      - name: rating
+        type: number
+        label: Rating
+        required: true
+        description: 0 - 3
+      - name: description
+        type: rich-text
+        label: Description
+      - name: gradings
+        type: text
+        label: Grading
+        required: true
+        description: Comma separated gradings, e.g. V1, V2, V3
+      - name: image
+        type: image
+        label: Image
+      - name: isSds
+        type: boolean
+        label: Is SDS
+      - name: comment
+        type: text
+        label: Comment
   - name: boulders
     label: Boulders
     type: collection

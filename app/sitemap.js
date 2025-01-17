@@ -2,8 +2,10 @@ import { websiteHost } from "./_helpers/config"
 import boulders from '@/app/data/boulders.json'
 import routes from '@/app/data/routes.json'
 import _ from 'lodash'
+import fs from 'fs/promises';
+import matter from 'gray-matter';
 
-export default function sitemap() {
+export default async function sitemap() {
     let sitemapList = [
         {
             url: websiteHost,
@@ -73,12 +75,18 @@ export default function sitemap() {
     });
 
     // Add all zones
-    let allZones = _.map(boulders.data, 'zone');
-    allZones = _.uniq(allZones);
-    allZones = _.sortBy(allZones, String);
+    const zoneFiles = await fs.readdir('src/zones');
+    let allZones = [];
+    for (const file of zoneFiles) {
+        const fileContent = await fs.readFile(`src/zones/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allZones.push(data);
+        }
+    }
     allZones.forEach((zone) => {
         sitemapList.push({
-            url: `${websiteHost}sunset-forest/zone/${zone}/`,
+            url: `${websiteHost}sunset-forest/zone/${zone.id}/`,
             lastModified: new Date(),
             changeFrequency: 'daily',
             priority: 0.7,

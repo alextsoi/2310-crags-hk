@@ -3,8 +3,6 @@ import routes from '@/app/data/routes.json'
 import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
-import Image from '../_components/Image';
-import ImageMap from '../_components/ImageMap';
 
 export const metadata = {
     title: 'Sunset Forest Boulder Problem Listings | CRAGS.HK',

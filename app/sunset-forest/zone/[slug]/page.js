@@ -1,6 +1,4 @@
 import styles from '@/app/page.module.scss'
-import routes from '@/app/data/routes.json'
-import boulders from '@/app/data/boulders.json'
 import Link from 'next/link'
 import _ from 'lodash';
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
@@ -9,12 +7,55 @@ import fs from 'fs/promises';
 import matter from 'gray-matter';
 
 export async function generateMetadata({ params }) {
-    let matchedBoulders = boulders.data.filter((boulder) => {
-        return boulder.zone === parseInt(params.slug)
+    const routeFiles = await fs.readdir('src/routes');
+    let allRoutes = [];
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            if (typeof data.zone !== 'undefined' && data.zone === parseInt(params.slug)) {
+                allRoutes.push(data);
+            }
+        }
+    }
+    const boulderFiles = await fs.readdir('src/boulders');
+    let allBoulders = [];
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            if (typeof data.zone !== 'undefined' && data.zone === parseInt(params.slug)) {
+                allBoulders.push(data);
+            }
+        }
+    }
+    allBoulders = _.sortBy(allBoulders, 'order');
+    let matchedBoulders = allBoulders.filter((boulder) => boulder.zone === parseInt(params.slug));
+    matchedBoulders = matchedBoulders.map(boulder => {
+        boulder.id = boulder.id + '';
+        return boulder;
     });
     let matchedBoulderIds = _.map(matchedBoulders, 'id');
     if (matchedBoulders.length > 0) {
-        let matchedRoutes = routes.data.filter((route) => matchedBoulderIds.includes(route.boulder));
+        let matchedRoutes = allRoutes.filter((route) => {
+            return matchedBoulderIds.includes(route.boulder)
+        });
+        matchedRoutes = matchedRoutes.map(route => {
+            if (!Array.isArray(route.gradings)) {
+                route.gradings = route.gradings.split(',');
+                route.gradings = route.gradings.map(grading => {
+                    if (!isNaN(parseInt(grading))) {
+                        return parseInt(grading);
+                    } else {
+                        return grading.trim();
+                    }
+                });
+            }
+            return route;
+        });
+
+        matchedRoutes = _.sortBy(matchedRoutes, 'id');
+
         let allGradings = _.map(matchedRoutes, 'gradings');
         allGradings = _.flattenDeep(allGradings);
         allGradings = _.uniq(allGradings);
@@ -60,7 +101,17 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Zone({ params }) {
-    const { slug } = params;
+    const routeFiles = await fs.readdir('src/routes');
+    let allRoutes = [];
+    for (const file of routeFiles) {
+        const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            if (typeof data.zone !== 'undefined' && data.zone === parseInt(params.slug)) {
+                allRoutes.push(data);
+            }
+        }
+    }
     const boulderFiles = await fs.readdir('src/boulders');
     let allBoulders = [];
     for (const file of boulderFiles) {
@@ -73,11 +124,32 @@ export default async function Zone({ params }) {
         }
     }
     allBoulders = _.sortBy(allBoulders, 'order');
-
-    const matchedBoulders = boulders.data.filter((boulder) => boulder.zone === parseInt(params.slug));
+    let matchedBoulders = allBoulders.filter((boulder) => boulder.zone === parseInt(params.slug));
+    matchedBoulders = matchedBoulders.map(boulder => {
+        boulder.id = boulder.id + '';
+        return boulder;
+    });
     let description = null;
     let matchedBoulderIds = _.map(matchedBoulders, 'id');
-    let matchedRoutes = routes.data.filter((route) => matchedBoulderIds.includes(route.boulder));
+    let matchedRoutes = allRoutes.filter((route) => {
+        return matchedBoulderIds.includes(route.boulder)
+    });
+    matchedRoutes = matchedRoutes.map(route => {
+        if (!Array.isArray(route.gradings)) {
+            route.gradings = route.gradings.split(',');
+            route.gradings = route.gradings.map(grading => {
+                if (!isNaN(parseInt(grading))) {
+                    return parseInt(grading);
+                } else {
+                    return grading.trim();
+                }
+            });
+        }
+        return route;
+    });
+
+    matchedRoutes = _.sortBy(matchedRoutes, 'id');
+
     let allGradings = _.map(matchedRoutes, 'gradings');
     allGradings = _.flattenDeep(allGradings);
     allGradings = _.uniq(allGradings);
@@ -109,7 +181,7 @@ export default async function Zone({ params }) {
                             <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
                             {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
                             <ul className={styles.boulderRoutes}>
-                                {routes.data.filter(route => {
+                                {matchedRoutes.filter(route => {
                                     return `${route.boulder}` === `${boulder.id}`
                                 }).map((route) => {
                                     let foundBoulder = allBoulders.find((boulder) => `${boulder.id}` === `${route.boulder}`);
