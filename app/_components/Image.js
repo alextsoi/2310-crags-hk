@@ -3,10 +3,17 @@ import images from '@/app/data/images.json';
 import { useEffect, useState } from 'react';
 
 function getSmallerSizeImage(path) {
+    if (path.indexOf('/images') > -1) {
+        return '/images-resized' + path.replace('/images', '');
+    }
     return '/images-resized' + path;
 }
 function getNormalSizeImage(path) {
-    return '/images' + path;
+    if (path.indexOf('/images') > -1) {
+        return path;
+    } else {
+        return '/images' + path;
+    }
 }
 function getWidthFromPath(path) {
     try {

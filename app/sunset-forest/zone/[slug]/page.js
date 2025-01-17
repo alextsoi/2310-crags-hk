@@ -5,6 +5,8 @@ import Link from 'next/link'
 import _ from 'lodash';
 import { ratingText, siteName, websiteHost } from '@/app/_helpers/config';
 import Image from '@/app/_components/Image';
+import fs from 'fs/promises';
+import matter from 'gray-matter';
 
 export async function generateMetadata({ params }) {
     let matchedBoulders = boulders.data.filter((boulder) => {
@@ -57,8 +59,20 @@ export async function generateMetadata({ params }) {
     }
 }
 
-export default function Zone({ params }) {
+export default async function Zone({ params }) {
     const { slug } = params;
+    const boulderFiles = await fs.readdir('src/boulders');
+    let allBoulders = [];
+    for (const file of boulderFiles) {
+        const fileContent = await fs.readFile(`src/boulders/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            if (typeof data.zone !== 'undefined' && data.zone === parseInt(params.slug)) {
+                allBoulders.push(data);
+            }
+        }
+    }
+    allBoulders = _.sortBy(allBoulders, 'order');
 
     const matchedBoulders = boulders.data.filter((boulder) => boulder.zone === parseInt(params.slug));
     let description = null;
@@ -90,13 +104,15 @@ export default function Zone({ params }) {
             <div className="container">
                 <section className={styles.boulder}>
                     <h2>Zone {params.slug}</h2>
-                    {matchedBoulders.map((boulder) => {
+                    {allBoulders.map((boulder) => {
                         return <section className={styles.boulder}>
                             <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
                             {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
                             <ul className={styles.boulderRoutes}>
-                                {routes.data.filter(route => route.boulder === boulder.id).map((route) => {
-                                    let foundBoulder = boulders.data.find((boulder) => boulder.id === route.boulder);
+                                {routes.data.filter(route => {
+                                    return `${route.boulder}` === `${boulder.id}`
+                                }).map((route) => {
+                                    let foundBoulder = allBoulders.find((boulder) => `${boulder.id}` === `${route.boulder}`);
                                     return <li className={styles.boulderRoute} key={route.id}>
                                         <Link
                                             title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}
@@ -121,10 +137,18 @@ export default function Zone({ params }) {
 }
 
 export async function generateStaticParams() {
-    let zones = _.uniq(_.map(boulders.data, 'zone'));
-    return zones.map((zone) => {
+    const zoneFiles = await fs.readdir('src/zones');
+    let allZones = [];
+    for (const file of zoneFiles) {
+        const fileContent = await fs.readFile(`src/zones/${file}`, 'utf8');
+        const data = matter(fileContent).data;
+        if (typeof data.published !== 'undefined' && data.published) {
+            allZones.push(data);
+        }
+    }
+    return allZones.map((zone) => {
         return {
-            slug: '' + zone
+            slug: `${zone.id}`
         }
     })
 }
