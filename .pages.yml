@@ -64,6 +64,28 @@ content:
         type: rich-text
         label: Content 2
         required: true
+  - name: boulders
+    label: Boulders
+    type: collection
+    path: src/boulders
+    fields:
+      - name: id
+        type: number
+        label: ID
+        required: true
+      - name: slug
+        type: text
+        label: Slug
+        required: true
+        primary: true
+      - name: name
+        type: text
+        label: Name
+        required: true
+      - name: zone
+        type: number
+        label: Zone ( Please use the defined zone ID)
+        required: true
   - name: zones
     label: Zones
     type: collection
@@ -73,6 +95,7 @@ content:
         type: number
         label: ID
         required: true
+        primary: true
       - name: order
         type: number
         label: Order
