@@ -73,6 +73,10 @@ content:
         type: number
         label: ID
         required: true
+      - name: order
+        type: number
+        label: Order
+        required: true
       - name: name
         type: text
         label: Name
