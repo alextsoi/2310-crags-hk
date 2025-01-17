@@ -19,6 +19,10 @@ content:
         type: rich-text
         label: Content
         required: true
+      - name: mapUrl
+        type: text
+        label: Map URL
+        required: true
       - name: maps
         type: image
         label: Maps
