@@ -39,6 +39,10 @@ content:
             type: text
             label: Title
             required: true
+          - name: description
+            type: rich-text
+            label: Description
+            required: true
   - name: approach
     label: Approach
     type: file
