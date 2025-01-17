@@ -154,6 +154,17 @@ content:
         type: image
         label: Image
         description: Please use the signature image of the boulder
+      - name: gps
+        type: object
+        label: GPS
+        required: false
+        fields:
+          - name: lat
+            type: number
+            label: Latitude
+          - name: lng
+            type: number
+            label: Longitude
       - name: access
         type: object
         label: Access
