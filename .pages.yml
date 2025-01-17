@@ -11,6 +11,10 @@ content:
         type: text
         label: Title
         required: true
+      - name: subtitle
+        type: text
+        label: Subtitle
+        required: true
       - name: content
         type: rich-text
         label: Content
