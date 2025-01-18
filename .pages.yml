@@ -73,7 +73,7 @@ content:
         type: text
         label: ID
         required: true
-        description: Will bed sorted by id
+        description: Will be sorted by id
       - name: published
         type: boolean
         label: Published
@@ -109,7 +109,7 @@ content:
         type: text
         label: Grading
         required: true
-        description: Comma separated gradings, e.g. V1, V2, V3
+        description: Comma separated gradings, e.g. 1, 2, 3, project etc
       - name: image
         type: image
         label: Image
