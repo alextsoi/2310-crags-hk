@@ -70,7 +70,7 @@ content:
     path: src/routes
     fields:
       - name: id
-        type: number
+        type: text
         label: ID
         required: true
         description: Will bed sorted by id
