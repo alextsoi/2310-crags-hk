@@ -24,7 +24,7 @@ export default async function Home() {
                 <h1>{data.title}</h1>
                 <div className="new-map">
                     <h2>{data.subtitle}</h2>
-                    <iframe className={styles.alltrails} src={data.mapUrl} width="100%" style={{ height: '75vh', minHeight: '400px' }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
+                    <iframe className={styles.alltrails} src={data.mapUrl} width="100%" style={{ height: '75vh', minHeight: '400px' }} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
                     <br /><br />
                     {data.externalMapUrl && <div>
                         <p><a href={data.externalMapUrl.url} target="_blank" rel="noopener noreferrer">{data.externalMapUrl.title}</a></p>

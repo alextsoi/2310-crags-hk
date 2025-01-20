@@ -70,7 +70,7 @@ export default async function Home() {
             <div className="container">
                 <h1>Sunset Forest Boulder Problem Listings</h1>
                 <p>Total <strong>{allRoutes.length}</strong> boulder problems developed.</p>
-                <iframe className={styles.alltrails} src="https://www.alltrails.com/widget/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt" width="100%" style={{ height: '75vh', minHeight: '400px' }} frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
+                <iframe className={styles.alltrails} src="https://www.alltrails.com/widget/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt" width="100%" style={{ height: '75vh', minHeight: '400px' }} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
                 <br /><br />
                 <div><a href="https://www.alltrails.com/explore/map/morning-hike-f00e1df-82?u=m&sh=s1yzdt" target="_blank" rel="noopener noreferrer">Save Sunset Forest Map on AllTrails</a></div>
                 {allBoulders.map((boulder) => {
