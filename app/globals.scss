@@ -40,24 +40,6 @@ a {
   gap: 10px;
 }
 
-footer {
-  margin: 50px 0;
-}
-
-.map {
-  img {
-    // width: 640px;
-    max-width: 100%;
-    height: auto;
-  }
-  & + .map {
-    margin-top: 20px;
-  }
-}
-
-#root-logo {
-  dipslay: none;
-}
 .root-header-quickaccess {
   display: none;
 }
