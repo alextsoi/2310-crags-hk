@@ -43,8 +43,8 @@ export default async function Rating() {
         <main className={styles.main}>
             <div className="container">
                 <h1>Sunset Forest Rating Listings</h1>
-                {allRatings.map((rating) => {
-                    return <section key={rating} className={styles.rating}>
+                {allRatings.map((rating, ratingKey) => {
+                    return <section key={ratingKey} className={styles.rating}>
                         <h3><Link
                             title={`${rating !== 0 ? `Problems rated with ${rating} stars` : 'Normal Problems'} | Sunset Forest Bouldering Grades | CRAGS.HK`}
                             href={`/sunset-forest/rating/${rating}`}>{rating !== 0 ? `${rating} star` : 'Normal'}</Link><span className={styles.problemCount}>x {allRoutes.filter(route => route.rating === rating).length} problems</span></h3>

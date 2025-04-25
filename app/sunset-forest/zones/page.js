@@ -54,11 +54,11 @@ export default async function Zone() {
         <main className={styles.main}>
             <div className="container">
                 <h1>Sunset Forest Zone Listings</h1>
-                {allZones.map((zone) => {
+                {allZones.map((zone, zoneKey) => {
                     // TODO: find number of boulders in the zone
                     // let matchedZone = zones.data.find(z => z.id === zone);
                     const length = allRoutes.filter(route => route.zone === zone.id).length;
-                    return <section key={zone} className={styles.zone}>
+                    return <section key={zoneKey} className={styles.zone}>
                         <h3><Link
                             title={`Sunset Forest Bouldering ${zone.name} | Sunset Forest Bouldering Grades | CRAGS.HK`}
                             href={`/sunset-forest/zone/${zone.id}`}>{zone.name}</Link><span className={styles.problemCount}>x {length} problems</span></h3>

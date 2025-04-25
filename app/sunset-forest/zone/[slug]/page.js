@@ -176,8 +176,8 @@ export default async function Zone({ params }) {
             <div className="container">
                 <section className={styles.boulder}>
                     <h2>Zone {params.slug}</h2>
-                    {allBoulders.map((boulder) => {
-                        return <section className={styles.boulder}>
+                    {allBoulders.map((boulder, boulderKey) => {
+                        return <section className={styles.boulder} key={boulderKey}>
                             <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
                             {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
                             <ul className={styles.boulderRoutes}>

@@ -41,8 +41,8 @@ export default async function Boulders() {
             <div className="container">
                 <h1>Sunset Forest Boulder Listings</h1>
                 <p>Total <strong>{allBoulders.length}</strong> boulders developed.</p>
-                {allBoulders.map(boulder => {
-                    return <section className={`${styles.boulder} ${styles.accessContainer}`}>
+                {allBoulders.map((boulder, boulderKey) => {
+                    return <section key={boulderKey} className={`${styles.boulder} ${styles.accessContainer}`}>
                         <h3><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h3>
                         {boulder.access && <div><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
                     </section>;
