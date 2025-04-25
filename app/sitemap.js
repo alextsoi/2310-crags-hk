@@ -3,6 +3,8 @@ import _ from 'lodash'
 import fs from 'fs/promises';
 import matter from 'gray-matter';
 
+export const dynamic = 'force-static'
+
 export default async function sitemap() {
     let sitemapList = [
         {
