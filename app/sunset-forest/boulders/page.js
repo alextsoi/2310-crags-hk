@@ -49,7 +49,7 @@ export default async function Boulders() {
                             key={boulderKey} 
                             className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
                         >
-                            <div className="space-y-3">
+                            <div className="flex items-center justify-between">
                                 <h3 className="text-2xl font-semibold">
                                     <Link 
                                         title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} 
@@ -61,12 +61,12 @@ export default async function Boulders() {
                                 </h3>
                                 
                                 {boulder.access && (
-                                    <div className="text-blue-600 hover:text-blue-800">
+                                    <div className="text-blue-600 hover:text-blue-800 ml-4">
                                         <a 
                                             href={boulder.access.link} 
                                             title={boulder.access.title} 
                                             target={boulder.access.target ? boulder.access.target : '_blank'}
-                                            className="underline hover:no-underline"
+                                            className="underline hover:no-underline text-sm"
                                         >
                                             {boulder.access.text}
                                         </a>
