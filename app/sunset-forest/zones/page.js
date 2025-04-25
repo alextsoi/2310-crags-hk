@@ -40,7 +40,7 @@ export default async function Zone() {
     allZones = _.sortBy(allZones, 'order');
 
     const routeFiles = await fs.readdir('src/routes');
-    let  allRoutes = [];
+    let allRoutes = [];
     for (const file of routeFiles) {
         const fileContent = await fs.readFile(`src/routes/${file}`, 'utf8');
         const data = matter(fileContent).data;
@@ -51,21 +51,51 @@ export default async function Zone() {
     allRoutes = _.sortBy(allRoutes, 'id');
 
     return (
-        <main className={styles.main}>
-            <div className="container">
-                <h1>Sunset Forest Zone Listings</h1>
-                {allZones.map((zone) => {
-                    // TODO: find number of boulders in the zone
-                    // let matchedZone = zones.data.find(z => z.id === zone);
-                    const length = allRoutes.filter(route => route.zone === zone.id).length;
-                    return <section key={zone} className={styles.zone}>
-                        <h3><Link
-                            title={`Sunset Forest Bouldering ${zone.name} | Sunset Forest Bouldering Grades | CRAGS.HK`}
-                            href={`/sunset-forest/zone/${zone.id}`}>{zone.name}</Link><span className={styles.problemCount}>x {length} problems</span></h3>
-                        {zone.access && <div><a href={zone.access.link} title={zone.access.title} target={zone.access.target ? zone.access.target : '_blank'}>{zone.access.text}</a></div>}
-                    </section>;
-                })}
-                <article className={styles.articleParagraphs}>
+        <main className="min-h-screen bg-white">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                <h1 className="text-4xl font-bold mb-8">Sunset Forest Zone Listings</h1>
+                
+                <div className="space-y-6">
+                    {allZones.map((zone, zoneKey) => {
+                        const length = allRoutes.filter(route => route.zone === zone.id).length;
+                        return (
+                            <section 
+                                key={zoneKey} 
+                                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+                            >
+                                <div className="flex items-center justify-between mb-2">
+                                    <h3 className="text-2xl font-semibold">
+                                        <Link
+                                            title={`Sunset Forest Bouldering ${zone.name} | Sunset Forest Bouldering Grades | CRAGS.HK`}
+                                            href={`/sunset-forest/zone/${zone.id}`}
+                                            className="text-gray-800 hover:text-blue-600 transition-colors"
+                                        >
+                                            {zone.name}
+                                        </Link>
+                                    </h3>
+                                    <span className="text-gray-600 font-medium">
+                                        {length} problems
+                                    </span>
+                                </div>
+                                
+                                {zone.access && (
+                                    <div className="mt-2">
+                                        <a 
+                                            href={zone.access.link} 
+                                            title={zone.access.title} 
+                                            target={zone.access.target ? zone.access.target : '_blank'}
+                                            className="text-blue-600 hover:text-blue-800 underline"
+                                        >
+                                            {zone.access.text}
+                                        </a>
+                                    </div>
+                                )}
+                            </section>
+                        );
+                    })}
+                </div>
+
+                <article className="prose prose-lg max-w-none mt-12 space-y-6">
                     <p>Welcome to your definitive guide to the zones in Sunset Forest, exclusively on CRAGS.HK. We have meticulously segmented the Sunset Forest bouldering site into distinctive zones, making it easier for you to navigate and explore the area.</p>
                     <p>At CRAGS.HK, we understand that a well-organized climbing site can significantly enhance your bouldering experience. That's why we've divided Sunset Forest into manageable zones, each featuring a unique collection of blocs and problems.</p>
                     <p>Our guide provides a detailed overview of each zone, including its location, the number of blocs, the range of problems, and any specific features or challenges it offers. Whether you're a seasoned climber seeking new challenges or a beginner looking for a suitable starting point, our zone guide helps you plan your visit efficiently.</p>

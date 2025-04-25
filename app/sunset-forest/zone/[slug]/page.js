@@ -172,37 +172,94 @@ export default async function Zone({ params }) {
     description = `There are total ${matchedRoutes.length} routes in the Sunset Forest Bouldering Zone ${params.slug}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
 
     return (
-        <main className={styles.main}>
-            <div className="container">
-                <section className={styles.boulder}>
-                    <h2>Zone {params.slug}</h2>
-                    {allBoulders.map((boulder) => {
-                        return <section className={styles.boulder}>
-                            <h2 className={styles.boulderTitle}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}>{boulder.id} {boulder.name}</Link></h2>
-                            {boulder.image && <div className={styles.boulderSignautreImage}><Link title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} href={`/sunset-forest/boulder/${boulder.slug}`}><Image path={boulder.image} hideFullView={true} /></Link></div>}
-                            <ul className={styles.boulderRoutes}>
-                                {matchedRoutes.filter(route => {
-                                    return `${route.boulder}` === `${boulder.id}`
-                                }).map((route) => {
-                                    let foundBoulder = allBoulders.find((boulder) => `${boulder.id}` === `${route.boulder}`);
-                                    return <li className={styles.boulderRoute} key={route.id}>
-                                        <Link
-                                            title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}
-                                            href={{
-                                                pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
-                                                query: { problem: route.slug }
-                                            }}>
-                                            <div className={styles.boulderRouteId}>{route.id} -</div>
-                                            <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
-                                            <div className={styles.boulderRouteGrade}>({route.gradings.map(grade => grade !== 'project' ? `V${grade}` : `${grade}`).join('/')})</div>
+        <main className="min-h-screen bg-white">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                <section className="mb-12">
+                    <h2 className="text-4xl font-bold mb-8">Zone {params.slug}</h2>
+                    
+                    <div className="space-y-12">
+                        {allBoulders.map((boulder, boulderKey) => (
+                            <section 
+                                key={boulderKey} 
+                                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+                            >
+                                <div className="flex items-center justify-between mb-6">
+                                    <h2 className="text-2xl font-semibold">
+                                        <Link 
+                                            title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} 
+                                            href={`/sunset-forest/boulder/${boulder.slug}`}
+                                            className="text-gray-800 hover:text-blue-600 transition-colors"
+                                        >
+                                            {boulder.id} {boulder.name}
                                         </Link>
-                                    </li>
-                                })}
-                            </ul>
-                        </section>;
-                    })}
+                                    </h2>
+                                </div>
+
+                                {boulder.image && (
+                                    <div className="mb-6 overflow-hidden rounded-lg">
+                                        <Link 
+                                            title={`${boulder.id} ${boulder.name} | Sunset Forest Boulders | CRAGS.HK`} 
+                                            href={`/sunset-forest/boulder/${boulder.slug}`}
+                                        >
+                                            <Image 
+                                                path={boulder.image} 
+                                                hideFullView={true}
+                                                className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300"
+                                            />
+                                        </Link>
+                                    </div>
+                                )}
+
+                                <ul className="space-y-2">
+                                    {matchedRoutes
+                                        .filter(route => `${route.boulder}` === `${boulder.id}`)
+                                        .map((route) => {
+                                            let foundBoulder = allBoulders.find((boulder) => `${boulder.id}` === `${route.boulder}`);
+                                            return (
+                                                <li 
+                                                    key={route.id}
+                                                    className="hover:bg-gray-200 rounded-md transition-colors"
+                                                >
+                                                    <Link
+                                                        title={`${route.id} ${route.name} | ${boulder.id} ${boulder.name} | Sunset Forest Bouldering Problems | CRAGS.HK`}
+                                                        href={{
+                                                            pathname: `/sunset-forest/boulder/${foundBoulder.slug}`,
+                                                            query: { problem: route.slug }
+                                                        }}
+                                                        className="flex items-center gap-2 p-3 text-gray-800 hover:text-blue-600"
+                                                    >
+                                                        <span className="font-medium min-w-[3rem]">
+                                                            {route.id} -
+                                                        </span>
+                                                        <span className="flex-grow">
+                                                            {route.name}
+                                                            {route.isSds && <span className="text-gray-600 ml-1">(sds)</span>}
+                                                            {route.rating !== 0 && (
+                                                                <span className="text-yellow-500 ml-1">
+                                                                    {ratingText[route.rating]}
+                                                                </span>
+                                                            )}
+                                                        </span>
+                                                        <span className="text-gray-600">
+                                                            ({route.gradings.map(grade => 
+                                                                grade !== 'project' ? `V${grade}` : grade
+                                                            ).join('/')})
+                                                        </span>
+                                                    </Link>
+                                                </li>
+                                            );
+                                        })}
+                                </ul>
+                            </section>
+                        ))}
+                    </div>
                 </section>
-                {description && <article className={styles.articleParagraphs}>{description}</article>}
+
+                {description && (
+                    <article className="prose prose-lg max-w-none mt-12 p-6 bg-blue-50 rounded-lg">
+                        {description}
+                    </article>
+                )}
             </div>
         </main>
     )

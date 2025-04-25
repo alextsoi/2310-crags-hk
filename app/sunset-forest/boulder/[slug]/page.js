@@ -142,30 +142,92 @@ export default async function Boulder({ params }) {
     }
     description = `There are total ${matchedRoutes.length} routes on the ${boulder.name} Boulder that is located in zone ${boulder.zone}. The boulder problems are graded ${gradingText}${ratingTextDescription}`;
     return (
-        <main className={styles.main}>
-            <div className="container">
-                <section className={styles.boulder}>
-                    <h2>Sunset Forest Boulders</h2>
-                    <h1>{boulder.id} {boulder.name} Boulder</h1>
-                    {boulder.access && <div className={styles.boulderAccess}><a href={boulder.access.link} title={boulder.access.title} target={boulder.access.target ? boulder.access.target : '_blank'}>{boulder.access.text}</a></div>}
-                    {boulder.gps && <div className={styles.boulderGps}><a href={`https://www.google.com/maps/search/?api=1&query=${boulder.gps.lat},${boulder.gps.lng}`} title="Google Map" target="_blank">Google Map</a> or <Copy value={`${boulder.gps.lat}, ${boulder.gps.lng}`} text={`Click to copy (${boulder.gps.lat}, ${boulder.gps.lng})`} /></div>}
-                    <ul className={styles.boulderRoutes}>
-                        {matchedRoutes.map((route) => {
-                            return <li className={styles.boulderRoute} key={route.id}>
-                                {route.image && <div className={styles.boulderRouteImages}>
-                                    <Image path={route.image} />
-                                </div>}
-                                <div className={styles.boulderRouteTitle}>
-                                    <div className={styles.boulderRouteId}>{route.id} -</div>
-                                    <div className={styles.boulderRouteName}>{route.name}{route.isSds ? ' (sds)' : ''}{route.rating !== 0 ? ratingText[route.rating] : ''}</div>
-                                    <div className={styles.boulderRouteGrade}>({route.gradings.map(grade => grade !== 'project' ? `V${grade}` : `${grade}`).join('/')})</div>
+        <main className="min-h-screen bg-white">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                <section className="mb-12">
+                    <h2 className="text-2xl font-semibold text-gray-600 mb-2">Sunset Forest Boulders</h2>
+                    <h1 className="text-4xl font-bold mb-8">{boulder.id} {boulder.name} Boulder</h1>
+                    
+                    {boulder.access && (
+                        <div className="mb-4">
+                            <a 
+                                href={boulder.access.link} 
+                                title={boulder.access.title} 
+                                target={boulder.access.target ? boulder.access.target : '_blank'}
+                                className="text-blue-600 hover:text-blue-800 transition-colors"
+                            >
+                                {boulder.access.text}
+                            </a>
+                        </div>
+                    )}
+                    
+                    {boulder.gps && (
+                        <div className="flex items-center gap-3 mb-8 text-sm">
+                            <a 
+                                href={`https://www.google.com/maps/search/?api=1&query=${boulder.gps.lat},${boulder.gps.lng}`} 
+                                title="Google Map" 
+                                target="_blank"
+                                className="text-blue-600 hover:text-blue-800 transition-colors"
+                            >
+                                Google Map
+                            </a>
+                            <span className="text-gray-400">or</span>
+                            <Copy 
+                                value={`${boulder.gps.lat}, ${boulder.gps.lng}`} 
+                                text={`Click to copy (${boulder.gps.lat}, ${boulder.gps.lng})`}
+                            />
+                        </div>
+                    )}
+
+                    <div className="space-y-12">
+                        {matchedRoutes.map((route) => (
+                            <div key={route.id} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
+                                {route.image && (
+                                    <div className="mb-6 overflow-hidden rounded-lg">
+                                        <Image 
+                                            path={route.image}
+                                            className="w-full h-auto"
+                                        />
+                                    </div>
+                                )}
+                                
+                                <div className="flex items-center gap-3 mb-4">
+                                    <span className="font-medium text-gray-600 min-w-[3rem]">
+                                        {route.id} -
+                                    </span>
+                                    <span className="flex-grow font-semibold">
+                                        {route.name}
+                                        {route.isSds && (
+                                            <span className="text-gray-600 ml-2">(sds)</span>
+                                        )}
+                                        {route.rating !== 0 && (
+                                            <span className="text-yellow-500 ml-2">
+                                                {ratingText[route.rating]}
+                                            </span>
+                                        )}
+                                    </span>
+                                    <span className="text-gray-600 font-medium">
+                                        ({route.gradings.map(grade => 
+                                            grade !== 'project' ? `V${grade}` : `${grade}`
+                                        ).join('/')})
+                                    </span>
                                 </div>
-                                {route.description && <div className={styles.boulderRouteDescription}>{route.description}</div>}
-                            </li>
-                        })}
-                    </ul>
+
+                                {route.description && (
+                                    <div className="text-gray-600 text-sm">
+                                        {route.description}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </section>
-                {description && <article className={styles.articleParagraphs}>{description}</article>}
+
+                {description && (
+                    <article className="prose prose-lg max-w-none p-6 bg-blue-50 rounded-lg">
+                        {description}
+                    </article>
+                )}
             </div>
         </main>
     )

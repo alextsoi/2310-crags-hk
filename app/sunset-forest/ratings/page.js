@@ -39,18 +39,48 @@ export default async function Rating() {
     let allRatings = _.map(allRoutes, 'rating');
     allRatings = _.uniq(allRatings);
     allRatings = _.sortBy(allRatings, String);
+    
     return (
-        <main className={styles.main}>
-            <div className="container">
-                <h1>Sunset Forest Rating Listings</h1>
-                {allRatings.map((rating) => {
-                    return <section key={rating} className={styles.rating}>
-                        <h3><Link
-                            title={`${rating !== 0 ? `Problems rated with ${rating} stars` : 'Normal Problems'} | Sunset Forest Bouldering Grades | CRAGS.HK`}
-                            href={`/sunset-forest/rating/${rating}`}>{rating !== 0 ? `${rating} star` : 'Normal'}</Link><span className={styles.problemCount}>x {allRoutes.filter(route => route.rating === rating).length} problems</span></h3>
-                    </section>;
-                })}
-                <article className={styles.articleParagraphs}>
+        <main className="min-h-screen bg-white">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                <h1 className="text-4xl font-bold mb-8">Sunset Forest Rating Listings</h1>
+                
+                <div className="space-y-4">
+                    {allRatings.map((rating, ratingKey) => {
+                        const problemCount = allRoutes.filter(route => route.rating === rating).length;
+                        const ratingTitle = rating !== 0 ? `${rating} star` : 'Normal';
+                        const ratingDescription = rating !== 0 ? `Problems rated with ${rating} stars` : 'Normal Problems';
+                        
+                        return (
+                            <section 
+                                key={ratingKey} 
+                                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors"
+                            >
+                                <div className="flex items-center justify-between">
+                                    <h3 className="text-2xl font-semibold flex items-center">
+                                        <Link
+                                            title={`${ratingDescription} | Sunset Forest Bouldering Grades | CRAGS.HK`}
+                                            href={`/sunset-forest/rating/${rating}`}
+                                            className="text-gray-800 hover:text-blue-600 transition-colors flex items-center gap-2"
+                                        >
+                                            {ratingTitle}
+                                            {rating !== 0 && (
+                                                <span className="text-yellow-400">
+                                                    {'★'.repeat(rating)}
+                                                </span>
+                                            )}
+                                        </Link>
+                                    </h3>
+                                    <span className="text-gray-600 font-medium">
+                                        {problemCount} problems
+                                    </span>
+                                </div>
+                            </section>
+                        );
+                    })}
+                </div>
+
+                <article className="prose prose-lg max-w-none mt-12 space-y-6">
                     <p>Welcome to your essential guide to the boulder problem ratings in Sunset Forest, brought to you by CRAGS.HK. Our system rates each problem from standard to a maximum of 3 stars, enabling you to quickly identify the most highly recommended climbs.</p>
                     <p>At CRAGS.HK, we understand that your time at Sunset Forest is precious. You want to make the most of your climbing experience, especially if your visit is brief. That's why we've developed this rating system: to help you prioritize the most enjoyable and rewarding problems.</p>
                     <p>A 3-star rating indicates a must-try problem - a climb that offers an exceptional combination of technical challenge, aesthetic appeal, and overall fun. Problems with 2 stars are also highly recommended, offering a great climbing experience. 1-star problems are standard climbs, perfect for warm-ups or cooling down.</p>
