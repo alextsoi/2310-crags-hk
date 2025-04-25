@@ -18,21 +18,41 @@ export default async function Home() {
     contentResult = contentResult.toString();
     console.log(contentResult);
     return (
-        <main className={styles.main}>
-            <div className="container">
-                <h2>CRAGS.HK</h2>
-                <h1>{data.title}</h1>
-                <div className="new-map">
-                    <h2>{data.subtitle}</h2>
-                    <iframe className={styles.alltrails} src={data.mapUrl} width="100%" style={{ height: '75vh', minHeight: '400px' }} frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"></iframe>
-                    <br /><br />
-                    {data.externalMapUrl && <div>
-                        <p><a href={data.externalMapUrl.url} target="_blank" rel="noopener noreferrer">{data.externalMapUrl.title}</a></p>
-                        {data.externalMapUrl.description && <div>{data.externalMapUrl.description}</div>}
-                    </div>}
+        <main className="min-h-screen bg-white">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                <h2 className="text-xl font-bold mb-2">CRAGS.HK</h2>
+                <h1 className="text-4xl font-bold mb-6">{data.title}</h1>
+                <div className="space-y-6">
+                    <h2 className="text-2xl font-semibold">{data.subtitle}</h2>
+                    <iframe 
+                        className="w-full h-[75vh] min-h-[400px] rounded-lg shadow-lg" 
+                        src={data.mapUrl} 
+                        frameBorder="0" 
+                        scrolling="no" 
+                        title="AllTrails: Trail Guides and Maps for Hiking, Camping, and Running"
+                    />
+                    {data.externalMapUrl && (
+                        <div className="mt-8 space-y-2">
+                            <p>
+                                <a 
+                                    href={data.externalMapUrl.url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                >
+                                    {data.externalMapUrl.title}
+                                </a>
+                            </p>
+                            {data.externalMapUrl.description && (
+                                <div className="text-gray-700">
+                                    {data.externalMapUrl.description}
+                                </div>
+                            )}
+                        </div>
+                    )}
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: contentResult }}></div>
+                <div className="mt-12 prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: contentResult }}></div>
             </div>
-        </main >
+        </main>
     )
 }

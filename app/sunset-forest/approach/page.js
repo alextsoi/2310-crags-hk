@@ -41,23 +41,36 @@ export default async function Approach() {
     let content2 = data.content2;
     let content2Result = await processor.process(content2);
     content2Result = content2Result.toString();
+    
     return (
-        <main className={styles.main}>
-            <div className="container">
-                <h1>Sunset Forest Approach</h1>
-                <div dangerouslySetInnerHTML={{ __html: contentResult }}></div>
-                <div className={styles.approachWrapper}>
-                    {
-                        images && images.map((image, index) => {
-                            return (
-                                <div key={index} className={styles.approach}>
-                                    <img loading="lazy" width={396} height={704} src={image} alt={`Sunset Forest Bouldering Site Approach Step ${index + 1} | CRAGS.HK`} />
-                                </div>
-                            )
-                        })
-                    }
+        <main className="min-h-screen bg-white">
+            <div className="container mx-auto px-4 py-8 max-w-7xl">
+                <h1 className="text-4xl font-bold mb-8">Sunset Forest Approach</h1>
+                
+                <div className="prose prose-lg max-w-none mb-12" dangerouslySetInnerHTML={{ __html: contentResult }}></div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    {images && images.map((image, index) => (
+                        <div 
+                            key={index} 
+                            className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                        >
+                            <img 
+                                loading="lazy" 
+                                width={396} 
+                                height={704} 
+                                src={image} 
+                                alt={`Sunset Forest Bouldering Site Approach Step ${index + 1} | CRAGS.HK`}
+                                className="w-full h-auto object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                                Step {index + 1}
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: content2Result }}></div>
+                
+                <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: content2Result }}></div>
             </div>
         </main>
     )
